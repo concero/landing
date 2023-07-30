@@ -167,7 +167,7 @@ ul, ol, li {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 48px;
     font-weight: 600;
 }
 
@@ -212,10 +212,24 @@ a {
     font-size: 13px;
 }
 
+.title1 {
+    color: var(--color-text-secondary);
+    font-size: 28px;
+}
+
 button {
     border: none;
     cursor: pointer;
     font-weight: 500;
     line-height: 0;
     outline: none;
+}
+
+
+.screenContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }

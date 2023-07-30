@@ -1,0 +1,42 @@
+.container {
+    margin-top: -66px;
+}
+
+.mainContainer {
+    width: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-xxl);
+}
+
+.titleContainer {
+    gap: var(--sp-xxl);
+    flex: 1;
+
+    .buttonContainer {
+        width: 250px;
+
+        button {
+            .buttonIcon {
+                color: var(--color-base-black);
+                transform: rotate(90deg);
+            }
+
+            p {
+                color: var(--color-base-black);
+            }
+        }
+    }
+
+}
+
+.subtitleContainer {
+    flex-direction: row;
+    gap: var(--sp-xl)
+}
+
+.imgContainer {
+    min-width: 200px;
+    flex: 0.7;
+}

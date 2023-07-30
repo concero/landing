@@ -9,4 +9,6 @@ export type CssIdentifiersMap = {
   "dark": string|undefined
   "light": string|undefined
   "root": string|undefined
+  "screenContainer": string|undefined
+  "title1": string|undefined
 }

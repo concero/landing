@@ -1,7 +1,4 @@
-import classNames from './HomeScreen.module.pcss'
-import { CardsGrid } from '../../cards/CardsGrid/CardsGrid'
-
-const items = [
+export const items = [
   {
     id: '1',
     title: 'Test',
@@ -28,11 +25,3 @@ const items = [
     subtitle: 'test5',
   },
 ]
-
-export const HomeScreen = () => {
-  return (
-    <div className={classNames.container}>
-      <CardsGrid items={items} />
-    </div>
-  )
-}
