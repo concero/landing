@@ -1,27 +1,27 @@
 export const items = [
   {
     id: '1',
-    title: 'Test',
-    subtitle: 'test1',
+    title: 'Cross-chain',
+    subtitle: 'Cross-chain swaps across all chains',
   },
   {
     id: '2',
-    title: 'Test',
-    subtitle: 'test2',
+    title: 'Stay up to date',
+    subtitle: 'Cross-chain swaps across all chains',
   },
   {
     id: '3',
-    title: 'Test',
-    subtitle: 'test3',
+    title: 'Max liquidity',
+    subtitle: 'Cross-chain swaps across all chains',
   },
   {
     id: '4',
-    title: 'Test',
-    subtitle: 'test4',
+    title: 'Max liquidity',
+    subtitle: 'Cross-chain swaps across all chains',
   },
   {
     id: '5',
-    title: 'Test',
-    subtitle: 'test5',
+    title: 'Max liquidity',
+    subtitle: 'Cross-chain swaps across all chains',
   },
 ]

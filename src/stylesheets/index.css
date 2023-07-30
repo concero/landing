@@ -17,6 +17,7 @@
     --color-text-primary: #000;
     --color-text-secondary: #fafafa;
     --color-border-main: #EDEDED;
+    --radius-md: 16px;
 
     color-scheme: light dark;
     font-family: Poppins, sans-serif;
@@ -83,6 +84,7 @@ body::-webkit-scrollbar {
     --color-red-lightest: #290C0C;
     --color-text-primary: #131313;
     --color-text-secondary: #98959E;
+    --color-bg1: #F6F6F6;
 }
 
 .dark {
@@ -225,11 +227,16 @@ button {
     outline: none;
 }
 
-
 .screenContainer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
+}
+
+
+.headerContainer {
+    width: 100%;
+    padding-bottom: var(--sp-xl)
 }

@@ -37,6 +37,7 @@ export const CardsGrid: FC<CardsGridProps> = ({ items }) => {
               key={item.id}
               title={item.title}
               subtitle={item.subtitle}
+              size={'md'}
               className={classNames.secondLineItems}
             />
           )

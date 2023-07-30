@@ -7,6 +7,7 @@ export type CssIdentifiersMap = {
   "body1": string|undefined
   "body2": string|undefined
   "dark": string|undefined
+  "headerContainer": string|undefined
   "light": string|undefined
   "root": string|undefined
   "screenContainer": string|undefined
