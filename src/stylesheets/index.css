@@ -16,6 +16,7 @@
     --color-base-background: #fff;
     --color-text-primary: #000;
     --color-text-secondary: #fafafa;
+    --color-border-main: #EDEDED;
 
     color-scheme: light dark;
     font-family: Poppins, sans-serif;
@@ -30,6 +31,10 @@
 #root {
     width: 100%;
     height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 * {
@@ -128,7 +133,6 @@ body {
     display: flex;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     padding: 0;
     width: 100vw;
     scrollbar-width: none;
@@ -168,7 +172,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -200,7 +204,12 @@ a {
 
 .body1 {
     color: var(--color-text-secondary);
-    font-size: 0.85rem;
+    font-size: 18px;
+}
+
+.body2 {
+    color: var(--color-text-secondary);
+    font-size: 13px;
 }
 
 button {
