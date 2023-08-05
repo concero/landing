@@ -6,6 +6,7 @@ export default identifiersMap
 export type CssIdentifiersMap = {
   "body1": string|undefined
   "body2": string|undefined
+  "card": string|undefined
   "dark": string|undefined
   "headerContainer": string|undefined
   "light": string|undefined
