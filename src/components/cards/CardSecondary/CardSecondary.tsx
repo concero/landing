@@ -1,21 +1,17 @@
 import { FC } from 'react'
 import classNames from './CardSecondary.module.pcss'
+import { SecondaryCardItem } from './types'
 
-interface CardSecondaryProps {
-  title: string
-  subtitle: string
-  imgSrc?: string | null
-  size?: 'sm' | 'md' | 'lg'
-}
-
-export const CardSecondary: FC<CardSecondaryProps> = ({ title, subtitle, imgSrc = null, size = 'md' }) => {
+export const CardSecondary: FC<SecondaryCardItem> = ({ title, subtitles, imgSrc = null, size = 'md' }) => {
   const classes = classNames[size]
   return (
     <div className={`card ${classNames.container} ${classes}`}>
       <div className={classNames.titleContainer}>
         <h3>{title}</h3>
         <div>
-          <p className={'body2'}>{subtitle}</p>
+          {subtitles.map((subtitle) => (
+            <p className={'body2'}>{subtitle}</p>
+          ))}
         </div>
       </div>
       {imgSrc ? (

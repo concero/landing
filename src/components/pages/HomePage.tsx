@@ -1,12 +1,12 @@
 import { MainScreen } from '../screens/MainScreen/MainScreen'
-import { DexAggregatorScreen } from '../screens/DexAgregatorScreen/DexAggregatorScreen'
 import classNames from './HomePage.module.pcss'
+import { RoadmapBlock } from '../Blocks/RoadmapBlock/RoadmapBlock'
 
 export const HomePage = () => {
   return (
     <div className={classNames.container}>
       <MainScreen />
-      <DexAggregatorScreen />
+      <RoadmapBlock />
     </div>
   )
 }
