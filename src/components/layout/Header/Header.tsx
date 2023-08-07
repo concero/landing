@@ -10,10 +10,7 @@ export const Header: FC<HeaderProps> = () => {
   return (
     <header className={classNames.container}>
       <Logo />
-      <Button
-        variant={'secondary'}
-        // leftIcon={{name: "ArrowsDiff", iconProps: {size: 18, transform: "", color: colors.primary.main}}}
-      >
+      <Button variant={'secondary'}>
         <Icon name={'ArrowsDiff'} size={18} className={classNames.buttonIcon} />
         <p className={`body2 ${classNames.buttonText}`}>Try now</p>
       </Button>

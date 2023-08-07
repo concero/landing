@@ -4,10 +4,8 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
-  "aaveLogoContainer": string|undefined
+  "buttonText": string|undefined
+  "contactCard": string|undefined
   "container": string|undefined
-  "imgContainer": string|undefined
-  "md": string|undefined
-  "sm": string|undefined
-  "titleContainer": string|undefined
+  "subtitle": string|undefined
 }

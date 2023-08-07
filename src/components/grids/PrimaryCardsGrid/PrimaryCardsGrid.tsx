@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { CardPrimary } from '../CardPrimary/CardPrimary'
-import classNames from './CardsGrid.module.pcss'
+import { CardPrimary } from '../../cards/CardPrimary/CardPrimary'
+import classNames from './PrimaryCardsGrid.module.pcss'
 
 interface CardsGridProps {
   items: Item[]
@@ -12,7 +12,7 @@ type Item = {
   subtitle: string
 }
 
-export const CardsGrid: FC<CardsGridProps> = ({ items }) => {
+export const PrimaryCardsGrid: FC<CardsGridProps> = ({ items }) => {
   const firstLine = items.slice(0, 2)
   const secondLine = items.slice(2, items.length)
 
@@ -22,7 +22,7 @@ export const CardsGrid: FC<CardsGridProps> = ({ items }) => {
         {firstLine.map((item, index) => {
           return (
             <CardPrimary
-              key={item.id}
+              key={index.toString()}
               title={item.title}
               subtitle={item.subtitle}
               className={index === 0 ? classNames.firsLineFirstItem : classNames.firstLineSecondItem}

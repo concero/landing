@@ -1,5 +1,5 @@
 import { Block } from '../../layout/Block/Block'
-import { SecondaryCardsGid } from '../../cards/SecondaryCardsGrid/SecondaryCardsGid'
+import { SecondaryCardsGid } from '../../grids/SecondaryCardsGrid/SecondaryCardsGid'
 import walletIcon from '../../../assets/icons/wallet.svg'
 
 const items = [

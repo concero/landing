@@ -8,10 +8,8 @@ interface ChainCardProps {
 
 export const ChainCard: FC<ChainCardProps> = ({ symbol }) => {
   return (
-    <div>
-      <div className={classNames.container}>
-        <CryptoIcon symbol={symbol} />
-      </div>
+    <div className={classNames.container}>
+      <CryptoIcon symbol={symbol} />
     </div>
   )
 }

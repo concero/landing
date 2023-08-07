@@ -15,7 +15,7 @@ export const CardSecondary: FC<SecondaryCardItem> = ({ title, subtitles, imgSrc 
         </div>
       </div>
       {imgSrc ? (
-        <div className={classNames.imgContainer}>
+        <div className={`${classNames.imgContainer} ${title === 'AAVE' ? classNames.aaveLogoContainer : ''}`}>
           <img src={imgSrc} />
         </div>
       ) : null}

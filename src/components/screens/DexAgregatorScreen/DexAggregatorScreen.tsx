@@ -9,7 +9,7 @@ export const DexAggregatorScreen = () => {
       {/*<div className={'headerContainer'}>*/}
       {/*  <h1 className={'title1'}>Dex Aggregator</h1>*/}
       {/*</div>*/}
-      {/*/!*<CardsGrid items={items} />*!/*/}
+      {/*/!*<PrimaryCardsGrid items.ts={items.ts} />*!/*/}
       {/*<CardSecondary*/}
       {/*  title={'Q3 ‘23'}*/}
       {/*  subtitle={'X-chain DEX aggregator\n' + 'X-chain Staking aggregator'}*/}
@@ -24,6 +24,5 @@ export const DexAggregatorScreen = () => {
           imgSrc={walletIcon}
         />
       </Block>
-
   )
 }

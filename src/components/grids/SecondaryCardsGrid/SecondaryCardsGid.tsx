@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import classNames from './SecondaryCardsGrid.module.pcss'
-import { CardSecondary } from '../CardSecondary/CardSecondary'
-import { SecondaryCardItem } from '../CardSecondary/types'
+import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
+import { SecondaryCardItem } from '../../cards/CardSecondary/types'
 
 interface SecondaryCardsGidProps {
   items: SecondaryCardItem[]
