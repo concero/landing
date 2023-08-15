@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { CardPrimary } from '../../cards/CardPrimary/CardPrimary'
 import classNames from './PrimaryCardsGrid.module.pcss'
+import { SecondaryCardsGid } from '../SecondaryCardsGrid/SecondaryCardsGid'
 
 interface CardsGridProps {
   items: Item[]
@@ -9,7 +10,7 @@ interface CardsGridProps {
 type Item = {
   id: string
   title: string
-  subtitle: string
+  subtitles: string[]
 }
 
 export const PrimaryCardsGrid: FC<CardsGridProps> = ({ items }) => {
@@ -24,24 +25,15 @@ export const PrimaryCardsGrid: FC<CardsGridProps> = ({ items }) => {
             <CardPrimary
               key={index.toString()}
               title={item.title}
-              subtitle={item.subtitle}
+              subtitles={item.subtitles}
               className={index === 0 ? classNames.firsLineFirstItem : classNames.firstLineSecondItem}
+              imgSrc={item.imgSrc}
             />
           )
         })}
       </div>
-      <div className={`${classNames.lineContainer} ${classNames.secondLineContainer}`}>
-        {secondLine.map((item) => {
-          return (
-            <CardPrimary
-              key={item.id}
-              title={item.title}
-              subtitle={item.subtitle}
-              size={'md'}
-              className={classNames.secondLineItems}
-            />
-          )
-        })}
+      <div className={`${classNames.lineContainer}`}>
+        <SecondaryCardsGid items={secondLine} size={'sm'} />
       </div>
     </div>
   )

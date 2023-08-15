@@ -11,9 +11,9 @@ interface SecondaryCardsGidProps {
 export const SecondaryCardsGid: FC<SecondaryCardsGidProps> = ({ items, size }) => {
   return (
     <div className={classNames.container}>
-      {items.map((item: SecondaryCardItem) => (
+      {items.map((item: SecondaryCardItem, index: number) => (
         <CardSecondary
-          key={item.title}
+          key={index.toString()}
           title={item.title}
           subtitles={item.subtitles}
           size={size}

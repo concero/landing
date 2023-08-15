@@ -1,27 +1,39 @@
+import hexagon from '../../../assets/images/dexAggregatorBlock/hexagons.svg'
+import news from '../../../assets/images/dexAggregatorBlock/news.svg'
+import walletIcon from '../../../assets/icons/wallet.svg'
+
 export const items = [
   {
     id: '1',
     title: 'Cross-chain',
-    subtitle: 'Cross-chain swaps across all chains',
+    subtitles: ['Swap across 16 chains, ', '13 bridges & 34 DEXes.'],
+    imgSrc: hexagon,
   },
   {
     id: '2',
-    title: 'Stay up to date',
-    subtitle: 'Cross-chain swaps across all chains',
+    title: 'Live news & transactions',
+    subtitles: ['Stay up to date with on-chain '],
+    imgSrc: news,
   },
   {
     id: '3',
-    title: 'Max liquidity',
-    subtitle: 'Cross-chain swaps across all chains',
+    title: 'Maximum liquidity',
+    subtitles: ['X-chain DEX aggregator', 'X-chain Staking aggregator'],
+
+    imgSrc: walletIcon,
   },
   {
     id: '4',
-    title: 'Max liquidity',
-    subtitle: 'Cross-chain swaps across all chains',
+    title: 'Minimum slippage',
+    subtitles: ['X-chain DEX aggregator', 'X-chain Staking aggregator'],
+
+    imgSrc: walletIcon,
   },
   {
     id: '5',
-    title: 'Max liquidity',
-    subtitle: 'Cross-chain swaps across all chains',
+    title: 'Mobile-first',
+    subtitles: ['X-chain DEX aggregator', 'X-chain Staking aggregator'],
+
+    imgSrc: walletIcon,
   },
 ]

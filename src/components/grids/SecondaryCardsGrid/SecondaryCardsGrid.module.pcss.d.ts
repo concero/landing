@@ -5,8 +5,4 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "container": string|undefined
-  "firsLineFirstItem": string|undefined
-  "firstLineSecondItem": string|undefined
-  "lineContainer": string|undefined
-  "secondLineItems": string|undefined
 }

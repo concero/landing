@@ -21,7 +21,7 @@ export const MainScreen = () => {
           </div>
         </div>
         <div className={classNames.imgContainer}>
-          <img src={'src/assets/images/img.png'} />
+          <img src={'src/assets/images/mainScreen/img.png'} />
         </div>
       </div>
     </div>

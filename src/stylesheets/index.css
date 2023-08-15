@@ -162,7 +162,6 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, label, span, li {
     margin: 0;
     padding: 0;
     user-select: none;
-
 }
 
 ul, ol, li {
@@ -177,7 +176,7 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 500;
 }
 
@@ -209,12 +208,12 @@ a {
 
 .body1 {
     color: var(--color-text-secondary);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .body2 {
     color: var(--color-text-secondary);
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .title1 {
@@ -248,4 +247,5 @@ button {
     border: 2px solid var(--color-border-main);
     border-radius: var(--st-br-md);
     padding: var(--sp-md) var(--sp-lg);
+    background-color: var(--color-bg1);
 }

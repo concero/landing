@@ -6,6 +6,11 @@ export default identifiersMap
 export type CssIdentifiersMap = {
   "cardContainer": string|undefined
   "container": string|undefined
+  "hexagonsImage": string|undefined
+  "img": string|undefined
+  "imgContainer": string|undefined
+  "innerContainer": string|undefined
   "mdBody": string|undefined
   "mdHeader": string|undefined
+  "newsImage": string|undefined
 }
