@@ -5,6 +5,8 @@ import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
 import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 import { DexAggregatorBlock } from '../blocks/DexAggregatorBlock/DexAggregatorBlock'
 import { StackingAggregatorBlock } from '../blocks/StackingAggregatorBlock/StackingAggregatorBlock'
+import { ComingSoonBlock } from '../blocks/ComingSoonBlock/ComingSoonBlock'
+import { ContactsBlock } from '../blocks/ContactsBlock/ContactsBlock'
 
 export const HomePage = () => {
   return (
@@ -12,9 +14,11 @@ export const HomePage = () => {
       <MainScreen />
       <DexAggregatorBlock />
       <StackingAggregatorBlock />
+      <ComingSoonBlock />
       <RoadmapBlock />
       <ChainsBlock />
       <PartnersBlock />
+      <ContactsBlock />
     </div>
   )
 }

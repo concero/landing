@@ -9,6 +9,7 @@ export type CssIdentifiersMap = {
   "card": string|undefined
   "dark": string|undefined
   "headerContainer": string|undefined
+  "heading": string|undefined
   "light": string|undefined
   "root": string|undefined
   "screenContainer": string|undefined

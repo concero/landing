@@ -32,9 +32,11 @@ export const PrimaryCardsGrid: FC<CardsGridProps> = ({ items }) => {
           )
         })}
       </div>
-      <div className={`${classNames.lineContainer}`}>
-        <SecondaryCardsGid items={secondLine} size={'sm'} />
-      </div>
+      {secondLine ? (
+        <div className={`${classNames.lineContainer}`}>
+          <SecondaryCardsGid items={secondLine} size={'sm'} />
+        </div>
+      ) : null}
     </div>
   )
 }

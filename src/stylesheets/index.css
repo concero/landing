@@ -178,6 +178,7 @@ h1 {
 h2 {
     font-size: 36px;
     font-weight: 500;
+    line-height: 120%;
 }
 
 h3 {
@@ -248,4 +249,8 @@ button {
     border-radius: var(--st-br-md);
     padding: var(--sp-md) var(--sp-lg);
     background-color: var(--color-bg1);
+}
+
+.heading {
+    margin-bottom: var(--sp-sm);
 }
