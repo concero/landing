@@ -1,6 +1,38 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+    width: 100%;
+    display: flex;
+    gap: var(--sp-gap-sm);
+    overflow: hidden;
+}
+
+.firstLine, .secondLine {
+    width: calc(108px * 40);
+    flex-direction: row;
     gap: var(--sp-gap-sm);
 }
 
+.firstLine {
+    .item {
+        animation: translateFirstLine 30s linear infinite;
+    }
+}
+
+.secondLine {
+    transform: translateX(calc(-108px * 20));
+
+    .item {
+        animation: translateSecondLine 30s linear infinite;
+    }
+}
+
+@keyframes translateFirstLine {
+    100% {
+        transform: translateX(calc(-108px * 20));
+    }
+}
+
+@keyframes translateSecondLine {
+    100% {
+        transform: translateX(calc(108px * 20));
+    }
+}
