@@ -6,5 +6,6 @@ export default identifiersMap
 export type CssIdentifiersMap = {
   "container": string|undefined
   "form": string|undefined
+  "innerContainer": string|undefined
   "sendButton": string|undefined
 }

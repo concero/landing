@@ -5,8 +5,8 @@ import { Input } from '../../layout/Input/Input'
 
 export const SendFrom = () => {
   return (
-    <Card padding={'lg'}>
-      <div className={classNames.container}>
+    <Card padding={'lg'} className={classNames.container}>
+      <div className={classNames.innerContainer}>
         <div>
           <h3 className={'heading'}>Stay up to date.</h3>
           <p className={'body2'}>Sign up for the newsletter.</p>
