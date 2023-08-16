@@ -20,7 +20,7 @@ export const CardPrimary: FC<CardPrimaryProps> = ({ title, subtitles, className 
 
   return (
     <div className={`${classNames.container} ${className ? className : ''}`}>
-      <Card>
+      <Card className={classNames.card}>
         <div className={classNames.innerContainer}>
           <div className={classNames.cardContainer}>
             <h2 className={size === 'md' ? classNames.mdHeader : ''}>{title}</h2>
