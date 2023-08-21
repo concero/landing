@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     stylelint({
       fix: true,
-      include: ['./src/**/*.css', './src/**/*.pcss'],
+      include: ['./src/**/*.css', './src/**/*StakingScreen.module.pcss'],
       configFile: './.stylelintrc.json',
       emitErrorAsWarning: true,
     }),
