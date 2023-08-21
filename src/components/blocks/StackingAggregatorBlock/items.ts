@@ -5,7 +5,7 @@ import walletIcon from '../../../assets/icons/wallet.svg'
 export const items = [
   {
     title: 'All-in-one staking',
-    subtitles: ['Swap across 16 chains, 13 bridges & 34 DEXes.'],
+    subtitles: ['Swap across 16 chains, ', '13 bridges & 34 DEXes.'],
     imgSrc: arrowMinimize,
   },
   {

@@ -4,7 +4,7 @@ import { Block } from '../../layout/Block/Block'
 
 export const DexAggregatorBlock = () => {
   return (
-    <Block title={'X-Chain DEX Aggregator'}>
+    <Block title={'DEX Aggregator'}>
       <PrimaryCardsGrid items={items} />
     </Block>
   )

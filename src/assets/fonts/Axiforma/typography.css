@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-SemiBold.eot');
     src: local('Axiforma SemiBold'), local('Axiforma-SemiBold'),
     url('Axiforma-SemiBold.eot?#iefix') format('embedded-opentype'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Thin.eot');
     src: local('Axiforma Thin'), local('Axiforma-Thin'),
     url('Axiforma-Thin.eot?#iefix') format('embedded-opentype'),
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Regular.eot');
     src: local('Axiforma Regular'), local('Axiforma-Regular'),
     url('Axiforma-Regular.eot?#iefix') format('embedded-opentype'),
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-MediumItalic.eot');
     src: local('Axiforma Medium Italic'), local('Axiforma-MediumItalic'),
     url('Axiforma-MediumItalic.eot?#iefix') format('embedded-opentype'),
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Black.eot');
     src: local('Axiforma Black'), local('Axiforma-Black'),
     url('Axiforma-Black.eot?#iefix') format('embedded-opentype'),
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-BlackItalic.eot');
     src: local('Axiforma Black Italic'), local('Axiforma-BlackItalic'),
     url('Axiforma-BlackItalic.eot?#iefix') format('embedded-opentype'),
@@ -71,7 +71,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Heavy.eot');
     src: local('Axiforma Heavy'), local('Axiforma-Heavy'),
     url('Axiforma-Heavy.eot?#iefix') format('embedded-opentype'),
@@ -83,7 +83,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Medium.eot');
     src: local('Axiforma Medium'), local('Axiforma-Medium'),
     url('Axiforma-Medium.eot?#iefix') format('embedded-opentype'),
@@ -95,7 +95,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-BoldItalic.eot');
     src: local('Axiforma Bold Italic'), local('Axiforma-BoldItalic'),
     url('Axiforma-BoldItalic.eot?#iefix') format('embedded-opentype'),
@@ -107,7 +107,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-ExtraBoldItalic.eot');
     src: local('Axiforma ExtraBold Italic'), local('Axiforma-ExtraBoldItalic'),
     url('Axiforma-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
@@ -119,7 +119,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Book.eot');
     src: local('Axiforma Book'), local('Axiforma-Book'),
     url('Axiforma-Book.eot?#iefix') format('embedded-opentype'),
@@ -131,7 +131,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Light.eot');
     src: local('Axiforma Light'), local('Axiforma-Light'),
     url('Axiforma-Light.eot?#iefix') format('embedded-opentype'),
@@ -143,7 +143,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-ThinItalic.eot');
     src: local('Axiforma Thin Italic'), local('Axiforma-ThinItalic'),
     url('Axiforma-ThinItalic.eot?#iefix') format('embedded-opentype'),
@@ -155,7 +155,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Bold.eot');
     src: local('Axiforma Bold'), local('Axiforma-Bold'),
     url('Axiforma-Bold.eot?#iefix') format('embedded-opentype'),
@@ -167,7 +167,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-LightItalic.eot');
     src: local('Axiforma Light Italic'), local('Axiforma-LightItalic'),
     url('Axiforma-LightItalic.eot?#iefix') format('embedded-opentype'),
@@ -179,7 +179,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-SemiBoldItalic.eot');
     src: local('Axiforma SemiBold Italic'), local('Axiforma-SemiBoldItalic'),
     url('Axiforma-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
@@ -191,7 +191,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-Italic.eot');
     src: local('Axiforma Italic'), local('Axiforma-Italic'),
     url('Axiforma-Italic.eot?#iefix') format('embedded-opentype'),
@@ -203,7 +203,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-BookItalic.eot');
     src: local('Axiforma Book Italic'), local('Axiforma-BookItalic'),
     url('Axiforma-BookItalic.eot?#iefix') format('embedded-opentype'),
@@ -215,7 +215,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-ExtraBold.eot');
     src: local('Axiforma ExtraBold'), local('Axiforma-ExtraBold'),
     url('Axiforma-ExtraBold.eot?#iefix') format('embedded-opentype'),
@@ -227,7 +227,7 @@
 }
 
 @font-face {
-    font-family: 'Axiforma';
+    font-family: Axiforma;
     src: url('Axiforma-HeavyItalic.eot');
     src: local('Axiforma Heavy Italic'), local('Axiforma-HeavyItalic'),
     url('Axiforma-HeavyItalic.eot?#iefix') format('embedded-opentype'),

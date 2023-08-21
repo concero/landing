@@ -12,10 +12,13 @@ interface CardPrimaryProps {
 
 export const CardPrimary: FC<CardPrimaryProps> = ({ title, subtitles, className = null, size = 'lg', imgSrc }) => {
   let imgContainerClasses = `${classNames.imgContainer} `
-  if (imgSrc === '/src/assets/images/dexAggregatorBlock/hexagons.svg') {
+  const fileName = imgSrc?.split('/').pop()
+  if (fileName === 'hexagons.svg') {
     imgContainerClasses = imgContainerClasses.concat(`${classNames.hexagonsImage}`)
-  } else if (imgSrc === '/src/assets/images/dexAggregatorBlock/news.svg') {
+  } else if (fileName === 'news.svg') {
     imgContainerClasses = imgContainerClasses.concat(`${classNames.newsImage}`)
+  } else if (fileName === 'arrows-minimize.svg') {
+    imgContainerClasses = imgContainerClasses.concat(`${classNames.arrowsMinimizeImage}`)
   }
 
   return (
@@ -29,8 +32,10 @@ export const CardPrimary: FC<CardPrimaryProps> = ({ title, subtitles, className 
             ))}
           </div>
           {imgSrc ? (
-            <div className={imgContainerClasses}>
-              <img src={imgSrc} className={classNames.img} />
+            <div className={classNames.imageWrapper}>
+              <div className={imgContainerClasses}>
+                <img src={imgSrc} className={classNames.img} />
+              </div>
             </div>
           ) : null}
         </div>

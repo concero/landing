@@ -1,3 +1,5 @@
+@import url("../assets/fonts/Axiforma/typography.css");
+
 :root {
     --st-br-xl: 20px;
     --st-br-lg: 16px;
@@ -23,7 +25,8 @@
     --radius-md: 16px;
 
     color-scheme: light dark;
-    font-family: Poppins, sans-serif;
+    font-family: Axiforma;
+    font-style: normal;
     font-size: 16px; /* base font size, 1rem */
     -webkit-font-smoothing: antialiased;
     font-synthesis: none;
@@ -159,6 +162,7 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, label, span, li {
     box-sizing: border-box;
     color: var(--color-text-primary);
     font-family: inherit;
+    font-style: normal;
     margin: 0;
     padding: 0;
     user-select: none;
@@ -173,6 +177,7 @@ ul, ol, li {
 h1 {
     font-size: 48px;
     font-weight: 600;
+    line-height: 120%;
 }
 
 h2 {

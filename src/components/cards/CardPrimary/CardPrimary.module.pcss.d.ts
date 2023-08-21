@@ -4,10 +4,12 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "arrowsMinimizeImage": string|undefined
   "card": string|undefined
   "cardContainer": string|undefined
   "container": string|undefined
   "hexagonsImage": string|undefined
+  "imageWrapper": string|undefined
   "img": string|undefined
   "imgContainer": string|undefined
   "innerContainer": string|undefined

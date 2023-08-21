@@ -4,15 +4,25 @@
 
 .mainContainer {
     width: 100%;
+    position: relative;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--sp-xxl);
 }
 
+.button {
+    padding: 16px;
+}
+
 .titleContainer {
-    gap: var(--sp-xxl);
+    gap: var(--sp-xl);
     flex: 1;
+
+    .title {
+        max-width: 640px;
+        min-width: 500px;
+    }
 
     .buttonContainer {
         width: 250px;
@@ -37,6 +47,21 @@
 }
 
 .imgContainer {
-    min-width: 200px;
+    min-width: 300px;
+    max-width: 450px;
     flex: 0.7;
+}
+
+.learnMoreContainer {
+    position: absolute;
+    bottom: 70px;
+    gap: var(--sp-sm);
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-end;
+
+
+    p {
+        font-size: 18px;
+    }
 }

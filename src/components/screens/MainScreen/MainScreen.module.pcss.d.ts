@@ -4,11 +4,14 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "button": string|undefined
   "buttonContainer": string|undefined
   "buttonIcon": string|undefined
   "container": string|undefined
   "imgContainer": string|undefined
+  "learnMoreContainer": string|undefined
   "mainContainer": string|undefined
   "subtitleContainer": string|undefined
+  "title": string|undefined
   "titleContainer": string|undefined
 }
