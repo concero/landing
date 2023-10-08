@@ -4,9 +4,6 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
-  "black": string|undefined
-  "container": string|undefined
-  "lg": string|undefined
-  "md": string|undefined
-  "white": string|undefined
+  "cardContainer": string|undefined
+  "imagesContainer": string|undefined
 }

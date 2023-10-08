@@ -4,7 +4,7 @@ import classNames from './Card.module.pcss'
 interface CardProps {
   children: ReactNode
   padding?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
-  color?: 'white' | 'main'
+  color?: 'white' | 'main' | 'black'
   className?: string
 }
 

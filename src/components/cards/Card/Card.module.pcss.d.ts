@@ -4,6 +4,7 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "black": string|undefined
   "container": string|undefined
   "paddinglg": string|undefined
   "paddingmd": string|undefined

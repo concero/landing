@@ -193,6 +193,14 @@ button {
     }
 }
 
+@media (width <= 1300px) {
+    .headerContainer {
+        p {
+            max-width: 100%;
+        }
+    }
+}
+
 .card {
     border: 2px solid var(--color-border-main);
     border-radius: var(--st-br-md);
