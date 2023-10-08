@@ -1,0 +1,38 @@
+.cardsContainer {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--sp-lg);
+}
+
+.secondaryCardsContainer {
+    flex: 1;
+    min-width: 460px;
+    gap: var(--sp-lg);
+
+    .line {
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+        gap: var(--sp-lg);
+    }
+}
+
+.flex1 {
+    flex: 1
+}
+
+@media (max-width: 1300px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondaryCardsContainer {
+
+        .line {
+            flex-direction: column;
+        }
+    }
+}

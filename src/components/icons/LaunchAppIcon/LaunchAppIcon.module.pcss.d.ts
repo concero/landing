@@ -5,10 +5,7 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "container": string|undefined
-  "paddinglg": string|undefined
-  "paddingmd": string|undefined
-  "paddingsm": string|undefined
-  "paddingxl": string|undefined
-  "paddingxxl": string|undefined
-  "white": string|undefined
+  "icon": string|undefined
+  "lg": string|undefined
+  "md": string|undefined
 }

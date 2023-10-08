@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import classNames from './Header.module.pcss'
-import { Button } from '../Button/Button'
-import Icon from '../../Icon'
 import { Logo } from './Logo'
+import { MainButton } from '../MainButton/MainButton'
+import { LaunchAppIcon } from '../../icons/LaunchAppIcon/LaunchAppIcon'
 
 export interface HeaderProps {}
 
@@ -10,10 +10,10 @@ export const Header: FC<HeaderProps> = () => {
   return (
     <header className={classNames.container}>
       <Logo />
-      <Button variant={'secondary'}>
-        <Icon name={'ArrowsDiff'} size={18} className={classNames.buttonIcon} />
-        <p className={`body2 ${classNames.buttonText}`}>Try now</p>
-      </Button>
+      <MainButton>
+        <h4>Launch app</h4>
+        <LaunchAppIcon />
+      </MainButton>
     </header>
   )
 }

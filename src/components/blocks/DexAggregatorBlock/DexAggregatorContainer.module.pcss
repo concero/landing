@@ -1,0 +1,29 @@
+.cardsContainer {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--sp-lg);
+}
+
+.secondaryCardsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--sp-lg);
+}
+
+.flex1 {
+    flex: 1
+}
+
+@media (max-width: 1300px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondaryCardsContainer {
+        flex-direction: column;
+    }
+}

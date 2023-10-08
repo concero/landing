@@ -8,7 +8,9 @@ export type CssIdentifiersMap = {
   "container": string|undefined
   "header": string|undefined
   "headerContainer": string|undefined
-  "img": string|undefined
   "imgContainer": string|undefined
-  "mask": string|undefined
+  "leftConor": string|undefined
+  "leftSide": string|undefined
+  "rightSide": string|undefined
+  "rightSideInnerContainer": string|undefined
 }

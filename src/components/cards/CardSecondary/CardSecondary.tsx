@@ -1,24 +1,22 @@
-import { FC } from 'react'
+import { Card } from '../Card/Card'
+import { CardHeader } from '../../layout/CardHeader/CardHeader'
 import classNames from './CardSecondary.module.pcss'
-import { SecondaryCardItem } from './types'
 
-export const CardSecondary: FC<SecondaryCardItem> = ({ title, subtitles, imgSrc = null, size = 'md' }) => {
-  const classes = classNames[size]
+interface CardSecondaryProps {
+  title: string
+  body: string
+  imgSrc?: string | null
+}
+
+export function CardSecondary({ title, body, imgSrc = null }: CardSecondaryProps) {
   return (
-    <div className={`card ${classNames.container} ${classes}`}>
-      <div className={classNames.titleContainer}>
-        <h3>{title}</h3>
-        <div>
-          {subtitles.map((subtitle) => (
-            <p className={'body2'}>{subtitle}</p>
-          ))}
-        </div>
-      </div>
-      {imgSrc ? (
-        <div className={`${classNames.imgContainer} ${title === 'AAVE' ? classNames.aaveLogoContainer : ''}`}>
+    <Card padding={'xl'} className={classNames.container}>
+      {imgSrc && (
+        <div className={classNames.imgContainer}>
           <img src={imgSrc} />
         </div>
-      ) : null}
-    </div>
+      )}
+      <CardHeader title={title} body={body} size={'md'} />
+    </Card>
   )
 }
