@@ -34,12 +34,14 @@ export function DexAggregatorBlock() {
           body={'Stay updated with live news & transactions'}
           imgSrc={chartImg}
           className={classNames.flex1}
+          imgWidth={'100%'}
         />
         <CardMain
           title={'Cross-chain'}
           body={'Swap across 16 chains, 13 bridges & 34 DEXes.'}
           imgSrc={swapImg}
           className={classNames.flex1}
+          imgWidth={430}
         />
         <div className={classNames.secondaryCardsContainer}>
           {items.map((item, index) => (

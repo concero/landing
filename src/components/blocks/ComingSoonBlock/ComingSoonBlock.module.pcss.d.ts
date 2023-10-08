@@ -5,5 +5,9 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "cardContainer": string|undefined
+  "container": string|undefined
+  "headerContainer": string|undefined
   "imagesContainer": string|undefined
+  "imgContainer": string|undefined
+  "referralContainer": string|undefined
 }
