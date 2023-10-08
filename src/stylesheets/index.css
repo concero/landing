@@ -1,7 +1,7 @@
 @import url("../assets/fonts/Axiforma/typography.css");
 
 :root {
-    --st-br-xl: 20px;
+    --st-br-xl: 64px;
     --st-br-lg: 16px;
     --st-br-md: 12px;
     --st-br-sm: 8px;
@@ -51,6 +51,7 @@ body::-webkit-scrollbar {
 }
 
 .light {
+    --color-bg-main: #131313;
     --color-base-background: #FFF;
     --color-base-black: #FFF;
     --color-base-white: #000;
@@ -224,7 +225,7 @@ a {
 
 .title1 {
     color: var(--color-text-secondary);
-    font-size: 28px;
+    font-size: 22px;
 }
 
 button {

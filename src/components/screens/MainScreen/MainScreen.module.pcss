@@ -1,67 +1,51 @@
 .container {
+    width: 100%;
     margin-top: -66px;
+    padding: var(--sp-xxl) var(--sp-md);
 }
 
-.mainContainer {
+.bgContainer {
+    flex: 1;
     width: 100%;
     position: relative;
-    flex-flow: row wrap;
-    align-items: center;
     justify-content: space-between;
-    gap: var(--sp-xxl);
-}
-
-.button {
-    padding: 16px;
-}
-
-.titleContainer {
-    gap: var(--sp-xl);
-    flex: 1;
-
-    .title {
-        max-width: 640px;
-        min-width: 500px;
-    }
-
-    .buttonContainer {
-        width: 250px;
-
-        button {
-            .buttonIcon {
-                color: var(--color-base-black);
-                transform: rotate(90deg);
-            }
-
-            p {
-                color: var(--color-base-black);
-            }
-        }
-    }
-
-}
-
-.subtitleContainer {
+    align-items: center;
     flex-direction: row;
-    gap: var(--sp-xl)
+    background-color: var(--color-bg-main);
+    border-radius: var(--st-br-xl);
+    clip-path: polygon(100% 8.122%, 100% 8.122%, 99.939% 6.804%, 99.763% 5.555%, 99.481% 4.389%, 99.103% 3.325%, 98.638% 2.379%, 98.096% 1.567%, 97.486% 0.907%, 96.819% 0.414%, 96.103% 0.106%, 95.349% 0%, 4.651% 0%, 4.651% 0%, 3.897% 0.106%, 3.181% 0.414%, 2.514% 0.907%, 1.904% 1.567%, 1.362% 2.379%, 0.897% 3.325%, 0.519% 4.389%, 0.237% 5.555%, 0.061% 6.804%, 0% 8.122%, 0% 71.066%, 0% 71.066%, 0.061% 72.383%, 0.237% 73.633%, 0.519% 74.798%, 0.897% 75.863%, 1.362% 76.809%, 1.904% 77.621%, 2.514% 78.281%, 3.181% 78.774%, 3.897% 79.082%, 4.651% 79.188%, 28.27% 79.188%, 28.27% 79.188%, 29.449% 79.354%, 30.567% 79.835%, 31.61% 80.604%, 32.562% 81.636%, 33.409% 82.905%, 34.136% 84.383%, 34.727% 86.046%, 35.167% 87.867%, 35.443% 89.82%, 35.538% 91.878%, 35.538% 91.878%, 35.538% 91.878%, 35.599% 93.196%, 35.775% 94.445%, 36.057% 95.611%, 36.435% 96.675%, 36.9% 97.621%, 37.442% 98.433%, 38.051% 99.093%, 38.719% 99.586%, 39.435% 99.894%, 40.189% 100%, 95.349% 100%, 95.349% 100%, 96.103% 99.894%, 96.819% 99.586%, 97.486% 99.093%, 98.096% 98.433%, 98.638% 97.621%, 99.103% 96.675%, 99.481% 95.611%, 99.763% 94.445%, 99.939% 93.196%, 100% 91.878%, 100% 8.122%);
+}
+
+.mask {
+    width: 521px;
+    height: 196px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px
+}
+
+.headerContainer {
+    margin-top: -140px;
+    padding: 98px;
+
+    .header {
+        max-width: 580px;
+        color: var(--color-base-black);
+        font-size: 80px;
+    }
 }
 
 .imgContainer {
-    min-width: 300px;
-    max-width: 450px;
-    flex: 0.7;
-}
-
-.learnMoreContainer {
-    position: absolute;
-    bottom: 70px;
-    gap: var(--sp-sm);
-    flex-direction: row;
-    align-items: center;
-    justify-self: flex-end;
+    width: 900px;
+    margin-right: -50px;
+    margin-bottom: -200px;
 
 
-    p {
-        font-size: 18px;
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
