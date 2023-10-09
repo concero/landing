@@ -5,12 +5,13 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "bgContainer": string|undefined
+  "buttonContainer": string|undefined
+  "buttonTitle": string|undefined
   "container": string|undefined
+  "cornerContainer": string|undefined
   "header": string|undefined
   "headerContainer": string|undefined
   "imgContainer": string|undefined
-  "leftConor": string|undefined
   "leftSide": string|undefined
   "rightSide": string|undefined
-  "rightSideInnerContainer": string|undefined
 }

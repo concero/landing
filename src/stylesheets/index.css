@@ -125,6 +125,7 @@ h2 {
     line-height: 120%;
 }
 
+
 h3 {
     font-size: 1.25rem;
     font-weight: 500;
@@ -196,13 +197,6 @@ button {
     }
 }
 
-@media (width <= 1300px) {
-    .headerContainer {
-        p {
-            max-width: 100%;
-        }
-    }
-}
 
 .card {
     border: 2px solid var(--color-border-main);
@@ -213,4 +207,26 @@ button {
 
 .heading {
     margin-bottom: var(--sp-sm);
+}
+
+@media (width <= 1300px) {
+    .headerContainer {
+        p {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (width <= 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .title1 {
+        font-size: 32px;
+    }
+
+    .body1 {
+        font-size: 16px;
+    }
 }

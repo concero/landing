@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     padding: 0 var(--sp-xl) var(--sp-xxl) var(--sp-xl);
+    margin-bottom: var(--sp-block-v)
 }
 
 .bgContainer {
@@ -9,20 +10,22 @@
     overflow: hidden;
     position: relative;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
+    border-top-left-radius: var(--st-br-card-lg);
+    border-top-right-radius: var(--st-br-card-lg);
+    border-bottom-right-radius: var(--st-br-card-lg);
+    background-color: var(--color-bg-main);
 }
 
 .leftSide {
     height: 100%;
-    margin-right: -100px;
 
     .headerContainer {
         flex: 1;
         padding-left: 98px;
-        border-top-left-radius: var(--st-br-xl);
-        border-bottom-left-radius: var(--st-br-xl);
-        background-color: var(--color-bg-main);
         justify-content: center;
+        margin-bottom: -90px;
 
         .header {
             z-index: 1;
@@ -32,34 +35,33 @@
         }
     }
 
-    .leftConor {
-        border-top-right-radius: var(--st-br-xl);
-        width: 100%;
-        height: 200px;
-        background-color: var(--color-base-white);
+    .cornerContainer {
+        width: 619px;
+        margin-left: -1px;
+
+        .buttonContainer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            .buttonTitle {
+                font-size: 48px;
+            }
+        }
+
     }
 }
 
 .rightSide {
     height: 100%;
     flex: 1;
-
-    .rightSideInnerContainer {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        justify-content: flex-end;
-        align-items: flex-end;
-        border-top-right-radius: var(--st-br-xl);
-        border-bottom-right-radius: var(--st-br-xl);
-        border-bottom-left-radius: var(--st-br-xl);
-        background-color: var(--color-bg-main);
-    }
+    align-items: flex-end;
+    justify-content: flex-end;
 
     .imgContainer {
+        margin-right: -100px;
+        margin-bottom: -60px;
         width: 900px;
-        margin-right: -80px;
-        margin-bottom: -90px;
 
         img {
             width: 100%;
@@ -70,4 +72,12 @@
     }
 }
 
-
+@media (max-width: 768px) {
+    .leftSide {
+        .headerContainer {
+            .header {
+                font-size: 48px;
+            }
+        }
+    }
+}
