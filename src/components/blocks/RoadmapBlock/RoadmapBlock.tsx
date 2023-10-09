@@ -1,5 +1,7 @@
 import { Card } from '../../cards/Card/Card'
 import classNames from './RoadmapBlock.module.pcss'
+import { BlackCardHeader } from '../../cards/BlackCard/BlackCardHeader'
+import { BlackCard } from '../../cards/BlackCard/BlackCard'
 
 interface RoadMapCardProps {
   year: string
@@ -61,24 +63,19 @@ const items_24 = [
 export function RoadmapBlock() {
   return (
     <div className={classNames.container}>
-      <Card color={'black'} className={classNames.cardContainer}>
-        <div className={classNames.cardInnerContainer}>
-          <div className={classNames.header}>
-            <h2 className={`title1 ${classNames.headerTitle}`}>Rodmap</h2>
-            <div />
+      <BlackCard>
+        <BlackCardHeader title={'Roadmap'} />
+        <div className={classNames.roadMapCardsContainer}>
+          <div className={classNames.line}>
+            <RoadMapCard year={items_24[0].year} quarter={items_24[0].quarter} listItems={items_24[0].listItems} />
+            <RoadMapCard year={items_24[1].year} quarter={items_24[1].quarter} listItems={items_24[1].listItems} />
           </div>
-          <div className={classNames.roadMapCardsContainer}>
-            <div className={classNames.line}>
-              <RoadMapCard year={items_24[0].year} quarter={items_24[0].quarter} listItems={items_24[0].listItems} />
-              <RoadMapCard year={items_24[1].year} quarter={items_24[1].quarter} listItems={items_24[1].listItems} />
-            </div>
-            <div className={classNames.line}>
-              <RoadMapCard year={items_24[2].year} quarter={items_24[2].quarter} listItems={items_24[2].listItems} />
-              <RoadMapCard year={items_24[3].year} quarter={items_24[3].quarter} listItems={items_24[3].listItems} />
-            </div>
+          <div className={classNames.line}>
+            <RoadMapCard year={items_24[2].year} quarter={items_24[2].quarter} listItems={items_24[2].listItems} />
+            <RoadMapCard year={items_24[3].year} quarter={items_24[3].quarter} listItems={items_24[3].listItems} />
           </div>
         </div>
-      </Card>
+      </BlackCard>
     </div>
   )
 }

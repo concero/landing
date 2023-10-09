@@ -1,0 +1,50 @@
+.container {
+    padding: var(--sp-xxl) var(--sp-lg);
+    padding-bottom: var(--sp-block-v);
+}
+
+.cardInnerContainer {
+    padding: 130px calc(130px - var(--sp-lg));
+}
+
+.header {
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: var(--sp-xxl);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTitle {
+    color: var(--color-base-white);
+}
+
+@media (max-width: 1300px) {
+    .roadMapCardsContainer {
+        height: unset;
+
+        .line {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: unset;
+        padding-bottom: var(--sp-block-v);
+    }
+
+    .cardContainer {
+        border-radius: 0;
+    }
+
+    .cardInnerContainer {
+        padding: var(--sp-xxl) var(--sp-lg);
+    }
+
+    .header {
+        padding-bottom: var(--sp-lg);
+    }
+}
+
