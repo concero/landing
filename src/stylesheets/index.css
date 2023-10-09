@@ -8,6 +8,8 @@
     --st-br-sm: 8px;
     --st-br-xs: 4px;
     --st-br-card: 32px;
+    --st-br-card-sm: 24px;
+    --st-br-card-lg: 64px;
     --sp-xxl: 48px;
     --sp-xl: 32px;
     --sp-lg: 24px;
@@ -35,6 +37,7 @@
 
     --color-text-black: #131313;
     --color-bg-main: #131313;
+    --color-card-dark: #202020;
     --color-base-background: #FFF;
     --color-base-black: #000;
     --color-base-white: #FFF;

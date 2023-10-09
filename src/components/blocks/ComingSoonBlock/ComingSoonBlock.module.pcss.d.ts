@@ -10,4 +10,5 @@ export type CssIdentifiersMap = {
   "imagesContainer": string|undefined
   "imgContainer": string|undefined
   "referralContainer": string|undefined
+  "referralImgContainer": string|undefined
 }

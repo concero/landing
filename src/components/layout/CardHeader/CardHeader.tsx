@@ -2,7 +2,7 @@ import classNames from './CardHeader.module.pcss'
 
 interface CardHeaderProps {
   title: string
-  body: string
+  body?: string
   size?: 'lg' | 'md'
   variant?: 'white' | 'black'
 }
