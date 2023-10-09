@@ -1,33 +1,38 @@
-import lifiLogo from '../../../assets/partners/lifiLogo.svg'
-import aaveLogo from '../../../assets/partners/aaveLogo.svg'
-import rangoLogo from '../../../assets/partners/rangoLogo.svg'
-import insurAceLogo from '../../../assets/partners/insurAceLogo.svg'
-import widoLogo from '../../../assets/partners/widoLogo.svg'
+import lifiLogo from '../../../assets/images/Partner/lifi.svg'
+import widoLogo from '../../../assets/images/Partner/wido.svg'
+import enso from '../../../assets/images/Partner/enso.svg'
+import insurace from '../../../assets/images/Partner/insurace.svg'
+import aave from '../../../assets/images/Partner/aave.svg'
+import rango from '../../../assets/images/Partner/rango.svg'
 
 export const items = [
   {
     title: 'LI.FI',
-    subtitles: ['Decentralised lending &', 'borrowing protocol'],
+
     imgSrc: lifiLogo,
   },
   {
     title: 'AAVE',
-    subtitles: ['Decentralised lending &', 'borrowing protocol'],
-    imgSrc: aaveLogo,
+
+    imgSrc: aave,
   },
   {
     title: 'Rango',
-    subtitles: ['Decentralised lending &', 'borrowing protocol'],
-    imgSrc: rangoLogo,
+
+    imgSrc: rango,
   },
   {
     title: 'InsurAce',
-    subtitles: ['Decentralised lending &', 'borrowing protocol'],
-    imgSrc: insurAceLogo,
+
+    imgSrc: insurace,
   },
   {
     title: 'Wido',
-    subtitles: ['Decentralised lending &', 'borrowing protocol'],
+
     imgSrc: widoLogo,
+  },
+  {
+    title: 'ENSO',
+    imgSrc: enso,
   },
 ]

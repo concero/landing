@@ -4,6 +4,7 @@ import { DexAggregatorBlock } from '../blocks/DexAggregatorBlock/DexAggregatorBl
 import { ComingSoonBlock } from '../blocks/ComingSoonBlock/ComingSoonBlock'
 import { RoadmapBlock } from '../blocks/RoadmapBlock/RoadmapBlock'
 import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
+import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 
 export const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ export const HomePage = () => {
       <ComingSoonBlock />
       <RoadmapBlock />
       <ChainsBlock />
+      <PartnersBlock />
     </div>
   )
 }

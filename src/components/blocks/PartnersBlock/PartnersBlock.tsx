@@ -1,11 +1,51 @@
-import { PartnersCardsGrid } from '../../grids/PartnersCardsGrid/PatrnersCardsGrid'
-import { Block } from '../../layout/Block/Block'
+import { BlackCard } from '../../cards/BlackCard/BlackCard'
+import { BlackCardHeader } from '../../cards/BlackCard/BlackCardHeader'
+import classNames from './PartnerBlock.module.pcss'
 import { items } from './items'
+import { Card } from '../../cards/Card/Card'
+import { MainButton } from '../../layout/MainButton/MainButton'
+
+interface PartnerCardProps {
+  title: string
+  imgSrc: string
+}
+
+function PartnerCard({ title, imgSrc }: PartnerCardProps) {
+  return (
+    <Card className={classNames.partnerCardContainer}>
+      <div className={classNames.imageContainer}>
+        <img src={imgSrc} />
+      </div>
+      <p className={'body1'}>{title}</p>
+    </Card>
+  )
+}
 
 export const PartnersBlock = () => {
   return (
-    <Block title={'Partners'}>
-      <PartnersCardsGrid items={items} />
-    </Block>
+    <BlackCard>
+      <BlackCardHeader title={'Partners'} />
+      <div className={classNames.wrapper}>
+        <div className={classNames.cardsContainer}>
+          <div className={classNames.column}>
+            <PartnerCard title={items[0].title} imgSrc={items[0].imgSrc} />
+            <PartnerCard title={items[1].title} imgSrc={items[1].imgSrc} />
+            <PartnerCard title={items[2].title} imgSrc={items[2].imgSrc} />
+          </div>
+          <div className={classNames.column}>
+            <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} />
+            <PartnerCard title={items[4].title} imgSrc={items[4].imgSrc} />
+            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} />
+          </div>
+        </div>
+        <div className={classNames.contactCard}>
+          <div className={classNames.contactHeader}>
+            <h2>Let’s work together</h2>
+            <p className={'body2'}>We are always looking to grow with new partners </p>
+          </div>
+          <MainButton size={'md'}>Let’s Chat</MainButton>
+        </div>
+      </div>
+    </BlackCard>
   )
 }
