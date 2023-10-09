@@ -5,6 +5,8 @@ import { ComingSoonBlock } from '../blocks/ComingSoonBlock/ComingSoonBlock'
 import { RoadmapBlock } from '../blocks/RoadmapBlock/RoadmapBlock'
 import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
 import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
+import { JoinBlock } from '../blocks/JoinBlock/JoinBlock'
+import { Footer } from '../layout/Footer/Footer'
 
 export const HomePage = () => {
   return (
@@ -16,6 +18,8 @@ export const HomePage = () => {
       <RoadmapBlock />
       <ChainsBlock />
       <PartnersBlock />
+      <JoinBlock />
+      <Footer />
     </div>
   )
 }

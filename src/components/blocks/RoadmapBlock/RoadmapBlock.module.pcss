@@ -1,5 +1,5 @@
 .container {
-    padding: var(--sp-xxl) var(--sp-lg);
+    padding: var(--sp-xxl) 0;
     padding-bottom: var(--sp-block-v);
 }
 
@@ -111,3 +111,13 @@
     }
 }
 
+
+@media (max-width: 600px) {
+    .roadMapCardsContainer {
+        flex-direction: column;
+
+        .line {
+            width: 100%;
+        }
+    }
+}
