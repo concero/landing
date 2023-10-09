@@ -8,4 +8,5 @@ export type CssIdentifiersMap = {
   "icon": string|undefined
   "lg": string|undefined
   "md": string|undefined
+  "sm": string|undefined
 }

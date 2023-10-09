@@ -13,5 +13,6 @@ export type CssIdentifiersMap = {
   "headerContainer": string|undefined
   "imgContainer": string|undefined
   "leftSide": string|undefined
+  "mainButton": string|undefined
   "rightSide": string|undefined
 }

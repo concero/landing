@@ -4,8 +4,12 @@ import corner from '../../../assets/images/mainScreen/corner.svg'
 import { Header } from '../../layout/Header/Header'
 import { MainButton } from '../../layout/MainButton/MainButton'
 import { LaunchAppIcon } from '../../icons/LaunchAppIcon/LaunchAppIcon'
+import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 
 export const MainScreen = () => {
+  const isIpad = useMediaQuery('ipad')
+  const isMobile = useMediaQuery('mobile')
+
   return (
     <div className={`screenContainer ${classNames.container}`}>
       <Header />
@@ -16,9 +20,9 @@ export const MainScreen = () => {
           </div>
           <div className={classNames.cornerContainer}>
             <div className={classNames.buttonContainer}>
-              <MainButton size={'lg'}>
+              <MainButton size={isMobile ? 'sm' : 'lg'} className={classNames.mainButton}>
                 <h2 className={classNames.buttonTitle}>Launch app</h2>
-                <LaunchAppIcon size={'lg'} />
+                <LaunchAppIcon size={isMobile ? 'sm' : isIpad ? 'md' : 'lg'} />
               </MainButton>
             </div>
             <img src={corner} />

@@ -85,6 +85,7 @@ body {
     scrollbar-width: none;
 }
 
+
 div {
     box-sizing: border-box;
     color: var(--color-text-primary);
@@ -185,7 +186,6 @@ button {
     height: 100vh;
     width: 100%;
 }
-
 
 .headerContainer {
     width: 100%;
