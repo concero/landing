@@ -2,6 +2,8 @@ import { Card } from '../../cards/Card/Card'
 import classNames from './RoadmapBlock.module.pcss'
 import { BlackCardHeader } from '../../cards/BlackCard/BlackCardHeader'
 import { BlackCard } from '../../cards/BlackCard/BlackCard'
+import { Segment, SegmentedControl } from '../../layout/SegmenedControl/SegmentedControl'
+import { useState } from 'react'
 
 interface RoadMapCardProps {
   year: string
@@ -61,10 +63,14 @@ const items_24 = [
 ]
 
 export function RoadmapBlock() {
+  const [selectedSegment, setSelectedSegment] = useState(Segment['2023'])
+
   return (
     <div className={classNames.container}>
       <BlackCard>
-        <BlackCardHeader title={'Roadmap'} />
+        <BlackCardHeader title={'Roadmap'}>
+          <SegmentedControl selectedSegment={selectedSegment} setSelectedSegment={setSelectedSegment} />
+        </BlackCardHeader>
         <div className={classNames.roadMapCardsContainer}>
           <div className={classNames.line}>
             <RoadMapCard year={items_24[0].year} quarter={items_24[0].quarter} listItems={items_24[0].listItems} />

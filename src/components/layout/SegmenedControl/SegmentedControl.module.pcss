@@ -1,0 +1,23 @@
+.container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 6px;
+    background-color: var(--color-card-dark);
+    border-radius: var(--st-br-card);
+}
+
+.segment {
+    padding: 18px var(--sp-lg);
+    border-radius: var(--st-br-card);
+    background-color: var(--color-card-dark);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    color: var(--color-text-secondary);
+}
+
+.segment.active {
+    border-radius: var(--st-br-card);
+    background-color: var(--color-primary);
+    color: var(--color-base-white);
+}
