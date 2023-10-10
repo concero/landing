@@ -10,9 +10,9 @@ export const Header: FC<HeaderProps> = () => {
   return (
     <header className={classNames.container}>
       <Logo />
-      <MainButton>
+      <MainButton className={classNames.mainButton}>
         <h4>Launch app</h4>
-        <LaunchAppIcon />
+        <LaunchAppIcon className={classNames.anime} />
       </MainButton>
     </header>
   )

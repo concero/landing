@@ -22,7 +22,7 @@ export const MainScreen = () => {
             <div className={classNames.buttonContainer}>
               <MainButton size={isMobile ? 'sm' : 'lg'} className={classNames.mainButton}>
                 <h2 className={classNames.buttonTitle}>Launch app</h2>
-                <LaunchAppIcon size={isMobile ? 'sm' : isIpad ? 'md' : 'lg'} />
+                <LaunchAppIcon size={isMobile ? 'sm' : isIpad ? 'md' : 'lg'} className={classNames.anime} />
               </MainButton>
             </div>
             <img src={corner} />

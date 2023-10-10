@@ -4,6 +4,7 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "anime": string|undefined
   "bgContainer": string|undefined
   "buttonContainer": string|undefined
   "buttonTitle": string|undefined
