@@ -13,8 +13,8 @@ export function JoinBlock() {
             <h2>Join newsletter</h2>
             <p className={'body1'}>Be the first to know about progress, trading competitions, new features and more.</p>
           </div>
-          <MainButton size={'lg'}>
-            <h3>Submit</h3>
+          <MainButton size={'md'}>
+            <h4>Submit</h4>
           </MainButton>
         </div>
         <div className={classNames.imgContainer}>
