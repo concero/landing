@@ -32,6 +32,11 @@ export const MainScreen = () => {
           <div className={classNames.imgContainer}>
             <img src={objectImg} />
           </div>
+          {isMobile ? (
+            <div className={classNames.imgContainer2}>
+              <img src={objectImg} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

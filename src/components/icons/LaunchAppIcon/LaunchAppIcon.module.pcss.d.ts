@@ -9,4 +9,5 @@ export type CssIdentifiersMap = {
   "lg": string|undefined
   "md": string|undefined
   "sm": string|undefined
+  "xs": string|undefined
 }

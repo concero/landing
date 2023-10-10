@@ -2,10 +2,10 @@ import classNames from './LaunchAppIcon.module.pcss'
 import ArrowUpRight from '../../../assets/icons/ArrowUpRight.svg'
 
 export function LaunchAppIcon({
-  size = 'sm',
+  size = 'xs',
   className = null,
 }: {
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xs'
   className?: string | null
 }) {
   let classes = classNames[size]
