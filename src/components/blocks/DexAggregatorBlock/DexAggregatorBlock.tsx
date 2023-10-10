@@ -4,6 +4,7 @@ import chartImg from '../../../assets/images/dexAggregatorBlock/chartImg.svg'
 import swapImg from '../../../assets/images/dexAggregatorBlock/SwapImg.svg'
 import { Block } from '../../layout/Block/Block'
 import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
+import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 
 const items = [
   {
@@ -21,6 +22,8 @@ const items = [
 ]
 
 export function DexAggregatorBlock() {
+  const isMobile = useMediaQuery('mobile')
+
   return (
     <Block
       title="DEX aggregator"
@@ -41,7 +44,7 @@ export function DexAggregatorBlock() {
           body={'Swap across 16 chains, 13 bridges & 34 DEXes.'}
           imgSrc={swapImg}
           className={classNames.flex1}
-          imgWidth={430}
+          imgWidth={isMobile ? '100%' : 430}
         />
         <div className={classNames.secondaryCardsContainer}>
           {items.map((item, index) => (
