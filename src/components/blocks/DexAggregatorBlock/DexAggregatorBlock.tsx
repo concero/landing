@@ -44,7 +44,7 @@ export function DexAggregatorBlock() {
           body={'Swap across 16 chains, 13 bridges & 34 DEXes.'}
           imgSrc={swapImg}
           className={classNames.flex1}
-          imgWidth={isMobile ? '100%' : 430}
+          imgWidth={isMobile ? '100%' : 478}
         />
         <div className={classNames.secondaryCardsContainer}>
           {items.map((item, index) => (
