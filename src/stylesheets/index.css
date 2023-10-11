@@ -49,10 +49,14 @@
     --color-grey-550: #CBCACF;
     --color-grey-600: #E5E5E7;
     --color-grey-650: #F7F7F7;
+    --color-main-300: #9774F1;
+    --color-main-350: #885FF0;
+    --color-main-400: #794CEF;
+    --color-main-450: #7335F7;
+    --color-primary: #7335F7;
     --color-text-primary: #131313;
     --color-text-secondary: #888698;
     --color-bg1: #F1F2F5;
-    --color-primary: #7335F7;
 }
 
 #root {
@@ -84,7 +88,6 @@ body {
     width: 100vw;
     scrollbar-width: none;
 }
-
 
 div {
     box-sizing: border-box;

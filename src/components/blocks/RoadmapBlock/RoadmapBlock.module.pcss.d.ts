@@ -7,6 +7,10 @@ export type CssIdentifiersMap = {
   "cardContainer": string|undefined
   "cardHeader": string|undefined
   "cardInnerContainer": string|undefined
+  "color300": string|undefined
+  "color350": string|undefined
+  "color400": string|undefined
+  "color450": string|undefined
   "container": string|undefined
   "dot": string|undefined
   "header": string|undefined

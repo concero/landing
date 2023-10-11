@@ -9,13 +9,23 @@ interface RoadMapCardProps {
   year: string
   quarter: string
   listItems: string[]
+  index: number
 }
 
-function RoadMapCard({ year, quarter, listItems }: RoadMapCardProps) {
+const roadMapClasses = {
+  0: classNames.color300,
+  1: classNames.color350,
+  2: classNames.color400,
+  3: classNames.color450,
+}
+
+function RoadMapCard({ year, quarter, listItems, index }: RoadMapCardProps) {
+  const headerClasses = `${classNames.cardHeader} ${roadMapClasses[index]}`
+
   return (
     <Card className={classNames.roadmapCardContainer}>
       <div className={classNames.headerWrapper}>
-        <div className={classNames.cardHeader}>
+        <div className={headerClasses}>
           <h2 className={classNames.title}>{quarter}</h2>
           <h2 className={classNames.title}>{year}</h2>
         </div>
@@ -73,12 +83,32 @@ export function RoadmapBlock() {
         </BlackCardHeader>
         <div className={classNames.roadMapCardsContainer}>
           <div className={classNames.line}>
-            <RoadMapCard year={items_24[0].year} quarter={items_24[0].quarter} listItems={items_24[0].listItems} />
-            <RoadMapCard year={items_24[1].year} quarter={items_24[1].quarter} listItems={items_24[1].listItems} />
+            <RoadMapCard
+              year={items_24[0].year}
+              quarter={items_24[0].quarter}
+              listItems={items_24[0].listItems}
+              index={0}
+            />
+            <RoadMapCard
+              year={items_24[1].year}
+              quarter={items_24[1].quarter}
+              listItems={items_24[1].listItems}
+              index={1}
+            />
           </div>
           <div className={classNames.line}>
-            <RoadMapCard year={items_24[2].year} quarter={items_24[2].quarter} listItems={items_24[2].listItems} />
-            <RoadMapCard year={items_24[3].year} quarter={items_24[3].quarter} listItems={items_24[3].listItems} />
+            <RoadMapCard
+              year={items_24[2].year}
+              quarter={items_24[2].quarter}
+              listItems={items_24[2].listItems}
+              index={2}
+            />
+            <RoadMapCard
+              year={items_24[3].year}
+              quarter={items_24[3].quarter}
+              listItems={items_24[3].listItems}
+              index={3}
+            />
           </div>
         </div>
       </BlackCard>
