@@ -3,21 +3,27 @@ import { CardMain } from '../../cards/CardMain/CardMain'
 import chartImg from '../../../assets/images/dexAggregatorBlock/chartImg.svg'
 import swapImg from '../../../assets/images/dexAggregatorBlock/SwapImg.svg'
 import { Block } from '../../layout/Block/Block'
-import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
+import { CardSmall } from '../../cards/CardSmall/CardSmall'
+import egg from '../../../assets/images/dexAggregatorBlock/egg.svg'
+import fire from '../../../assets/images/dexAggregatorBlock/fire.svg'
+import coin from '../../../assets/images/dexAggregatorBlock/coin.svg'
 
 const items = [
   {
     title: 'Maximum liquidity',
     body: 'Access maximum decentralised liquidity',
+    imgSrc: egg,
   },
   {
     title: 'Swap Insurance',
     body: 'Insure your cross-chain swaps for peace of mind',
+    imgSrc: fire,
   },
   {
     title: 'Cheapest Routes',
     body: 'Find most optimised routes with cheapest rates',
+    imgSrc: coin,
   },
 ]
 
@@ -48,7 +54,7 @@ export function DexAggregatorBlock() {
         />
         <div className={classNames.secondaryCardsContainer}>
           {items.map((item, index) => (
-            <CardSecondary title={item.title} body={item.body} key={index.toString()} />
+            <CardSmall key={index.toString()} title={item.title} body={item.body} imgSrc={item.imgSrc} />
           ))}
         </div>
       </div>
