@@ -20,14 +20,20 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
             <h2>{title}</h2>
             <p className={'body2'}>{body}</p>
           </div>
-          <div className={classNames.inputContainer}>
-            <Input title={'Name'} />
-            <Input title={'Email'} />
-            <Input title={'Message'} inputType={'textarea'} />
+          <form
+            className={classNames.inputContainer}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <Input title={'Name'} type={'text'} />
+            <Input title={'Email'} type={'email'} />
+            <Input title={'Message'} inputType={'textarea'} type={'text'} />
             <MainButton size={'md'}>
               <h4 className={classNames.buttonTitle}>Send</h4>
             </MainButton>
-          </div>
+          </form>
         </div>
         <div className={classNames.imageContainer}>
           <img src={object} />

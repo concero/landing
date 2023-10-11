@@ -17,7 +17,14 @@ export const Input: FC<InputProps> = ({ type, placeholder, value, onChange, titl
       {inputType === 'textarea' ? (
         <textarea className={classNames.textarea} placeholder={placeholder} value={value} onChange={onChange} />
       ) : (
-        <input className={classNames.input} type={type} placeholder={placeholder} value={value} onChange={onChange} />
+        <input
+          className={classNames.input}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          name="bot-field"
+        />
       )}
     </div>
   )
