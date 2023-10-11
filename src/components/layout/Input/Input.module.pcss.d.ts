@@ -4,5 +4,7 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "container": string|undefined
   "input": string|undefined
+  "textarea": string|undefined
 }

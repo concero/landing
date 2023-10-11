@@ -4,6 +4,8 @@ import classNames from './PartnerBlock.module.pcss'
 import { items } from './items'
 import { Card } from '../../cards/Card/Card'
 import { MainButton } from '../../layout/MainButton/MainButton'
+import { ContactModal } from './ContactModal/ContactModal'
+import { useState } from 'react'
 
 interface PartnerCardProps {
   title: string
@@ -22,6 +24,8 @@ function PartnerCard({ title, imgSrc }: PartnerCardProps) {
 }
 
 export const PartnersBlock = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <BlackCard>
       <BlackCardHeader title={'Partners'} />
@@ -43,9 +47,17 @@ export const PartnersBlock = () => {
             <h2>Let’s work together</h2>
             <p className={'body2'}>We are always looking to grow with new partners </p>
           </div>
-          <MainButton size={'md'}>Let’s Chat</MainButton>
+          <MainButton size={'md'} onClick={() => setIsModalOpen(true)}>
+            Let’s Chat
+          </MainButton>
         </div>
       </div>
+      <ContactModal
+        show={isModalOpen}
+        setShow={setIsModalOpen}
+        title={'Let’s work together '}
+        body={'We are always looking to grow with new partners '}
+      />
     </BlackCard>
   )
 }

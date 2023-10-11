@@ -1,0 +1,42 @@
+.container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formContainer {
+    padding: var(--sp-xxl);
+}
+
+.titleContainer {
+    gap: var(--sp-sm);
+
+    p {
+        max-width: 500px;
+    }
+}
+
+.inputContainer {
+    padding-top: var(--sp-xxl);
+    gap: var(--sp-xxl);
+}
+
+.imageContainer {
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    border-radius: var(--st-br-card);
+    background-color: var(--color-base-black);
+
+    img {
+        transform: scale(2) translateY(40px) translateX(40px);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.buttonTitle {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}

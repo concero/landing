@@ -13,6 +13,8 @@ export type CssIdentifiersMap = {
   "color450": string|undefined
   "container": string|undefined
   "dot": string|undefined
+  "firstEmpty": string|undefined
+  "fourthEmpty": string|undefined
   "header": string|undefined
   "headerTitle": string|undefined
   "headerWrapper": string|undefined
@@ -22,5 +24,7 @@ export type CssIdentifiersMap = {
   "line": string|undefined
   "roadMapCardsContainer": string|undefined
   "roadmapCardContainer": string|undefined
+  "secondEmpty": string|undefined
+  "thirdEmpty": string|undefined
   "title": string|undefined
 }

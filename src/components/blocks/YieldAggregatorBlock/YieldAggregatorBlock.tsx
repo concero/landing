@@ -11,7 +11,7 @@ import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
 const items = [
   {
     title: 'Find the best APR',
-    body: 'Find the best rates among 1000+ pools',
+    body: 'Find the best rates among 3000+ pools',
     imgSrc: fireImg,
   },
   {
@@ -36,13 +36,13 @@ export function YieldAggregatorBlock() {
     <Block
       title="Yield Aggregator"
       body={
-        'Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent.'
+        'Find best yield opportunities across 6 Blockchains and deposit seamlessly. All the tools and information at your fingertips.'
       }
     >
       <div className={classNames.cardsContainer}>
         <CardMain
           title={'All-in-one staking'}
-          body={'Stake effortlessly to over 35 protocols across 9 chains'}
+          body={'Stake effortlessly to over 36 protocols across 6 chains'}
           imgSrc={yieldImg}
           className={classNames.flex1}
         />

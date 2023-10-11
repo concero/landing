@@ -5,10 +5,12 @@ export function MainButton({
   children,
   size = 'sm',
   className = null,
+  onClick = null,
 }: {
   children: ReactNode
   size: 'md' | 'lg' | 'sm'
   className?: string | null
+  onClick?: () => void
 }) {
   let classes = classNames[size]
   if (className) {
@@ -16,7 +18,7 @@ export function MainButton({
   }
 
   return (
-    <button className={`${classNames.container} ${classes}`}>
+    <button className={`${classNames.container} ${classes}`} onClick={onClick && onClick}>
       <div className={classNames.innerContainer}>{children}</div>
     </button>
   )

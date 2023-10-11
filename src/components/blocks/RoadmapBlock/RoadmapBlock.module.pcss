@@ -27,17 +27,15 @@
 
     .line {
         flex: 1;
-        height: 100%;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: var(--sp-lg);
     }
 }
 
-
 .roadmapCardContainer {
     flex: 1;
-    height: 100%;
+    height: 400px;
     background-color: var(--color-card-dark);
 
     .headerWrapper {
@@ -98,11 +96,28 @@
 }
 
 
+.firstEmpty {
+}
+
+.secondEmpty {
+}
+
+.thirdEmpty {
+}
+
+.fourthEmpty {
+}
+
+
 @media (max-width: 1300px) {
     .roadMapCardsContainer {
-        height: unset;
+
+        .roadmapCardContainer {
+            flex: unset;
+        }
 
         .line {
+            height: 100%;
             flex-direction: column;
         }
     }
@@ -126,6 +141,7 @@
     .header {
         padding-bottom: var(--sp-lg);
     }
+
 }
 
 

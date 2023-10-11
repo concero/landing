@@ -3,6 +3,7 @@ import { Card } from '../../cards/Card/Card'
 import classNames from './JoinBlock.module.pcss'
 import { MainButton } from '../../layout/MainButton/MainButton'
 import object1 from '../../../assets/images/JoinBlock/object1.svg'
+import { Input } from '../../layout/Input/Input'
 
 export function JoinBlock() {
   return (
@@ -13,9 +14,12 @@ export function JoinBlock() {
             <h2>Join newsletter</h2>
             <p className={'body1'}>Be the first to know about progress, trading competitions, new features and more.</p>
           </div>
-          <MainButton size={'md'}>
-            <h4>Submit</h4>
-          </MainButton>
+          <div className={classNames.inputContainer}>
+            <Input placeholder={'E-mail'} />
+            <MainButton size={'md'}>
+              <h4>Submit</h4>
+            </MainButton>
+          </div>
         </div>
         <div className={classNames.imgContainer}>
           <img src={object1} />

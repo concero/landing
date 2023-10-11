@@ -4,8 +4,8 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
-  "cardContainer": string|undefined
-  "imgContainer": string|undefined
-  "inputContainer": string|undefined
+  "container": string|undefined
+  "header": string|undefined
+  "overlay": string|undefined
   "titleContainer": string|undefined
 }

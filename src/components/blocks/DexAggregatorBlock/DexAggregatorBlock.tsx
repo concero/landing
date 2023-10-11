@@ -17,7 +17,7 @@ const items = [
   },
   {
     title: 'Swap Insurance',
-    body: 'Insure your cross-chain swaps for peace of mind',
+    body: 'Insure your cross-chain swaps for peace of mindInsure your cross-chain swaps for peace of mind',
     imgSrc: fire,
   },
   {
@@ -34,20 +34,20 @@ export function DexAggregatorBlock() {
     <Block
       title="DEX aggregator"
       body={
-        'Qorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent.'
+        'Swap seamlessly across 50+ blockchains, 100+ DEXes and Bridges. With all the tools at your fingertips enter the world of chain-agnostic DeFi with Concero.'
       }
     >
       <div className={classNames.cardsContainer}>
         <CardMain
           title={'Live news & transactions'}
-          body={'Stay updated with live news & transactions'}
+          body={'Stay updated with live price, news and transactions'}
           imgSrc={chartImg}
           className={classNames.flex1}
           imgWidth={'100%'}
         />
         <CardMain
           title={'Cross-chain'}
-          body={'Swap across 16 chains, 13 bridges & 34 DEXes.'}
+          body={'Swap across 50+ chains, 100+ DEXes and Bridges'}
           imgSrc={swapImg}
           className={classNames.flex1}
           imgWidth={isMobile ? '100%' : 478}

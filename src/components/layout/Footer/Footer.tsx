@@ -3,8 +3,13 @@ import LogoWhite from '../../../assets/images/Footer/LogoWhite.svg'
 import discord from '../../../assets/images/Footer/discord.svg'
 import twitter from '../../../assets/images/Footer/twitter.svg'
 import linkedin from '../../../assets/images/Footer/linkedin.svg'
+import { MainButton } from '../MainButton/MainButton'
+import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
+import { useState } from 'react'
 
 export function Footer() {
+  const [isModalOpened, setIsModalOpened] = useState(false)
+
   return (
     <footer className={classNames.footer}>
       <div className={classNames.logoContainer}>
@@ -31,7 +36,20 @@ export function Footer() {
             <p className={'body2'}>Privacy Policy</p>
           </div>
         </div>
+        <div className={classNames.columnContainer}>
+          <div>
+            <MainButton size={'md'} onClick={() => setIsModalOpened(true)}>
+              Contact us
+            </MainButton>
+          </div>
+        </div>
       </div>
+      <ContactModal
+        show={isModalOpened}
+        setShow={setIsModalOpened}
+        title={'Сontact us'}
+        body={'Etiam eu turpis molestie, dictum est a, mattis tellus.'}
+      />
     </footer>
   )
 }

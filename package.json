@@ -15,6 +15,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "@tabler/icons": "^2.26.0",
     "axios": "^1.4.0",
     "axios-retry": "^3.5.1",

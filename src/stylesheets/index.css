@@ -22,7 +22,7 @@
     --sp-block-v: 100px;
     --sp-gap: 16px;
     --sp-gap-sm: 8px;
-    --color-border-main: #EDEDED;
+    --color-border-main: #D3D0E380;
     --radius-md: 16px;
 
     color-scheme: light dark;
@@ -57,6 +57,7 @@
     --color-text-primary: #131313;
     --color-text-secondary: #888698;
     --color-bg1: #F1F2F5;
+
 }
 
 #root {
