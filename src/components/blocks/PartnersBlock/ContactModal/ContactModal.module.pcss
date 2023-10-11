@@ -42,3 +42,25 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        justify-content: unset;
+        gap: var(--sp-xl);
+    }
+
+    .formContainer {
+        padding: 0;
+    }
+
+    .imageContainer {
+        width: 100%;
+        flex: 1;
+    }
+
+    .inputContainer {
+        gap: var(--sp-lg);
+        padding-top: var(--sp-lg);
+    }
+}

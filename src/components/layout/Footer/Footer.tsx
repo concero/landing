@@ -54,7 +54,7 @@ export function Footer() {
         show={isModalOpened}
         setShow={setIsModalOpened}
         title={'Сontact us'}
-        body={'Etiam eu turpis molestie, dictum est a, mattis tellus.'}
+        body={'Reach out if you have any requests, questions, problems or just want to chat.'}
       />
     </footer>
   )
