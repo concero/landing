@@ -20,10 +20,12 @@ export const MainScreen = () => {
           </div>
           <div className={classNames.cornerContainer}>
             <div className={classNames.buttonContainer}>
-              <MainButton size={isMobile ? 'sm' : 'lg'} className={classNames.mainButton}>
-                <h2 className={classNames.buttonTitle}>Launch app</h2>
-                <LaunchAppIcon size={isMobile ? 'sm' : isIpad ? 'md' : 'lg'} className={classNames.anime} />
-              </MainButton>
+              <a href="https://dex.concero.io/exchange" target={'_blank'}>
+                <MainButton size={isMobile ? 'sm' : 'lg'} className={classNames.mainButton}>
+                  <h2 className={classNames.buttonTitle}>Launch app</h2>
+                  <LaunchAppIcon size={isMobile ? 'sm' : isIpad ? 'md' : 'lg'} className={classNames.anime} />
+                </MainButton>
+              </a>
             </div>
             <img src={corner} />
           </div>

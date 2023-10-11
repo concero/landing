@@ -10,10 +10,12 @@ export const Header: FC<HeaderProps> = () => {
   return (
     <header className={classNames.container}>
       <Logo />
-      <MainButton className={classNames.mainButton}>
-        <h4>Launch app</h4>
-        <LaunchAppIcon className={classNames.anime} />
-      </MainButton>
+      <a href="https://dex.concero.io/exchange" target={'_blank'}>
+        <MainButton className={classNames.mainButton}>
+          <h4>Launch app</h4>
+          <LaunchAppIcon className={classNames.anime} />
+        </MainButton>
+      </a>
     </header>
   )
 }

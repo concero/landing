@@ -15,9 +15,15 @@ export function Footer() {
       <div className={classNames.logoContainer}>
         <img src={LogoWhite} />
         <div className={classNames.linksContainer}>
-          <img src={discord} />
-          <img src={twitter} />
-          <img src={linkedin} />
+          <a href="https://discord.gg/nBMAdxYTZK" target={'_blank'}>
+            <img src={discord} />
+          </a>
+          <a href="https://twitter.com/concero_io" target={'_blank'}>
+            <img src={twitter} />
+          </a>
+          <a href="https://medium.com/@concero" target={'_blank'}>
+            <img src={linkedin} />
+          </a>
         </div>
       </div>
       <div className={classNames.aboutContainer}>
