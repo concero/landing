@@ -3,6 +3,8 @@ import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
 import object from '../../../../assets/images/JoinBlock/object1.svg'
 import { MainButton } from '../../../layout/MainButton/MainButton'
+import { Button } from '../../../layout/Button/Button'
+import close from '../../../../assets/icons/Close.svg'
 
 interface ContactModalProps {
   show: boolean
@@ -32,6 +34,9 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
         <div className={classNames.imageContainer}>
           <img src={object} />
         </div>
+        <Button className={classNames.closeButton} size={'xs'} onClick={() => setShow(false)}>
+          <img src={close} />
+        </Button>
       </div>
     </Modal>
   )

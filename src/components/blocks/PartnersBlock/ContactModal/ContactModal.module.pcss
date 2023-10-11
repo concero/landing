@@ -28,6 +28,7 @@
     overflow: hidden;
     border-radius: var(--st-br-card);
     background-color: var(--color-base-black);
+    position: relative;
 
     img {
         transform: scale(2) translateY(40px) translateX(40px);
@@ -41,6 +42,13 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: var(--sp-lg);
+    right: var(--sp-lg);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

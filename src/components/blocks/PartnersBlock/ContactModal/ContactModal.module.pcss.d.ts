@@ -5,6 +5,7 @@ export default identifiersMap
 
 export type CssIdentifiersMap = {
   "buttonTitle": string|undefined
+  "closeButton": string|undefined
   "container": string|undefined
   "formContainer": string|undefined
   "imageContainer": string|undefined
