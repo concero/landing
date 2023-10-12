@@ -54,16 +54,29 @@
     gap: var(--sp-xl)
 }
 
-.hide-down {
-    opacity: 0;
-    transform: translateY(10px);
-}
 
-.show-up {
+.fade-in-up {
+    transition: opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     opacity: 1;
     transform: translateY(0);
 }
 
-.fade-in-out {
-    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+.fade-out-down {
+    transition: opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+@keyframes spring-fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
