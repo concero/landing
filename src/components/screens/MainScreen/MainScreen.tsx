@@ -1,5 +1,5 @@
 import classNames from './MainScreen.module.pcss'
-import objectImg from '../../../assets/images/mainScreen/object.svg'
+import objectImg from '../../../assets/images/mainScreen/blob.png'
 import corner from '../../../assets/images/mainScreen/corner.svg'
 import { MainButton } from '../../layout/MainButton/MainButton'
 import { LaunchAppIcon } from '../../icons/LaunchAppIcon/LaunchAppIcon'

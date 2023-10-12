@@ -1,25 +1,5 @@
 import { Block } from '../../layout/Block/Block'
 import classNames from './ChainsBlock.module.pcss'
-import optimism from '../../../assets/images/chains/optimism.svg'
-import x from '../../../assets/images/chains/x.svg'
-import polygon from '../../../assets/images/chains/polygon.svg'
-import image47 from '../../../assets/images/chains/image47.svg'
-import avalanche from '../../../assets/images/chains/avalanche.svg'
-import card from '../../../assets/images/chains/card.svg'
-import Layer from '../../../assets/images/chains/Layer.svg'
-import BSC from '../../../assets/images/chains/BSC.svg'
-import ethereum from '../../../assets/images/chains/ethereum.svg'
-import image44 from '../../../assets/images/chains/image44.svg'
-import ProtocolIcon from '../../../assets/images/chains/ProtocolIcon.svg'
-import solana from '../../../assets/images/chains/solana.svg'
-import image21 from '../../../assets/images/chains/image21.svg'
-import bitcoin from '../../../assets/images/chains/bitcoin.svg'
-import image11 from '../../../assets/images/chains/image11.svg'
-import Group4 from '../../../assets/images/chains/Group4.svg'
-import gnosis from '../../../assets/images/chains/gnosis.svg'
-import icon from '../../../assets/images/chains/icon.svg'
-import vector from '../../../assets/images/chains/vector.svg'
-import image23 from '../../../assets/images/chains/image23.svg'
 
 interface ChainCardProps {
   imgSrc: string
@@ -34,26 +14,30 @@ function ChainCard({ imgSrc }: ChainCardProps) {
 }
 
 const chainsImg = [
-  optimism,
-  x,
-  polygon,
-  image47,
-  avalanche,
-  card,
-  Layer,
-  BSC,
-  ethereum,
-  image44,
-  ProtocolIcon,
-  solana,
-  image21,
-  bitcoin,
-  image11,
-  Group4,
-  gnosis,
-  icon,
-  vector,
-  image23,
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1027.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/11840.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/3513.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1.png',
+  'https://s3.coinmarketcap.com/static-gravity/image/8b8447abcb1949ab9f426b1521cdc70f.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/11841.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/52.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/3890.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/6636.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/5805.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/9285.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1958.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/512.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/2010.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1975.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/5426.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/5034.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/3945.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/3635.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/1659.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/3794.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/12220.png',
+  'https://s2.coinmarketcap.com/static/img/coins/128x128/2.png',
 ]
 
 export const ChainsBlock = () => {
