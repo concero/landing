@@ -1,12 +1,12 @@
 import classNames from './MainScreen.module.pcss'
 import objectImg from '../../../assets/images/mainScreen/object.svg'
 import corner from '../../../assets/images/mainScreen/corner.svg'
-import { Header } from '../../layout/Header/Header'
 import { MainButton } from '../../layout/MainButton/MainButton'
 import { LaunchAppIcon } from '../../icons/LaunchAppIcon/LaunchAppIcon'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { animated, useInView } from '@react-spring/web'
 import { fadeInUp, popUp } from '../../../constants/animations'
+import logoImg from '../../../assets/images/Footer/LogoWhite.svg'
 
 export const MainScreen = () => {
   const isIpad = useMediaQuery('ipad')
@@ -17,10 +17,11 @@ export const MainScreen = () => {
 
   return (
     <div className={`screenContainer ${classNames.container}`}>
-      <Header />
+      {/*<Header />*/}
       <div className={classNames.bgContainer}>
         <div className={classNames.leftSide}>
           <div className={classNames.headerContainer}>
+            <img src={logoImg} className={classNames.logoImg} />
             <animated.h1 ref={ref} style={springs} className={classNames.header}>
               World’s first cross-chain DEX & Staking aggregator
             </animated.h1>

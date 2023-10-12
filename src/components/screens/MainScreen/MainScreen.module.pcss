@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    padding: 0 var(--sp-xl) var(--sp-xxl) var(--sp-xl);
+    padding: var(--sp-xl) var(--sp-xl) var(--sp-xxl) var(--sp-xl);
     margin-bottom: var(--sp-block-v)
 }
 
@@ -16,6 +16,13 @@
     border-top-right-radius: var(--st-br-card-lg);
     border-bottom-right-radius: var(--st-br-card-lg);
     background-color: var(--color-bg-main);
+}
+
+.logoImg {
+    width: 156px;
+    position: absolute;
+    top: 70px;
+    left: 98px;
 }
 
 .leftSide {
@@ -112,6 +119,11 @@
                 }
             }
         }
+
+        .logoImg {
+            position: unset;
+            padding-bottom: var(--sp-xl);
+        }
     }
 
     .rightSide {
@@ -192,6 +204,10 @@
                 transform: scaleX(-1);
             }
         }
+    }
+
+    .logoImg {
+        width: 100px;
     }
 }
 
