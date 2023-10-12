@@ -9,6 +9,7 @@
     --st-br-xs: 4px;
     --st-br-card: 32px;
     --st-br-card-sm: 24px;
+    --st-br-card-md: 32px;
     --st-br-card-lg: 64px;
     --sp-xxl: 48px;
     --sp-xl: 32px;
@@ -223,6 +224,10 @@ button {
 }
 
 @media (width <= 768px) {
+    .card {
+        border-radius: var(--st-br-sm);
+    }
+
     h1 {
         font-size: 48px;
     }
@@ -234,4 +239,5 @@ button {
     .body1 {
         font-size: 16px;
     }
+
 }

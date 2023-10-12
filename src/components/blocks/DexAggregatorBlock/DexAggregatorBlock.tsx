@@ -17,7 +17,7 @@ const items = [
   },
   {
     title: 'Swap Insurance',
-    body: 'Insure your cross-chain swaps for peace of mindInsure your cross-chain swaps for peace of mind',
+    body: 'Insure your cross-chain swaps for peace of mind',
     imgSrc: fire,
   },
   {

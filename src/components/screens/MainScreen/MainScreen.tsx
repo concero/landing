@@ -12,8 +12,13 @@ export const MainScreen = () => {
   const isIpad = useMediaQuery('ipad')
   const isMobile = useMediaQuery('mobile')
 
+  const slideUpLeft = {
+    from: { x: 50, y: 50 },
+    to: { x: 0, y: 0 },
+  }
   const [ref, springs] = useInView(() => fadeInUp)
   const [buttonRef, buttonSprings] = useInView(() => popUp)
+  const [imgRef, imgSprings] = useInView(() => slideUpLeft)
 
   return (
     <div className={`screenContainer ${classNames.container}`}>
@@ -39,9 +44,9 @@ export const MainScreen = () => {
           </div>
         </div>
         <div className={classNames.rightSide}>
-          <div className={classNames.imgContainer}>
+          <animated.div className={classNames.imgContainer} ref={imgRef} style={imgSprings}>
             <img src={objectImg} />
-          </div>
+          </animated.div>
           {isMobile ? (
             <div className={classNames.imgContainer2}>
               <img src={objectImg} />
