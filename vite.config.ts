@@ -5,7 +5,6 @@ import postcssPresetEnv from 'postcss-preset-env'
 import postcssSorting from 'postcss-sorting'
 import postcssImport from 'postcss-import'
 import precss from 'precss'
-import postcssDTS from 'postcss-d-ts'
 import EnvironmentPlugin from 'vite-plugin-environment'
 
 export default defineConfig({
@@ -21,7 +20,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [postcssDTS(), postcssImport(), postcssSorting(), postcssPresetEnv(), precss()],
+      plugins: [postcssImport(), postcssSorting(), postcssPresetEnv(), precss()],
     },
   },
 })
