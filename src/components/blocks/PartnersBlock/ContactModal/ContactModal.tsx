@@ -26,7 +26,7 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
     e.preventDefault()
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/mqkvwbgb',
+      url: 'https://formspree.io/f/maygajao',
       data: inputs,
     })
       .then((response) => {

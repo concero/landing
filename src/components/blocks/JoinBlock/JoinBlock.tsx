@@ -16,7 +16,7 @@ export function JoinBlock() {
     e.preventDefault()
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/mqkvwbgb',
+      url: 'https://formspree.io/f/maygajao',
       data: inputs,
     })
       .then((response) => {
