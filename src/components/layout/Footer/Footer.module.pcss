@@ -23,12 +23,9 @@
     flex: 1;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: var(--sp-lg);
 }
 
-
-.columnContainer {
-
-}
 
 .columnTitle {
     color: var(--color-base-white);
@@ -47,7 +44,6 @@
         font-size: 32px;
     }
 
-
     .footer {
         height: 500px;
         border-top-left-radius: 0px;
@@ -60,7 +56,6 @@
         flex-direction: row;
     }
 
-
     .columnContainer {
         flex: 1;
         justify-content: flex-start;
@@ -69,6 +64,10 @@
 
 
 @media (max-width: 400px) {
+    .footer {
+        padding: var(--sp-xl) var(--sp-md);
+    }
+
     .logoContainer {
         flex: none;
     }
@@ -77,11 +76,13 @@
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
+        padding-top: var(--sp-lg);
     }
 
     .columnContainer {
         align-items: center;
         justify-content: flex-end;
+        flex: unset;
 
         .column {
             align-items: center;

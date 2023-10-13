@@ -1,12 +1,13 @@
 import { Block } from '../../layout/Block/Block'
 import classNames from './YieldAggregatorBlock.module.pcss'
-import yieldImg from '../../../assets/images/YieldBlock/YieldImg.svg'
+import yieldImg from '../../../assets/images/YieldBlock/YieldImg.png'
 import fireImg from '../../../assets/images/YieldBlock/Fire.svg'
 import aaveLogo from '../../../assets/images/YieldBlock/AaveLogo.svg'
 import lidoLogo from '../../../assets/images/YieldBlock/LidoLogo.svg'
 import uniswapLogo from '../../../assets/images/YieldBlock/UniswapLogo.svg'
 import { CardMain } from '../../cards/CardMain/CardMain'
 import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
+import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 
 const items = [
   {
@@ -32,6 +33,8 @@ const items = [
 ]
 
 export function YieldAggregatorBlock() {
+  const isMobile = useMediaQuery('mobile')
+
   return (
     <Block
       title="Yield Aggregator"
@@ -45,6 +48,7 @@ export function YieldAggregatorBlock() {
           body={'Stake effortlessly to over 36 protocols across 6 chains'}
           imgSrc={yieldImg}
           className={classNames.flex1}
+          imgWidth={isMobile ? '100%' : 450}
         />
         <div className={classNames.secondaryCardsContainer}>
           <div className={classNames.line}>

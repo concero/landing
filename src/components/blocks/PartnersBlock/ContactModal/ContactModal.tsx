@@ -1,10 +1,12 @@
 import { Modal } from '../../../layout/Modal/Modal'
 import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
-import object from '../../../../assets/images/JoinBlock/object1.svg'
+import object from '../../../../assets/images/JoinBlock/object1.png'
 import { MainButton } from '../../../layout/MainButton/MainButton'
 import { Button } from '../../../layout/Button/Button'
 import close from '../../../../assets/icons/Close.svg'
+import { useState } from 'react'
+import axios from 'axios'
 
 interface ContactModalProps {
   show: boolean
@@ -14,6 +16,35 @@ interface ContactModalProps {
 }
 
 export function ContactModal({ show, setShow, title, body }: ContactModalProps) {
+  const [inputs, setInputs] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  function handleSubmit(e: any) {
+    e.preventDefault()
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/f/mqkvwbgb',
+      data: inputs,
+    })
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {
+        setShow(false)
+        setInputs({
+          name: '',
+          email: '',
+          message: '',
+        })
+      })
+  }
+
   return (
     <Modal show={show} setShow={setShow}>
       <div className={classNames.container}>
@@ -23,10 +54,26 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
             <p className={'body2'}>{body}</p>
           </div>
           <form className={classNames.inputContainer}>
-            <Input title={'Name'} type={'text'} />
-            <Input title={'Email'} type={'email'} />
-            <Input title={'Message'} inputType={'textarea'} type={'text'} />
-            <MainButton size={'md'}>
+            <Input
+              title={'Name'}
+              type={'text'}
+              onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
+              value={inputs.name}
+            />
+            <Input
+              title={'Email'}
+              type={'email'}
+              onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+              value={inputs.email}
+            />
+            <Input
+              title={'Message'}
+              inputType={'textarea'}
+              type={'text'}
+              onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
+              value={inputs.message}
+            />
+            <MainButton size={'md'} onClick={handleSubmit}>
               <h4 className={classNames.buttonTitle}>Send</h4>
             </MainButton>
           </form>

@@ -10,15 +10,16 @@ import { useState } from 'react'
 interface PartnerCardProps {
   title: string
   imgSrc: string
+  isDisabled?: boolean
 }
 
-function PartnerCard({ title, imgSrc }: PartnerCardProps) {
+function PartnerCard({ title, imgSrc, isDisabled = false }: PartnerCardProps) {
   return (
     <Card className={classNames.partnerCardContainer}>
       <div className={classNames.imageContainer}>
         <img src={imgSrc} />
       </div>
-      <p className={'body1'}>{title}</p>
+      <p className={`body1 ${isDisabled ? classNames.disabled : ''}`}>{title}</p>
     </Card>
   )
 }
@@ -39,7 +40,7 @@ export const PartnersBlock = () => {
           <div className={classNames.column}>
             <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} />
             <PartnerCard title={items[4].title} imgSrc={items[4].imgSrc} />
-            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} />
+            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} isDisabled={true} />
           </div>
         </div>
         <div className={classNames.contactCard}>
@@ -48,7 +49,7 @@ export const PartnersBlock = () => {
             <p className={'body2'}>We are always looking to grow with new partners </p>
           </div>
           <MainButton size={'md'} onClick={() => setIsModalOpen(true)}>
-            Let’s Chat
+            <p>Let’s Chat</p>
           </MainButton>
         </div>
       </div>

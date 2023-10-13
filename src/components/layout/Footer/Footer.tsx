@@ -45,7 +45,7 @@ export function Footer() {
         <div className={classNames.columnContainer}>
           <div>
             <MainButton size={'md'} onClick={() => setIsModalOpened(true)}>
-              Contact us
+              <p>Contact us</p>
             </MainButton>
           </div>
         </div>

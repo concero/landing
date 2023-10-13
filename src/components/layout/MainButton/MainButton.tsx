@@ -19,7 +19,7 @@ export function MainButton({
 
   return (
     <button className={`${classNames.container} ${classes}`} onClick={onClick && onClick}>
-      <div className={classNames.innerContainer}>{children}</div>
+      {children}
     </button>
   )
 }

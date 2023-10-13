@@ -90,6 +90,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+.mainButton {
+    gap: var(--sp-xl);
+}
+
 .mainButton:hover .anime {
     rotate: 45deg;
 }
@@ -155,8 +159,9 @@
 
 @media (max-width: 768px) {
     .container {
-        padding:  var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
+        padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
     }
+
     .bgContainer {
         border-top-left-radius: var(--st-br-card-md);
         border-top-right-radius: var(--st-br-card-md);

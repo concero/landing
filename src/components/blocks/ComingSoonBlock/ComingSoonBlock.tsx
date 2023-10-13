@@ -1,9 +1,9 @@
 import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import { CardHeader } from '../../layout/CardHeader/CardHeader'
-import portfolio1 from '../../../assets/images/ComingSoonBlock/portfolio1.svg'
-import portfolio2 from '../../../assets/images/ComingSoonBlock/portfolio2.svg'
-import portfolio3 from '../../../assets/images/ComingSoonBlock/portfolio3.svg'
+import portfolio1 from '../../../assets/images/ComingSoonBlock/portfolio1.png'
+import portfolio2 from '../../../assets/images/ComingSoonBlock/portfolio2.png'
+import portfolio3 from '../../../assets/images/ComingSoonBlock/portfolio3.png'
 import classNames from './ComingSoonBlock.module.pcss'
 import referralImg from '../../../assets/images/ComingSoonBlock/referral.svg'
 
