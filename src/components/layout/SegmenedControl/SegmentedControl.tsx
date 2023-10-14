@@ -8,17 +8,11 @@ export enum Segment {
 export function SegmentedControl({ selectedSegment, setSelectedSegment }) {
   return (
     <div className={classNames.container}>
-      <button
-        className={`${classNames.segment} ${selectedSegment === Segment['2023'] ? classNames.active : ''}`}
-        onClick={() => setSelectedSegment(Segment['2023'])}
-      >
-        2023
+      <button onClick={() => setSelectedSegment(Segment['2023'])}>
+        <p className={`${classNames.segment} ${selectedSegment === Segment['2023'] ? classNames.active : ''}`}>2023</p>
       </button>
-      <button
-        className={`${classNames.segment} ${selectedSegment === Segment['2024'] ? classNames.active : ''}`}
-        onClick={() => setSelectedSegment(Segment['2024'])}
-      >
-        2024
+      <button onClick={() => setSelectedSegment(Segment['2024'])}>
+        <p className={`${classNames.segment} ${selectedSegment === Segment['2024'] ? classNames.active : ''}`}>2024</p>
       </button>
     </div>
   )
