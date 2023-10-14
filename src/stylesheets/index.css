@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, label, span, li, textarea {
     user-select: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, input {
     transform: translateY(1px);
 }
 
