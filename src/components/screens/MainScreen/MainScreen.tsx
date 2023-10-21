@@ -40,7 +40,7 @@ export const MainScreen = () => {
                 </MainButton>
               </a>
             </animated.div>
-            <img src={corner} />
+            <img src={corner} className={classNames.cornerImg} />
           </div>
         </div>
         <div className={classNames.rightSide}>
