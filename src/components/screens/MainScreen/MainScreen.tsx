@@ -22,7 +22,6 @@ export const MainScreen = () => {
       <div className={classNames.bgContainer}>
         <div className={classNames.leftSide}>
           <div className={classNames.headerContainer}>
-            {/*<img src={logoImg} className={classNames.logoImg} />*/}
             <animated.h1 ref={ref} style={springs} className={classNames.header}>
               Making cross-chain effortless
             </animated.h1>
