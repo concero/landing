@@ -1,9 +1,7 @@
 import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import { CardHeader } from '../../layout/CardHeader/CardHeader'
-import portfolio1 from '../../../assets/images/ComingSoonBlock/portfolio1.png'
-import portfolio2 from '../../../assets/images/ComingSoonBlock/portfolio2.png'
-import portfolio3 from '../../../assets/images/ComingSoonBlock/portfolio3.png'
+import portfolioTracker from '../../../assets/images/ComingSoonBlock/portfolioTracker.png'
 import classNames from './ComingSoonBlock.module.pcss'
 import referralImg from '../../../assets/images/ComingSoonBlock/referral.svg'
 
@@ -11,20 +9,12 @@ export const ComingSoonBlock = () => {
   return (
     <Block title={'Coming soon'}>
       <div className={classNames.container}>
-        <Card color={'black'} className={`${classNames.cardContainer} f1`}>
+        <Card className={`${classNames.cardContainer} f1`}>
           <div className={classNames.headerContainer}>
-            <CardHeader title={'Portfolio\n Tracker'} body={'Track the performance of your assets'} variant={'white'} />
+            <CardHeader title={'Portfolio Tracker'} body={'Track the performance of your assets'} />
           </div>
-          <div className={classNames.imagesContainer}>
-            <div className={classNames.imgContainer}>
-              <img src={portfolio1} />
-            </div>
-            <div className={classNames.imgContainer}>
-              <img src={portfolio2} />
-            </div>
-            <div className={classNames.imgContainer}>
-              <img src={portfolio3} />
-            </div>
+          <div className={classNames.imgContainer}>
+            <img src={portfolioTracker} />
           </div>
         </Card>
         <Card className={classNames.referralContainer}>

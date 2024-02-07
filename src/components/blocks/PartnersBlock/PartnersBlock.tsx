@@ -40,7 +40,7 @@ export const PartnersBlock = () => {
           <div className={classNames.column}>
             <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} />
             <PartnerCard title={items[4].title} imgSrc={items[4].imgSrc} />
-            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} isDisabled={true} />
+            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} />
           </div>
         </div>
         <div className={classNames.contactCard}>

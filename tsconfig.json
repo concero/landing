@@ -4,7 +4,8 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ESNext"
+      "ESNext",
+      "es2015.promise"
     ],
     "plugins": [
       {
@@ -32,10 +33,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src"
+    "src",
+    "node_modules/eslint-plugin-react/lib/types.d.ts"
   ],
   "references": [
     {

@@ -1,54 +1,46 @@
 import { Block } from '../../layout/Block/Block'
 import classNames from './YieldAggregatorBlock.module.pcss'
-import yieldImg from '../../../assets/images/YieldBlock/YieldImg.png'
 import fireImg from '../../../assets/images/YieldBlock/Fire.svg'
 import aaveLogo from '../../../assets/images/YieldBlock/AaveLogo.svg'
+import stakinAggregator from '../../../assets/images/YieldBlock/stakingAggregaror.png'
 import lidoLogo from '../../../assets/images/YieldBlock/LidoLogo.svg'
 import uniswapLogo from '../../../assets/images/YieldBlock/UniswapLogo.svg'
 import { CardMain } from '../../cards/CardMain/CardMain'
 import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
-import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 
 const items = [
   {
-    title: 'Find the best APR',
-    body: 'Find the best rates among 3000+ pools',
+    title: 'Highest earnings',
+    body: 'Access the highest ARR rates from thousands of pools.',
     imgSrc: fireImg,
   },
   {
     title: 'Lending protocols',
-    body: 'Stake into Lending protocols like Aave and Compound',
+    body: 'Lend in reliable protocols like Aave and Compound.',
     imgSrc: aaveLogo,
   },
   {
     title: 'Liquid Staking',
-    body: 'Stake your assets with protocols like LIDO',
+    body: 'Enhance your staking flexibility with services like LIDO.',
     imgSrc: lidoLogo,
   },
   {
     title: 'Liquidity Provision',
-    body: 'Provide liquidity into DEXes like Uniswap',
+    body: 'Supply liquidity to leading DEXes like Uniswap or Curve.',
     imgSrc: uniswapLogo,
   },
 ]
 
 export function YieldAggregatorBlock() {
-  const isMobile = useMediaQuery('mobile')
-
   return (
-    <Block
-      title="Yield Aggregator"
-      body={
-        'Find best yield opportunities across 6 Blockchains and deposit seamlessly. All the tools and information at your fingertips.'
-      }
-    >
+    <Block title="Yield Aggregator" body={'Discover top yield opportunities across 17 Blockchains, all in one place.'}>
       <div className={classNames.cardsContainer}>
         <CardMain
           title={'All-in-one staking'}
-          body={'Stake effortlessly to over 36 protocols across 6 chains'}
-          imgSrc={yieldImg}
+          body={'Engage with over 35 protocols across 17 chains effortlessly.'}
+          imgSrc={stakinAggregator}
           className={classNames.flex1}
-          imgWidth={isMobile ? '100%' : 450}
+          imgWidth={'100%'}
         />
         <div className={classNames.secondaryCardsContainer}>
           <div className={classNames.line}>

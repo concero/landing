@@ -1,7 +1,6 @@
 .cardsContainer {
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: var(--sp-lg);
 }
 
@@ -22,13 +21,13 @@
     flex: 1
 }
 
-@media (max-width: 1300px) {
+@media (width <= 1300px) {
     .cardsContainer {
         flex-direction: column;
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .secondaryCardsContainer {
         min-width: unset;
         width: 100%;

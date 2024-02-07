@@ -1,25 +1,33 @@
 .container {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--sp-md) 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-lg) var(--sp-lg);
 
-    .buttonText {
-        color: var(--color-primary-500);
-    }
+  .buttonText {
+    color: var(--color-primary-500);
+  }
 
-    .buttonIcon {
-        color: var(--color-primary-500);
-        transform: rotate(90deg);
-    }
+  .buttonIcon {
+    color: var(--color-primary-500);
+    transform: rotate(90deg);
+  }
 }
 
 .anime {
-    rotate: 0deg;
-    transition: all 0.3s ease-in-out;
+  rotate: 0deg;
+  transition: all 0.3s ease-in-out;
 }
 
 .mainButton:hover .anime {
-    rotate: 45deg;
+  rotate: 45deg;
+}
+
+.button {
+  padding: var(--sp-sm) var(--sp-md);
+}
+
+.buttonTitle {
+  color: var(--color-base-white);
 }

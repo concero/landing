@@ -1,65 +1,63 @@
 .wrapper {
-    flex-direction: row;
-    gap: var(--sp-lg);
+  flex-direction: row;
+  gap: var(--sp-lg);
 }
 
-
 .partnerCardContainer {
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--color-card-dark);
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  border-radius: var(--st-br-card-sm);
+  padding: var(--sp-sm);
+  gap: var(--sp-md);
+
+  p {
+    color: var(--color-base-white);
+  }
+
+  .imageContainer {
+    width: 64px;
+    height: 64px;
     border-radius: var(--st-br-card-sm);
-    padding: var(--sp-sm);
-    gap: var(--sp-md);
+  }
 
-    p {
-        color: var(--color-base-white);
-    }
-
-    .imageContainer {
-        width: 64px;
-        height: 64px;
-        border-radius: var(--st-br-card-sm);
-    }
-
-    .disabled {
-        color: var(--color-text-secondary);
-    }
+  .disabled {
+    color: var(--color-text-secondary);
+  }
 }
 
 .cardsContainer {
+  flex: 1;
+  gap: var(--sp-lg);
+  flex-direction: row;
+
+  .column {
     flex: 1;
     gap: var(--sp-lg);
-    flex-direction: row;
-
-    .column {
-        flex: 1;
-        gap: var(--sp-lg);
-    }
+  }
 }
 
 .contactCard {
-    flex: 1;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: var(--color-card-dark);
-    border-radius: var(--st-br-card-sm);
-    padding: var(--sp-xxl);
-    gap: var(--sp-lg);
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--color-card-dark);
+  border-radius: var(--st-br-card-sm);
+  padding: var(--sp-xxl);
+  gap: var(--sp-lg);
 
-    .contactHeader {
-        max-width: 316px;
-        gap: var(--sp-sm);
+  .contactHeader {
+    max-width: 316px;
+    gap: var(--sp-sm);
 
-        h2 {
-            color: var(--color-base-white);
-        }
+    h2 {
+      color: var(--color-base-white);
     }
+  }
 }
 
-
-@media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
-    }
+@media (width <= 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
 }

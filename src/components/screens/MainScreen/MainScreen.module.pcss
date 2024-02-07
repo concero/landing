@@ -1,227 +1,97 @@
 .container {
-    width: 100%;
-    padding: var(--sp-xl) var(--sp-xl) var(--sp-xxl) var(--sp-xl);
-    margin-bottom: var(--sp-block-v);
-    min-height: 674px;
+  width: 100%;
+  padding: 0 var(--sp-xl) var(--sp-xxl) var(--sp-xl);
+  margin-bottom: var(--sp-block-v);
+  min-height: 674px;
 }
 
 .bgContainer {
-    flex: 1;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    border-top-left-radius: var(--st-br-card-lg);
-    border-top-right-radius: var(--st-br-card-lg);
-    border-bottom-right-radius: var(--st-br-card-lg);
-    background-color: var(--color-bg-main);
-}
-
-.logoImg {
-    width: 156px;
-    position: absolute;
-    top: 70px;
-    left: 98px;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: var(--st-br-card-lg);
+  background-color: var(--color-bg-main);
+  padding-left: 98px;
 }
 
 .leftSide {
-    height: 100%;
+  height: 100%;
 
-    .headerContainer {
-        flex: 1;
-        padding-left: 98px;
-        justify-content: center;
-        margin-bottom: -90px;
+  .headerContainer {
+    flex: 1;
+    justify-content: center;
+    gap: var(--sp-xl);
 
-        .header {
-            z-index: 1;
-            max-width: 580px;
-            color: var(--color-base-white);
-            font-size: 80px;
-        }
+    h3 {
+      color: var(--color-base-white);
+      font-weight: 400;
     }
 
-    .cornerContainer {
-        width: 619px;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-            overflow: hidden;
-        }
-
-        .buttonContainer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-
-            .buttonTitle {
-                font-size: 48px;
-            }
-        }
+    .header {
+      max-width: 580px;
+      color: var(--color-base-white);
+      font-size: 87px;
+      font-weight: 400;
+      line-height: 100%;
     }
+
+    .subTitle {
+      max-width: 300px;
+    }
+  }
 }
 
 .rightSide {
+  flex: 1;
+  height: 100%;
+  justify-content: flex-start;
+
+  .imgContainer {
     height: 100%;
-    flex: 1;
-    align-items: flex-end;
-    justify-content: flex-end;
 
-    .imgContainer {
-        margin-right: -100px;
-        margin-bottom: -60px;
-        width: 900px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scaleX(-1);
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      rotate: 45deg;
     }
+  }
 }
 
-.anime {
-    rotate: 0deg;
-    transition: all 0.3s ease-in-out;
+.buttonTitle {
+  color: var(--color-base-white);
+  line-height: 100%;
 }
 
-.mainButton {
-    gap: var(--sp-xl);
+.launchAppButton {
+  padding: var(--sp-md) var(--sp-lg) !important;
+  border-radius: var(--st-br-lg) !important;
 }
 
-.mainButton:hover .anime {
-    rotate: 45deg;
+@media (height <= 911px) {
+  .leftSide {
+    .headerContainer {
+      .header {
+        font-size: 60px;
+        max-width: 450px;
+      }
+    }
+  }
 }
 
-@media (max-width: 1024px) {
-    .leftSide {
-        .headerContainer {
-            padding-top: var(--sp-xxl);
-            padding-left: var(--sp-xxl);
-            justify-content: flex-start;
+@media (width <= 768px) {
+  .container {
+    padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
+    min-height: 500px;
+  }
 
-            .header {
-                font-size: 60px;
-            }
-        }
-
-        .cornerContainer {
-            width: 400px;
-
-            .buttonContainer {
-                .mainButton {
-                    padding-left: var(--sp-xl);
-                }
-
-                .buttonTitle {
-                    font-size: 30px;
-                }
-            }
-        }
-
-        .logoImg {
-            position: unset;
-            padding-bottom: var(--sp-xl);
-        }
-    }
-
-    .rightSide {
-        .imgContainer {
-            width: 500px;
-        }
-    }
+  .bgContainer {
+    border-top-left-radius: var(--st-br-card-md);
+    border-top-right-radius: var(--st-br-card-md);
+    border-bottom-right-radius: var(--st-br-card-md);
+  }
 }
-
-
-@media (max-height: 911px) {
-    .leftSide {
-        .headerContainer {
-
-            .header {
-                font-size: 60px;
-                max-width: 450px;
-            }
-        }
-    }
-
-    .rightSide {
-        .imgContainer {
-            width: 600px;
-        }
-    }
-
-    .logoImg {
-        position: unset;
-        padding-bottom: var(--sp-xl);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
-        min-height: 500px;
-    }
-
-    .bgContainer {
-        border-top-left-radius: var(--st-br-card-md);
-        border-top-right-radius: var(--st-br-card-md);
-        border-bottom-right-radius: var(--st-br-card-md);
-    }
-
-    .leftSide {
-        .cornerContainer {
-            width: 270px;
-            z-index: 1;
-
-            .buttonContainer {
-                .mainButton {
-                    padding-left: var(--sp-lg);
-                }
-
-                .buttonTitle {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .headerContainer {
-            padding-top: var(--sp-xl);
-            padding-left: var(--sp-xl);
-
-            .header {
-                font-size: 32px;
-                max-width: 250px;
-            }
-        }
-
-    }
-
-    .rightSide {
-        .imgContainer {
-            position: absolute;
-            width: 100%;
-        }
-
-        .imgContainer2 {
-            rotate: 180deg;
-            position: absolute;
-            width: 100%;
-            left: -80%;
-            bottom: -80px;
-
-            img {
-                transform: scaleX(-1);
-            }
-        }
-    }
-
-    .logoImg {
-        width: 100px;
-    }
-}
-

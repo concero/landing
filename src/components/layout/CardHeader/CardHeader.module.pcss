@@ -1,19 +1,28 @@
 .container {
-    gap: var(--sp-sm);
+  width: 100%;
+  gap: var(--sp-md);
+
+  p {
+    max-width: 350px;
+  }
+}
+
+.rowContainer {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .md {
-    gap: unset
 }
 
 .lg {
-    gap: var(--sp-sm);
+  gap: var(--sp-md);
 }
 
 .white {
-    color: var(--color-base-white);
+  color: var(--color-base-white);
 }
 
 .black {
-    color: var(--color-base-black);
+  color: var(--color-base-black);
 }
