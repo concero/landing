@@ -34,7 +34,7 @@ export function JoinBlock() {
   }
 
   return (
-    <Block>
+    <Block className={classNames.wrapper}>
       <Card className={classNames.cardContainer}>
         <div className={classNames.titleContainer}>
           <div>
@@ -49,6 +49,7 @@ export function JoinBlock() {
               type={'email'}
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
+              className={classNames.input}
             />
             <Button
               variant={'primary'}

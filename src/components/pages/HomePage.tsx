@@ -6,10 +6,11 @@ import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
 import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 import { JoinBlock } from '../blocks/JoinBlock/JoinBlock'
 import { Footer } from '../layout/Footer/Footer'
+import classNames from './HomePage.module.pcss'
 
 export const HomePage = () => {
   return (
-    <div>
+    <div className={classNames.container}>
       <MainScreen />
       <DexAggregatorBlock />
       <YieldAggregatorBlock />

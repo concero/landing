@@ -243,6 +243,7 @@ button {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  background-color: var(--color-base-white);
 }
 
 @media (width <= 785px) {
