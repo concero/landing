@@ -2,7 +2,6 @@ import { Modal } from '../../../layout/Modal/Modal'
 import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
 import object from '../../../../assets/images/mainScreen/mainPageFigure.png'
-import { MainButton } from '../../../layout/MainButton/MainButton'
 import { Button } from '../../../layout/Button/Button'
 import close from '../../../../assets/icons/Close.svg'
 import { useState } from 'react'
@@ -73,9 +72,9 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
               onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
               value={inputs.message}
             />
-            <MainButton size={'md'} onClick={handleSubmit}>
+            <Button size={'md'} onClick={handleSubmit}>
               <h4 className={classNames.buttonTitle}>Send</h4>
-            </MainButton>
+            </Button>
           </form>
         </div>
         <div className={classNames.imageContainer}>

@@ -60,13 +60,19 @@
   }
 }
 
-@media (width <= 400px) {
+@media (width <= 768px) {
   .footer {
     padding: var(--sp-xl) var(--sp-md);
   }
 
   .logoContainer {
     flex: none;
+    max-width: 100%;
+    padding-bottom: var(--sp-lg);
+
+    img {
+      width: 100%;
+    }
   }
 
   .aboutContainer {
@@ -77,12 +83,12 @@
   }
 
   .columnContainer {
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     flex: unset;
 
     .column {
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
     }
   }
