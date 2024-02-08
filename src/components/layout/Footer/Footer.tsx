@@ -42,6 +42,9 @@ export function Footer() {
           <div className={classNames.column}>
             <p className={'body2'}>What is Concero</p>
             <p className={'body2'}>P2P Protocol</p>
+            <a href={'/brand-assets.zip'}>
+              <p className={'body2'}>Brand assets</p>
+            </a>
             <p className={'body2'}>Help us</p>
           </div>
         </div>
