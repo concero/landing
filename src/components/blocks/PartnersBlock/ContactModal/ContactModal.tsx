@@ -1,7 +1,7 @@
 import { Modal } from '../../../layout/Modal/Modal'
 import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
-import object from '../../../../assets/images/JoinBlock/object1.png'
+import object from '../../../../assets/images/mainScreen/mainPageFigure.png'
 import { MainButton } from '../../../layout/MainButton/MainButton'
 import { Button } from '../../../layout/Button/Button'
 import close from '../../../../assets/icons/Close.svg'

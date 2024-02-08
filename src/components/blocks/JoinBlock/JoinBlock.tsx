@@ -50,17 +50,12 @@ export function JoinBlock() {
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
             />
-            {/*<MainButton size={'md'} className={classNames.mainButton} onClick={handleSubmit}>*/}
-            {/*  <h4>Submit</h4>*/}
-            {/*</MainButton>*/}
             <Button
               variant={'primary'}
               size={'lg'}
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-              onClick={() => {
-                window.open('https://app.concero.io', '_blank')
-              }}
+              onClick={handleSubmit}
             >
               <h3 className={classNames.buttonTitle}>Subscribe</h3>
             </Button>
