@@ -1,6 +1,6 @@
 import { Block } from '../../layout/Block/Block'
 import classNames from './YieldAggregatorBlock.module.pcss'
-import fireImg from '../../../assets/images/YieldBlock/Fire.svg'
+import fireImg from '../../../assets/images/YieldBlock/fire.svg'
 import aaveLogo from '../../../assets/images/YieldBlock/AaveLogo.svg'
 import stakinAggregator from '../../../assets/images/YieldBlock/stakingAggregaror.png'
 import lidoLogo from '../../../assets/images/YieldBlock/LidoLogo.svg'
@@ -44,12 +44,32 @@ export function YieldAggregatorBlock() {
         />
         <div className={classNames.secondaryCardsContainer}>
           <div className={classNames.line}>
-            <CardSecondary title={items[0].title} body={items[0].body} imgSrc={items[0].imgSrc} />
-            <CardSecondary title={items[1].title} body={items[1].body} imgSrc={items[1].imgSrc} />
+            <CardSecondary
+              title={items[0].title}
+              body={items[0].body}
+              imgSrc={items[0].imgSrc}
+              isDivForIconNeeded={true}
+            />
+            <CardSecondary
+              title={items[1].title}
+              body={items[1].body}
+              imgSrc={items[1].imgSrc}
+              isDivForIconNeeded={true}
+            />
           </div>
           <div className={classNames.line}>
-            <CardSecondary title={items[2].title} body={items[2].body} imgSrc={items[2].imgSrc} />
-            <CardSecondary title={items[3].title} body={items[3].body} imgSrc={items[3].imgSrc} />
+            <CardSecondary
+              title={items[2].title}
+              body={items[2].body}
+              imgSrc={items[2].imgSrc}
+              isDivForIconNeeded={true}
+            />
+            <CardSecondary
+              title={items[3].title}
+              body={items[3].body}
+              imgSrc={items[3].imgSrc}
+              isDivForIconNeeded={true}
+            />
           </div>
         </div>
       </div>

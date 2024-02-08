@@ -11,7 +11,7 @@ export const ComingSoonBlock = () => {
       <div className={classNames.container}>
         <Card className={`${classNames.cardContainer} f1`}>
           <div className={classNames.headerContainer}>
-            <CardHeader title={'Portfolio Tracker'} body={'Track the performance of your assets'} />
+            <CardHeader title={'Portfolio Tracker'} body={'Track the performance of your wallets across all chains'} />
           </div>
           <div className={classNames.imgContainer}>
             <img src={portfolioTracker} />
@@ -19,7 +19,7 @@ export const ComingSoonBlock = () => {
         </Card>
         <Card className={classNames.referralContainer}>
           <div className={classNames.headerContainer}>
-            <CardHeader title={'Referral program'} body={'Invite your friends and earn '} />
+            <CardHeader title={'Referral program'} body={'Invite your friends and earn a share of their fees'} />
           </div>
           <div className={classNames.referralImgContainer}>
             <img src={referralImg} />

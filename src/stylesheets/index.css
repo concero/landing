@@ -57,7 +57,7 @@
   --color-primary: #7335f7;
   --color-text-primary: #131313;
   --color-text-secondary: #888698;
-  --color-bg1: #f1f2f5;
+  --color-bg1: #f4f4f4;
   --color-primary-250: #0b0519;
   --color-primary-300: #170b31;
   --color-primary-350: #2e1563;
@@ -154,8 +154,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-input {
+p {
   transform: translateY(1px);
 }
 
@@ -182,6 +181,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-weight: 500;
+  line-height: 100%;
 }
 
 h4 {

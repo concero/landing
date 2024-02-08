@@ -1,5 +1,25 @@
 import { Block } from '../../layout/Block/Block'
+
+import aurora from '../../../assets/images/Chains/aurora.svg'
 import classNames from './ChainsBlock.module.pcss'
+import zkevm from '../../../assets/images/Chains/zkevm.svg'
+import arb from '../../../assets/images/Chains/arb.svg'
+import eth from '../../../assets/images/Chains/eth.svg'
+import optimism from '../../../assets/images/Chains/optimism.svg'
+import avalanche from '../../../assets/images/Chains/avalanche.svg'
+import pol from '../../../assets/images/Chains/pol.svg'
+import bcs from '../../../assets/images/Chains/bsc.svg'
+import zkSync from '../../../assets/images/Chains/zkSync.svg'
+import base from '../../../assets/images/Chains/base.svg'
+import linea from '../../../assets/images/Chains/linea.svg'
+import crow from '../../../assets/images/Chains/crow.svg'
+import fantom from '../../../assets/images/Chains/fantom.svg'
+import moonriver from '../../../assets/images/Chains/moonriver.svg'
+import moonbeam from '../../../assets/images/Chains/moonbeam.svg'
+import gnosis from '../../../assets/images/Chains/gnosis.svg'
+import fuse from '../../../assets/images/Chains/fuse.svg'
+import okx from '../../../assets/images/Chains/okx.svg'
+import boba from '../../../assets/images/Chains/boba.svg'
 
 interface ChainCardProps {
   imgSrc: string
@@ -14,30 +34,25 @@ function ChainCard({ imgSrc }: ChainCardProps) {
 }
 
 const chainsImg = [
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1027.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/11840.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/3513.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1.png',
-  'https://s3.coinmarketcap.com/static-gravity/image/8b8447abcb1949ab9f426b1521cdc70f.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/11841.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/52.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/3890.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/6636.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/5805.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/9285.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1958.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/512.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/2010.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1975.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/5426.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/5034.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/3945.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/3635.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/1659.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/3794.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/12220.png',
-  'https://s2.coinmarketcap.com/static/img/coins/128x128/2.png',
+  eth,
+  optimism,
+  arb,
+  pol,
+  bcs,
+  avalanche,
+  zkSync,
+  zkevm,
+  base,
+  aurora,
+  linea,
+  crow,
+  fantom,
+  moonriver,
+  moonbeam,
+  gnosis,
+  fuse,
+  okx,
+  boba,
 ]
 
 export const ChainsBlock = () => {
