@@ -81,7 +81,7 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
         <div className={classNames.imageContainer}>
           <img src={object} />
         </div>
-        <Button className={classNames.closeButton} size={'xs'} onClick={() => setShow(false)}>
+        <Button className={classNames.closeButton} variant={'black'} size={'xs'} onClick={() => setShow(false)}>
           <img src={close} />
         </Button>
       </div>
