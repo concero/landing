@@ -64,6 +64,7 @@
 @media (width <= 768px) {
   .footer {
     padding: var(--sp-xl) var(--sp-md);
+    height: 500px;
   }
 
   .logoContainer {
@@ -78,18 +79,18 @@
 
   .aboutContainer {
     flex: 1;
-    flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: var(--sp-lg);
   }
 
   .columnContainer {
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: flex-start;
     flex: unset;
 
     .column {
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
     }
   }
