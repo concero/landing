@@ -4,7 +4,7 @@ import fireImg from '../../../assets/images/YieldBlock/fire.svg'
 import aaveLogo from '../../../assets/images/YieldBlock/aaveLogo.svg'
 import stakinAggregator from '../../../assets/images/YieldBlock/stakingAggregaror.png'
 import lidoLogo from '../../../assets/images/YieldBlock/lidoLogo.svg'
-import uniswapLogo from '../../../assets/images/YieldBlock/UniswapLogo.svg'
+import uniswapLogo from '../../../assets/images/YieldBlock/uniswapLogo.svg'
 import { CardMain } from '../../cards/CardMain/CardMain'
 import { CardSecondary } from '../../cards/CardSecondary/CardSecondary'
 
