@@ -1,7 +1,7 @@
 import { Block } from '../../layout/Block/Block'
 import classNames from './YieldAggregatorBlock.module.pcss'
 import fireImg from '../../../assets/images/YieldBlock/fire.svg'
-import aaveLogo from '../../../assets/images/YieldBlock/AaveLogo.svg'
+import aaveLogo from '../../../assets/images/YieldBlock/aaveLogo.svg'
 import stakinAggregator from '../../../assets/images/YieldBlock/stakingAggregaror.png'
 import lidoLogo from '../../../assets/images/YieldBlock/LidoLogo.svg'
 import uniswapLogo from '../../../assets/images/YieldBlock/UniswapLogo.svg'
