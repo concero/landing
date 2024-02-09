@@ -6,13 +6,14 @@ interface CardSecondaryProps {
   title: string
   body: string
   imgSrc?: string | null
+  isDivForIconNeeded?: boolean
 }
 
-export function CardSecondary({ title, body, imgSrc = null }: CardSecondaryProps) {
+export function CardSecondary({ title, body, imgSrc = null, isDivForIconNeeded = false }: CardSecondaryProps) {
   return (
     <Card padding={'xl'} className={classNames.container}>
       {imgSrc && (
-        <div className={classNames.imgContainer}>
+        <div className={`${classNames.imgContainer} ${isDivForIconNeeded ? classNames.iconContainer : null}`}>
           <img src={imgSrc} />
         </div>
       )}

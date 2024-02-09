@@ -5,11 +5,12 @@ interface BlockProps {
   title?: string
   body?: string
   children: ReactNode
+  className?: string
 }
 
-export const Block: FC<BlockProps> = ({ children, title = null, body = null }) => {
+export const Block: FC<BlockProps> = ({ children, title = null, body = null, className = null }) => {
   return (
-    <div className={`block ${classNames.container}`}>
+    <div className={`block ${classNames.container} ${className ? className : null}`}>
       {title ? (
         <div className={'headerContainer'}>
           <h2 className={'title1'}>{title}</h2>

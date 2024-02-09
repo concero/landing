@@ -1,11 +1,12 @@
 import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import classNames from './JoinBlock.module.pcss'
-import { MainButton } from '../../layout/MainButton/MainButton'
-import object1 from '../../../assets/images/JoinBlock/object1.png'
+import object1 from '../../../assets/images/mainScreen/mainPageFigure.png'
 import { Input } from '../../layout/Input/Input'
 import axios from 'axios'
 import { useState } from 'react'
+import { Button } from '../../layout/Button/Button'
+import { IconArrowUpRight } from '@tabler/icons-react'
 
 export function JoinBlock() {
   const [inputs, setInputs] = useState({
@@ -33,12 +34,14 @@ export function JoinBlock() {
   }
 
   return (
-    <Block>
+    <Block className={classNames.wrapper}>
       <Card className={classNames.cardContainer}>
         <div className={classNames.titleContainer}>
           <div>
-            <h2>Join newsletter</h2>
-            <p className={'body1'}>Be the first to know about progress, trading competitions, new features and more.</p>
+            <h2>Join our newsletter</h2>
+            <p className={'body1'}>
+              Subscribe to our newsletter for exclusive updates, contests, and breakthrough features.
+            </p>
           </div>
           <div className={classNames.inputContainer}>
             <Input
@@ -46,10 +49,17 @@ export function JoinBlock() {
               type={'email'}
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
+              className={classNames.input}
             />
-            <MainButton size={'md'} className={classNames.mainButton} onClick={handleSubmit}>
-              <h4>Submit</h4>
-            </MainButton>
+            <Button
+              variant={'primary'}
+              size={'lg'}
+              className={classNames.launchAppButton}
+              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+              onClick={handleSubmit}
+            >
+              <h3 className={classNames.buttonTitle}>Subscribe</h3>
+            </Button>
           </div>
         </div>
         <div className={classNames.imgContainer}>

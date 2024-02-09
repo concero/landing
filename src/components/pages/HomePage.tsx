@@ -2,20 +2,20 @@ import { MainScreen } from '../screens/MainScreen/MainScreen'
 import { YieldAggregatorBlock } from '../blocks/YieldAggregatorBlock/YieldAggregatorBlock'
 import { DexAggregatorBlock } from '../blocks/DexAggregatorBlock/DexAggregatorBlock'
 import { ComingSoonBlock } from '../blocks/ComingSoonBlock/ComingSoonBlock'
-import { RoadmapBlock } from '../blocks/RoadmapBlock/RoadmapBlock'
 import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
 import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 import { JoinBlock } from '../blocks/JoinBlock/JoinBlock'
 import { Footer } from '../layout/Footer/Footer'
+import classNames from './HomePage.module.pcss'
 
 export const HomePage = () => {
   return (
-    <div>
+    <div className={classNames.container}>
       <MainScreen />
-      <YieldAggregatorBlock />
       <DexAggregatorBlock />
+      <YieldAggregatorBlock />
       <ComingSoonBlock />
-      <RoadmapBlock />
+      {/*<RoadmapBlock />*/}
       <ChainsBlock />
       <PartnersBlock />
       <JoinBlock />

@@ -1,69 +1,63 @@
 .container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: var(--sp-lg);
+  flex-flow: row nowrap;
+  gap: var(--sp-lg);
 }
 
 .cardContainer {
-    overflow: hidden;
-    min-width: 360px;
+  overflow: hidden;
+  justify-content: space-between;
+  min-width: 360px;
 }
 
-.imagesContainer {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: var(--sp-md);
-    flex: 1;
-    padding-top: var(--sp-xl);
+.imgContainer {
+  padding-left: var(--sp-xxl);
+  padding-right: var(--sp-xxl);
+  padding-top: var(--sp-xl);
+  width: 100%;
 
-    .imgContainer {
-        width: 400px;
-
-        img {
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .headerContainer {
-    padding: var(--sp-xxl) var(--sp-xxl) 0 var(--sp-xxl);
+  padding: var(--sp-xxl) var(--sp-xxl) 0 var(--sp-xxl);
 }
 
 .referralContainer {
-    justify-content: space-between;
-    min-width: 360px;
+  justify-content: space-between;
+  min-width: 360px;
+  max-width: 450px;
 
-    .referralImgContainer {
-
-        img {
-            margin-bottom: calc(var(--sp-xl) * -1);
-        }
+  .referralImgContainer {
+    img {
+      margin-bottom: calc(var(--sp-xl) * -1);
     }
-
+  }
 }
 
-@media (max-width: 1300px) {
-    .container {
-        flex-wrap: wrap;
+@media (width <= 1300px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .imagesContainer {
+    flex: 1;
+    width: 100%;
+  }
+
+  .referralContainer {
+    flex: 1;
+    max-width: unset;
+
+    .referralImgContainer {
+      width: 100%;
+      align-items: center;
+
+      img {
+        width: 300px;
+      }
     }
-
-    .imagesContainer {
-        flex: 1;
-        width: 100%;
-    }
-
-    .referralContainer {
-        flex: 1;
-
-        .referralImgContainer {
-            width: 100%;
-            align-items: center;
-
-            img {
-                width: 300px;
-            }
-        }
-    }
+  }
 }

@@ -3,9 +3,10 @@ import { BlackCardHeader } from '../../cards/BlackCard/BlackCardHeader'
 import classNames from './PartnerBlock.module.pcss'
 import { items } from './items'
 import { Card } from '../../cards/Card/Card'
-import { MainButton } from '../../layout/MainButton/MainButton'
 import { ContactModal } from './ContactModal/ContactModal'
 import { useState } from 'react'
+import { Button } from '../../layout/Button/Button'
+import { IconArrowUpRight } from '@tabler/icons-react'
 
 interface PartnerCardProps {
   title: string
@@ -40,7 +41,7 @@ export const PartnersBlock = () => {
           <div className={classNames.column}>
             <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} />
             <PartnerCard title={items[4].title} imgSrc={items[4].imgSrc} />
-            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} isDisabled={true} />
+            <PartnerCard title={items[5].title} imgSrc={items[5].imgSrc} />
           </div>
         </div>
         <div className={classNames.contactCard}>
@@ -48,9 +49,16 @@ export const PartnersBlock = () => {
             <h2>Let’s work together</h2>
             <p className={'body2'}>We are always looking to grow with new partners </p>
           </div>
-          <MainButton size={'md'} onClick={() => setIsModalOpen(true)}>
-            <p>Let’s Chat</p>
-          </MainButton>
+          <Button
+            variant={'primary'}
+            size={'lg'}
+            rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+            onClick={() => {
+              setIsModalOpen(true)
+            }}
+          >
+            <h3 className={classNames.buttonTitle}>Let’s Chat</h3>
+          </Button>
         </div>
       </div>
       <ContactModal

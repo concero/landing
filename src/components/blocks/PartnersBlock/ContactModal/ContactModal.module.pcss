@@ -1,75 +1,75 @@
 .container {
-    flex-direction: row;
-    justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .formContainer {
-    padding: var(--sp-xxl);
+  padding: var(--sp-xxl);
 }
 
 .titleContainer {
-    gap: var(--sp-sm);
+  gap: var(--sp-sm);
 
-    p {
-        max-width: 500px;
-    }
+  p {
+    max-width: 500px;
+  }
 }
 
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    padding-top: var(--sp-xxl);
-    gap: var(--sp-xxl);
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--sp-xxl);
+  gap: var(--sp-xxl);
 }
 
 .imageContainer {
-    height: 100%;
-    width: 40%;
-    overflow: hidden;
-    border-radius: var(--st-br-card);
-    background-color: var(--color-base-black);
-    position: relative;
+  height: 100%;
+  width: 40%;
+  overflow: hidden;
+  border-radius: var(--st-br-card);
+  background: linear-gradient(211deg, #0f1c2a 3.64%, #120a24 30.75%, #131216 71.22%);
+  position: relative;
 
-    img {
-        transform: scale(2) translateY(40px) translateX(40px);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .buttonTitle {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-base-white);
 }
 
 .closeButton {
-    position: absolute;
-    top: var(--sp-lg);
-    right: var(--sp-lg);
-    cursor: pointer;
+  position: absolute;
+  top: var(--sp-lg);
+  right: var(--sp-lg);
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse;
-        justify-content: unset;
-        gap: var(--sp-xl);
-        overflow-y: scroll;
-    }
+@media (width <= 768px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: unset;
+    gap: var(--sp-xl);
+    overflow-y: scroll;
+  }
 
-    .formContainer {
-        padding: 0;
-    }
+  .formContainer {
+    padding: 0;
+  }
 
-    .imageContainer {
-        width: 100%;
-        height: 250px;
-    }
+  .imageContainer {
+    width: 100%;
+    height: 250px;
+  }
 
-    .inputContainer {
-        gap: var(--sp-lg);
-        padding-top: var(--sp-lg);
-    }
+  .inputContainer {
+    gap: var(--sp-lg);
+    padding-top: var(--sp-lg);
+  }
 }

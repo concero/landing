@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.7.3",
-    "@tabler/icons": "^2.26.0",
+    "@tabler/icons-react": "^2.47.0",
     "axios": "^1.4.0",
     "axios-retry": "^3.5.1",
     "dayjs": "^1.11.9",

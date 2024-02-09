@@ -1,54 +1,54 @@
 .container {
-    padding: 0 var(--sp-xl) var(--sp-xxl);
-    padding-bottom: var(--sp-block-v);
+  padding: 0 var(--sp-xl) var(--sp-xxl);
+  padding-bottom: var(--sp-block-v);
+  background-color: var(--color-base-white);
 }
 
 .cardInnerContainer {
-    padding: 130px calc(130px - var(--sp-lg));
+  padding: 130px calc(130px - var(--sp-lg));
 }
 
 .cardContainer {
-    border-radius: var(--st-br-card-lg);
+  border-radius: var(--st-br-card-lg);
 }
 
 .header {
-    width: 100%;
-    flex-direction: row;
-    padding-bottom: var(--sp-xxl);
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding-bottom: var(--sp-xxl);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headerTitle {
-    color: var(--color-base-white);
+  color: var(--color-base-white);
 }
 
-@media (max-width: 1300px) {
-    .roadMapCardsContainer {
-        height: unset;
+@media (width <= 1300px) {
+  .roadMapCardsContainer {
+    height: unset;
 
-        .line {
-            flex-direction: column;
-        }
+    .line {
+      flex-direction: column;
     }
+  }
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: unset;
-        padding-bottom: var(--sp-xxl);
-    }
+@media (width <= 768px) {
+  .container {
+    padding: unset;
+    padding-bottom: var(--sp-xxl);
+  }
 
-    .cardContainer {
-        border-radius: 0;
-    }
+  .cardContainer {
+    border-radius: 0;
+  }
 
-    .cardInnerContainer {
-        padding: var(--sp-xxl) var(--sp-lg);
-    }
+  .cardInnerContainer {
+    padding: var(--sp-xxl) var(--sp-lg);
+  }
 
-    .header {
-        padding-bottom: var(--sp-lg);
-    }
+  .header {
+    padding-bottom: var(--sp-lg);
+  }
 }
-

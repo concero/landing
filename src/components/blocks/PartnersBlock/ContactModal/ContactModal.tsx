@@ -1,12 +1,11 @@
 import { Modal } from '../../../layout/Modal/Modal'
 import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
-import object from '../../../../assets/images/JoinBlock/object1.png'
-import { MainButton } from '../../../layout/MainButton/MainButton'
+import object from '../../../../assets/images/mainScreen/mainPageFigure.png'
 import { Button } from '../../../layout/Button/Button'
-import close from '../../../../assets/icons/Close.svg'
 import { useState } from 'react'
 import axios from 'axios'
+import { IconX } from '@tabler/icons-react'
 
 interface ContactModalProps {
   show: boolean
@@ -73,17 +72,21 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
               onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
               value={inputs.message}
             />
-            <MainButton size={'md'} onClick={handleSubmit}>
+            <Button size={'md'} onClick={handleSubmit}>
               <h4 className={classNames.buttonTitle}>Send</h4>
-            </MainButton>
+            </Button>
           </form>
         </div>
         <div className={classNames.imageContainer}>
           <img src={object} />
         </div>
-        <Button className={classNames.closeButton} size={'xs'} onClick={() => setShow(false)}>
-          <img src={close} />
-        </Button>
+        <Button
+          className={classNames.closeButton}
+          variant={'black'}
+          size={'xs'}
+          onClick={() => setShow(false)}
+          leftIcon={<IconX color={'var(--color-base-white)'} />}
+        ></Button>
       </div>
     </Modal>
   )

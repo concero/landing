@@ -1,60 +1,63 @@
 import classNames from './DexAggregatorContainer.module.pcss'
 import { CardMain } from '../../cards/CardMain/CardMain'
-import chartImg from '../../../assets/images/dexAggregatorBlock/chartImg.png'
-import swapImg from '../../../assets/images/dexAggregatorBlock/SwapImg.png'
+import dex from '../../../assets/images/dexAggregatorBlock/dex.png'
+import bestRoute from '../../../assets/images/dexAggregatorBlock/bestRoute.png'
 import { Block } from '../../layout/Block/Block'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { CardSmall } from '../../cards/CardSmall/CardSmall'
-import egg from '../../../assets/images/dexAggregatorBlock/egg.svg'
-import fire from '../../../assets/images/dexAggregatorBlock/fire.svg'
-import coin from '../../../assets/images/dexAggregatorBlock/coin.svg'
 
 const items = [
   {
-    title: 'Maximum liquidity',
-    body: 'Access maximum decentralised liquidity',
-    imgSrc: egg,
-  },
-  {
     title: 'Swap Insurance',
-    body: 'Insure your cross-chain swaps for peace of mind',
-    imgSrc: fire,
+    body: 'Enjoy peace of mind with swap insurance, powered by InsurAce.',
   },
   {
-    title: 'Cheapest Routes',
-    body: 'Find most optimised routes with cheapest rates',
-    imgSrc: coin,
+    title: 'Liquidity maximisation',
+    body: 'Tap into unparalleled decentralised liquidity through our advanced LMP.',
+  },
+  {
+    title: 'Gas abstraction',
+    body: 'No more low gas issues with abstracted gas.',
   },
 ]
+
+function Tag() {
+  return (
+    <div className={classNames.tagContainer}>
+      <p className={'body1'}>Coming soon</p>
+    </div>
+  )
+}
 
 export function DexAggregatorBlock() {
   const isMobile = useMediaQuery('mobile')
 
   return (
-    <Block
-      title="DEX aggregator"
-      body={
-        'Swap seamlessly across 50+ blockchains, 100+ DEXes and Bridges. With all the tools at your fingertips enter the world of chain-agnostic DeFi with Concero.'
-      }
-    >
+    <Block title="DEX aggregator" body={'Swap seamlessly across 18 blockchains, 100+ DEXes and Bridges.'}>
       <div className={classNames.cardsContainer}>
         <CardMain
-          title={'Live news & transactions'}
-          body={'Stay updated with live price, news and transactions'}
-          imgSrc={chartImg}
+          title={'Cross-chain'}
+          body={'Swap effortlessly across 16 chains, 13 bridges & 34 DEXes.'}
+          imgSrc={dex}
           className={classNames.flex1}
-          imgWidth={'100%'}
+          imgWidth={isMobile ? '100%' : 478}
         />
         <CardMain
-          title={'Cross-chain'}
-          body={'Swap across 50+ chains, 100+ DEXes and Bridges'}
-          imgSrc={swapImg}
+          title={'Best routes'}
+          body={'Secure the best swapping rates with our optimised routing algorithm.'}
+          imgSrc={bestRoute}
           className={classNames.flex1}
           imgWidth={isMobile ? '100%' : 478}
         />
         <div className={classNames.secondaryCardsContainer}>
           {items.map((item, index) => (
-            <CardSmall key={index.toString()} title={item.title} body={item.body} imgSrc={item.imgSrc} />
+            <CardSmall
+              key={index.toString()}
+              title={item.title}
+              body={item.body}
+              imgSrc={item.imgSrc}
+              Tag={index === items.length - 1 ? () => <Tag /> : null}
+            />
           ))}
         </div>
       </div>
