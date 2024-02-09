@@ -3,9 +3,9 @@ import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
 import object from '../../../../assets/images/mainScreen/mainPageFigure.png'
 import { Button } from '../../../layout/Button/Button'
-import close from '../../../../assets/icons/Close.svg'
 import { useState } from 'react'
 import axios from 'axios'
+import { IconX } from '@tabler/icons-react'
 
 interface ContactModalProps {
   show: boolean
@@ -80,9 +80,13 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
         <div className={classNames.imageContainer}>
           <img src={object} />
         </div>
-        <Button className={classNames.closeButton} variant={'black'} size={'xs'} onClick={() => setShow(false)}>
-          <img src={close} />
-        </Button>
+        <Button
+          className={classNames.closeButton}
+          variant={'black'}
+          size={'xs'}
+          onClick={() => setShow(false)}
+          leftIcon={<IconX color={'var(--color-base-white)'} />}
+        ></Button>
       </div>
     </Modal>
   )
