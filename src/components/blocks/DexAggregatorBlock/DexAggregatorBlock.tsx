@@ -33,7 +33,11 @@ export function DexAggregatorBlock() {
   const isMobile = useMediaQuery('mobile')
 
   return (
-    <Block title="DEX aggregator" body={'Swap seamlessly across 18 blockchains, 100+ DEXes and Bridges.'}>
+    <Block
+      title="DEX aggregator"
+      body={'Swap seamlessly across 18 blockchains, 100+ DEXes and Bridges.'}
+      className={classNames.container}
+    >
       <div className={classNames.cardsContainer}>
         <CardMain
           title={'Cross-chain'}
