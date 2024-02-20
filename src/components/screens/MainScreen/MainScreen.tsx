@@ -2,12 +2,10 @@ import classNames from './MainScreen.module.pcss'
 import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.png'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
-import { Header } from '../../layout/Header/Header'
 
 export const MainScreen = () => {
   return (
     <div className={`screenContainer ${classNames.container}`}>
-      <Header />
       <div className={classNames.bgContainer}>
         <div className={classNames.leftSide}>
           <div className={classNames.headerContainer}>

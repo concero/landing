@@ -11,10 +11,6 @@
   padding: var(--sp-sm);
   gap: var(--sp-md);
 
-  p {
-    color: var(--color-base-white);
-  }
-
   .imageContainer {
     width: 64px;
     height: 64px;
@@ -26,9 +22,14 @@
   }
 }
 
+.whiteText {
+  color: var(--color-base-white);
+}
+
 .cardsContainer {
   flex: 1;
   gap: var(--sp-lg);
+  padding-top: var(--sp-xxl);
   flex-direction: row;
 
   .column {
@@ -54,6 +55,10 @@
       color: var(--color-base-white);
     }
   }
+}
+
+.button {
+  border-radius: var(--st-br-xl);
 }
 
 .buttonTitle {
