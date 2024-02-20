@@ -7,11 +7,13 @@ import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 import { JoinBlock } from '../blocks/JoinBlock/JoinBlock'
 import { Footer } from '../layout/Footer/Footer'
 import classNames from './HomePage.module.pcss'
+import { SolvingProblemsBlock } from '../blocks/SolvingProblemsBlock/SolvingProblemsBlock'
 
 export const HomePage = () => {
   return (
     <div className={classNames.container}>
       <MainScreen />
+      <SolvingProblemsBlock />
       <DexAggregatorBlock />
       <YieldAggregatorBlock />
       <ComingSoonBlock />
