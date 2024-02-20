@@ -1,14 +1,12 @@
 import { MainScreen } from '../screens/MainScreen/MainScreen'
-import { YieldAggregatorBlock } from '../blocks/YieldAggregatorBlock/YieldAggregatorBlock'
-import { DexAggregatorBlock } from '../blocks/DexAggregatorBlock/DexAggregatorBlock'
-import { ComingSoonBlock } from '../blocks/ComingSoonBlock/ComingSoonBlock'
-import { ChainsBlock } from '../blocks/ChainsBlock/ChainsBlock'
 import { PartnersBlock } from '../blocks/PartnersBlock/PartnersBlock'
 import { JoinBlock } from '../blocks/JoinBlock/JoinBlock'
 import { Footer } from '../layout/Footer/Footer'
 import classNames from './HomePage.module.pcss'
 import { SolvingProblemsBlock } from '../blocks/SolvingProblemsBlock/SolvingProblemsBlock'
 import { KeyFeaturesBlock } from '../blocks/KeyFeaturesBlock/KeyFeaturesBlock'
+import { OurProductBlock } from '../blocks/OurProductBlock/OurProductBlock'
+import { CcipBlock } from '../blocks/CcipBlock/CcipBlock'
 
 export const HomePage = () => {
   return (
@@ -16,11 +14,13 @@ export const HomePage = () => {
       <MainScreen />
       <SolvingProblemsBlock />
       <KeyFeaturesBlock />
-      <DexAggregatorBlock />
-      <YieldAggregatorBlock />
-      <ComingSoonBlock />
+      <OurProductBlock />
+      {/*<DexAggregatorBlock />*/}
+      {/*<YieldAggregatorBlock />*/}
+      {/*<ComingSoonBlock />*/}
       {/*<RoadmapBlock />*/}
-      <ChainsBlock />
+      {/*<ChainsBlock />*/}
+      <CcipBlock />
       <PartnersBlock />
       <JoinBlock />
       <Footer />

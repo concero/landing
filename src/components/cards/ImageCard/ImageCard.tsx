@@ -1,5 +1,5 @@
 import { CardHeader } from '../../layout/CardHeader/CardHeader'
-import classNames from './CardMain.module.pcss'
+import classNames from './ImageCard.module.pcss'
 import { Card } from '../Card/Card'
 
 interface CardMainProps {
@@ -8,14 +8,15 @@ interface CardMainProps {
   imgSrc: string
   className?: string
   imgWidth?: number | string
+  imgHeight?: number | string
 }
 
-export function CardMain({ title, body, imgSrc, className, imgWidth }: CardMainProps) {
+export function ImageCard({ title, body, imgSrc, className, imgWidth, imgHeight }: CardMainProps) {
   return (
     <Card padding={'xxl'} className={className}>
       <CardHeader title={title} body={body} />
       <div className={classNames.innerContainer}>
-        <div className={classNames.imgContainer} style={{ width: imgWidth }}>
+        <div className={classNames.imgContainer} style={{ width: imgWidth, height: imgHeight }}>
           <img src={imgSrc} />
         </div>
       </div>

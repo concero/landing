@@ -2,6 +2,7 @@ import style from './TopicPicker.module.pcss'
 import { useState } from 'react'
 import { Button } from '../Button/Button'
 import { MainCard } from '../../cards/MainCard/MainCard'
+import { ImageCard } from '../../cards/ImageCard/ImageCard'
 
 export interface TopicPickerItem {
   id: string
@@ -14,9 +15,10 @@ interface TopicPickerProps {
   title: string
   body: string
   items: TopicPickerItem[]
+  cardType?: string | null
 }
 
-export function TopicPicker({ items, title, body }: TopicPickerProps) {
+export function TopicPicker({ items, title, body, cardType = null }: TopicPickerProps) {
   const [selectedItem, setSelectedItem] = useState<TopicPickerItem>(items[0])
 
   return (
@@ -27,6 +29,7 @@ export function TopicPicker({ items, title, body }: TopicPickerProps) {
         <div className={style.buttonsContainer}>
           {items.map((item: TopicPickerItem) => (
             <Button
+              key={item.id}
               onClick={() => {
                 setSelectedItem(item)
               }}
@@ -39,7 +42,11 @@ export function TopicPicker({ items, title, body }: TopicPickerProps) {
         </div>
       </div>
       <div className={style.cardContainer}>
-        <MainCard type={'big'} title={selectedItem.title} body={selectedItem.body} icon={selectedItem.icon} />
+        {cardType === 'image' ? (
+          <ImageCard title={selectedItem.title} body={selectedItem.body} imgSrc={selectedItem.icon} imgHeight={50} />
+        ) : (
+          <MainCard type={'big'} title={selectedItem.title} body={selectedItem.body} icon={selectedItem.icon} />
+        )}
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import classNames from './SolvingProblemsBlock.module.pcss'
 import { Block } from '../../layout/Block/Block'
 import { TopicPicker } from '../../layout/TopicPicker/TopicPicker'
 import rightUpArrows from '../../../assets/icons/rightUpArrows.svg'
@@ -27,7 +28,7 @@ const items = [
 
 export function SolvingProblemsBlock() {
   return (
-    <Block>
+    <Block className={classNames.container}>
       <TopicPicker
         items={items}
         title={'Solving problems people care about'}
