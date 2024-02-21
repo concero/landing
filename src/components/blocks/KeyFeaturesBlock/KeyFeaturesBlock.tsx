@@ -55,10 +55,11 @@ export function KeyFeaturesBlock() {
           title={'Liquidity maximisation'}
           icon={blob}
           body={'Aggregation of liquidity pools for deepest on-chain liquidity.'}
+          className={'f1'}
         />
-        <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} />
-        <MainCard type={'small'} title={'Native tokens'} icon={eth} />
-        <MainCard type={'small'} title={'Cross-chain\n' + 'pathfinding'} icon={road} />
+        <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} className={classNames.f05} />
+        <MainCard type={'small'} title={'Native tokens'} icon={eth} className={classNames.f05} />
+        <MainCard type={'small'} title={'Cross-chain\n' + 'pathfinding'} icon={road} className={classNames.f05} />
       </div>
     </Block>
   )

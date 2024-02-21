@@ -34,3 +34,20 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (width <= 768px) {
+  .container {
+    flex-direction: column;
+    gap: var(--sp-xl);
+  }
+
+  .buttonsContainer {
+    width: 100%;
+    gap: var(--sp-sm);
+
+    .button {
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+}
