@@ -2,7 +2,6 @@ import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import classNames from './JoinBlock.module.pcss'
 import object1 from '../../../assets/images/mainScreen/mainPageFigure.png'
-import { Input } from '../../layout/Input/Input'
 import axios from 'axios'
 import { useState } from 'react'
 import { Button } from '../../layout/Button/Button'
@@ -38,19 +37,19 @@ export function JoinBlock() {
       <Card className={classNames.cardContainer}>
         <div className={classNames.titleContainer}>
           <div>
-            <h2>Join our newsletter</h2>
+            <h2>Join waitlist</h2>
             <p className={'body1'}>
               Subscribe to our newsletter for exclusive updates, contests, and breakthrough features.
             </p>
           </div>
           <div className={classNames.inputContainer}>
-            <Input
-              placeholder={'E-mail'}
-              type={'email'}
-              onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
-              value={inputs.email}
-              className={classNames.input}
-            />
+            {/*<Input*/}
+            {/*  placeholder={'E-mail'}*/}
+            {/*  type={'email'}*/}
+            {/*  onChange={(e) => setInputs({ ...inputs, email: e.target.value })}*/}
+            {/*  value={inputs.email}*/}
+            {/*  className={classNames.input}*/}
+            {/*/>*/}
             <Button
               variant={'primary'}
               size={'lg'}
@@ -58,7 +57,16 @@ export function JoinBlock() {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={handleSubmit}
             >
-              <h3 className={classNames.buttonTitle}>Subscribe</h3>
+              <h3 className={classNames.buttonTitle}>Sign up</h3>
+            </Button>
+            <Button
+              variant={'transparent'}
+              size={'lg'}
+              className={classNames.launchAppButton}
+              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-black)'} />}
+              onClick={handleSubmit}
+            >
+              <h3>Help us test</h3>
             </Button>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { ContactModal } from './ContactModal/ContactModal'
 import { useState } from 'react'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
+import cylinder from '../../../assets/images/Partner/cylinder.png'
 
 interface PartnerCardProps {
   title: string
@@ -46,21 +47,26 @@ export const PartnersBlock = () => {
           </div>
         </div>
         <div className={classNames.contactCard}>
-          <div className={classNames.contactHeader}>
-            <h2>Let’s work together</h2>
-            <p className={'body2'}>We are always looking to grow with new partners </p>
+          <div className={classNames.titleContainer}>
+            <div className={classNames.contactHeader}>
+              <h2>Let’s work together</h2>
+              <p className={'body2'}>We are always looking to grow with new partners </p>
+            </div>
+            <Button
+              variant={'primary'}
+              size={'lg'}
+              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+              onClick={() => {
+                setIsModalOpen(true)
+              }}
+              className={classNames.button}
+            >
+              <h3 className={classNames.buttonTitle}>Sign up</h3>
+            </Button>
           </div>
-          <Button
-            variant={'primary'}
-            size={'lg'}
-            rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-            onClick={() => {
-              setIsModalOpen(true)
-            }}
-            className={classNames.button}
-          >
-            <h3 className={classNames.buttonTitle}>Sign up</h3>
-          </Button>
+          <div className={classNames.imgContainer}>
+            <img src={cylinder} />
+          </div>
         </div>
       </div>
       <ContactModal
