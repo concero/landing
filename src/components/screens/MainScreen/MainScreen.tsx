@@ -19,7 +19,7 @@ export const MainScreen = () => {
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={() => {
-                window.open('https://app.concero.io', '_blank')
+                window.open('`https://app.concero.io`', '_blank')
               }}
             >
               <h3 className={classNames.buttonTitle}>Launch app</h3>

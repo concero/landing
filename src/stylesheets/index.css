@@ -3,7 +3,7 @@
 :root {
   --st-br-xxl: 100px;
   --st-br-xl: 64px;
-  --st-br-lg: 16px;
+  --st-br-lg: 24px;
   --st-br-md: 12px;
   --st-br-sm: 8px;
   --st-br-xs: 4px;
@@ -219,6 +219,13 @@ a {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
+}
+
+.body3 {
+  color: var(--color-text-secondary);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .title1 {
