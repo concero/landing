@@ -49,7 +49,7 @@ export function KeyFeaturesBlock() {
           />
         </div>
       </div>
-      <div className={classNames.horizontalContainer}>
+      <div className={classNames.bottomHorizontalContainer}>
         <MainCard
           type={'horizontal'}
           title={'Liquidity maximisation'}
@@ -57,9 +57,11 @@ export function KeyFeaturesBlock() {
           body={'Aggregation of liquidity pools for deepest on-chain liquidity.'}
           className={'f1'}
         />
-        <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} className={classNames.f05} />
-        <MainCard type={'small'} title={'Native tokens'} icon={eth} className={classNames.f05} />
-        <MainCard type={'small'} title={'Cross-chain\n' + 'pathfinding'} icon={road} className={classNames.f05} />
+        <div className={classNames.smallCardsContainer}>
+          <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} className={classNames.f05} />
+          <MainCard type={'small'} title={'Native tokens'} icon={eth} className={classNames.f05} />
+          <MainCard type={'small'} title={'Cross-chain\n' + 'pathfinding'} icon={road} className={classNames.f05} />
+        </div>
       </div>
     </Block>
   )
