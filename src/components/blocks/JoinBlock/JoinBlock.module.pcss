@@ -5,19 +5,27 @@
 }
 
 .cardContainer {
-  height: 400px;
+  max-height: 400px;
   padding: var(--sp-xxl);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+
+  @media (width <= 1270px) {
+    max-height: unset;
+  }
+
+  @media (width <= 768px) {
+    max-height: 400px;
+  }
 }
 
 .titleContainer {
   flex: 1;
   height: 100%;
   max-width: 50%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: var(--sp-md);
   align-items: flex-start;
   z-index: 1;
@@ -55,13 +63,23 @@
   padding-top: 14px;
 }
 
+.launchAppButton {
+  padding: var(--sp-md) var(--sp-lg) !important;
+  border-radius: var(--st-br-lg) !important;
+}
+
+.buttonTitle {
+  color: var(--color-base-white);
+  font-weight: 400;
+}
+
 @media (width <= 768px) {
   .wrapper {
     margin-bottom: 500px;
   }
 
   .cardContainer {
-    padding: var(--sp-lg);
+    padding: var(--sp-md);
     flex-direction: column;
   }
 
@@ -82,14 +100,12 @@
   .mainButton {
     width: 100%;
   }
-}
 
-.launchAppButton {
-  padding: var(--sp-md) var(--sp-lg) !important;
-  border-radius: var(--st-br-lg) !important;
-}
+  .inputContainer {
+    gap: var(--sp-md);
+  }
 
-.buttonTitle {
-  color: var(--color-base-white);
-  font-weight: 400;
+  .buttonTitleSize {
+    font-size: 16px;
+  }
 }

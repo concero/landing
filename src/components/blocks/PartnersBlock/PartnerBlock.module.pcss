@@ -1,6 +1,7 @@
 .wrapper {
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: var(--sp-lg);
+  overflow: hidden;
 }
 
 .partnerCardContainer {
@@ -40,6 +41,8 @@
 
 .contactCard {
   flex: 1;
+  min-width: 504px;
+  position: relative;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
@@ -68,6 +71,21 @@
   justify-content: flex-end;
 }
 
+@media (width <= 768px) {
+  .imgContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+  }
+}
+
+@media (width <= 500px) {
+  .imgContainer {
+    right: -100px;
+  }
+}
+
 .button {
   border-radius: var(--st-br-xl);
 }
@@ -80,5 +98,13 @@
 @media (width <= 768px) {
   .wrapper {
     flex-direction: column;
+  }
+
+  .cardsContainer {
+    flex-wrap: wrap;
+  }
+
+  .contactCard {
+    min-width: unset;
   }
 }

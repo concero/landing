@@ -8,6 +8,26 @@
   flex-direction: row;
 }
 
+@media (width <= 768px) {
+  .topLeftContainer {
+    flex-wrap: wrap;
+  }
+}
+
+.topLeftVerticalContainer {
+  gap: 20px;
+  flex: 0.5;
+  flex-direction: column;
+}
+
+@media (width <= 768px) {
+  .topLeftVerticalContainer {
+    flex: 1;
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
 .verticalContainer {
   gap: 20px;
 }
@@ -22,8 +42,30 @@
   flex-flow: row wrap-reverse;
 }
 
+@media (width <= 590px) {
+  .bottomHorizontalContainer {
+    flex-flow: column nowrap;
+  }
+}
+
+.topHorizontalContainer {
+  gap: 20px;
+  flex-flow: row wrap;
+}
+
 .smallCardsContainer {
   flex-direction: row;
   gap: 20px;
+  flex: 1;
+}
+
+@media (width <= 918px) {
+  .smallCardsContainer {
+    flex: 1;
+    flex-wrap: wrap;
+  }
+}
+
+.smallCard {
   flex: 1;
 }

@@ -57,7 +57,7 @@ export function JoinBlock() {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={handleSubmit}
             >
-              <h3 className={classNames.buttonTitle}>Sign up</h3>
+              <h3 className={`${classNames.buttonTitle} ${classNames.buttonTitleSize}`}>Sign up</h3>
             </Button>
             <Button
               variant={'transparent'}
@@ -66,7 +66,7 @@ export function JoinBlock() {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-black)'} />}
               onClick={handleSubmit}
             >
-              <h3>Help us test</h3>
+              <h3 className={classNames.buttonTitleSize}>Help us test</h3>
             </Button>
           </div>
         </div>

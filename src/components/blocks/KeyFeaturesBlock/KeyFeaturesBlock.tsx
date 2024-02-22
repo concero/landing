@@ -18,9 +18,9 @@ export function KeyFeaturesBlock() {
       title={'Key Features'}
       body={'Designed and Built in collaboration with Chainlink'}
     >
-      <div className={classNames.horizontalContainer}>
+      <div className={classNames.topHorizontalContainer}>
         <div className={`${classNames.topLeftContainer} f1`}>
-          <div className={classNames.verticalContainer} style={{ flex: 0.5 }}>
+          <div className={classNames.topLeftVerticalContainer}>
             <MainCard type={'small'} title={'1-click transactions'} icon={click} className={'f1'} />
             <MainCard type={'small'} title={'Insurance'} icon={security} className={'f1'} />
           </div>
@@ -58,9 +58,14 @@ export function KeyFeaturesBlock() {
           className={'f1'}
         />
         <div className={classNames.smallCardsContainer}>
-          <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} className={classNames.f05} />
-          <MainCard type={'small'} title={'Native tokens'} icon={eth} className={classNames.f05} />
-          <MainCard type={'small'} title={'Cross-chain\n' + 'pathfinding'} icon={road} className={classNames.f05} />
+          <MainCard type={'small'} title={'Anti-Fraud'} icon={gasStation} className={classNames.smallCard} />
+          <MainCard type={'small'} title={'Native tokens'} icon={eth} className={classNames.smallCard} />
+          <MainCard
+            type={'small'}
+            title={'Cross-chain\n' + 'pathfinding'}
+            icon={road}
+            className={classNames.smallCard}
+          />
         </div>
       </div>
     </Block>
