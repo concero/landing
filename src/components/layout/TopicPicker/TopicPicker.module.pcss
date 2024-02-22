@@ -1,13 +1,12 @@
 .container {
   height: 100%;
-  gap: 100px;
-  flex-direction: row;
+  gap: var(--sp-lg);
+  flex-flow: row wrap;
   align-items: center;
 }
 
 .textContainer {
   flex: 1;
-  height: 100%;
   justify-content: center;
   gap: var(--sp-xl);
 
@@ -33,6 +32,15 @@
   flex: 1;
   justify-content: center;
   align-items: center;
+}
+
+.imgCardSize {
+  width: 600px;
+  padding: var(--sp-lg);
+
+  @media (width <= 768px) {
+    width: unset;
+  }
 }
 
 @media (width <= 768px) {

@@ -43,7 +43,12 @@ export function TopicPicker({ items, title, body, cardType = null }: TopicPicker
       </div>
       <div className={style.cardContainer}>
         {cardType === 'image' ? (
-          <ImageCard title={selectedItem.title} body={selectedItem.body} imgSrc={selectedItem.icon} imgHeight={50} />
+          <ImageCard
+            title={selectedItem.title}
+            body={selectedItem.body}
+            imgSrc={selectedItem.icon}
+            className={style.imgCardSize}
+          />
         ) : (
           <MainCard type={'big'} title={selectedItem.title} body={selectedItem.body} icon={selectedItem.icon} />
         )}

@@ -9,16 +9,16 @@ import classNames from './Navigator.module.pcss'
 
 export const Navigator = () => {
   return (
-    <div className={classNames.container}>
-      <Header />
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className={classNames.container}>
+        <Header />
         <Routes>
           <Route path={routes.home} element={<HomePage />} />
           <Route path={routes.prototypes} element={<PrototypesPage />} />
           <Route path={'/*'} element={<HomePage />} />
         </Routes>
-      </BrowserRouter>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }

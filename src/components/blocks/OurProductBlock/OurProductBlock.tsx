@@ -1,28 +1,28 @@
 import { Block } from '../../layout/Block/Block'
 import { TopicPicker } from '../../layout/TopicPicker/TopicPicker'
-import dex from '../../../assets/images/dexAggregatorBlock/dex.png'
-import stakingAggregator from '../../../assets/images/YieldBlock/stakingAggregaror.png'
-import portfolioTracker from '../../../assets/images/ComingSoonBlock/portfolioTracker.png'
+import swap from '../../../assets/images/common/swap.png'
+import earn from '../../../assets/images/common/earn.png'
+import track from '../../../assets/images/common/track.png'
 
 const items = [
   {
     id: '1',
     title: 'Swap',
     body: 'Swap any assets on any chains in one click.',
-    icon: dex,
+    icon: swap,
   },
 
   {
     id: '2',
     title: 'Earn',
     body: 'Deposit into liquidity pools, lending protocols and vaults from any chain.',
-    icon: stakingAggregator,
+    icon: earn,
   },
   {
     id: '3',
     title: 'Track',
     body: 'Track the performance of your portfolio across all chains.',
-    icon: portfolioTracker,
+    icon: track,
   },
 ]
 
