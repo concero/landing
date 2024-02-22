@@ -1,3 +1,16 @@
+.container {
+  @media (width <= 768px) {
+    background-color: var(--color-base-white);
+    padding-right: var(--sp-lg);
+    padding-left: var(--sp-lg);
+  }
+
+  @media (width <= 480px) {
+    padding-right: var(--sp-md);
+    padding-left: var(--sp-md);
+  }
+}
+
 .wrapper {
   flex-flow: row wrap;
   gap: var(--sp-lg);
@@ -106,5 +119,9 @@
 
   .contactCard {
     min-width: unset;
+  }
+
+  .partnerCardContainer {
+    border-radius: 0;
   }
 }

@@ -33,48 +33,50 @@ export const PartnersBlock = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
-    <BlackCard>
-      <h2 className={`title1 ${classNames.whiteText}`}>Partners</h2>
-      <div className={classNames.wrapper}>
-        <div className={classNames.cardsContainer}>
-          <div className={classNames.column}>
-            <PartnerCard title={items[0].title} imgSrc={items[0].imgSrc} body={items[0].body} />
-            <PartnerCard title={items[1].title} imgSrc={items[1].imgSrc} body={items[1].body} />
-          </div>
-          <div className={classNames.column}>
-            <PartnerCard title={items[2].title} imgSrc={items[2].imgSrc} body={items[2].body} />
-            <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} body={items[3].body} />
-          </div>
-        </div>
-        <div className={classNames.contactCard}>
-          <div className={classNames.titleContainer}>
-            <div className={classNames.contactHeader}>
-              <h2>Let’s work together</h2>
-              <p className={'body2'}>We are always looking to grow with new partners </p>
+    <div className={classNames.container}>
+      <BlackCard>
+        <h2 className={`title1 ${classNames.whiteText}`}>Partners</h2>
+        <div className={classNames.wrapper}>
+          <div className={classNames.cardsContainer}>
+            <div className={classNames.column}>
+              <PartnerCard title={items[0].title} imgSrc={items[0].imgSrc} body={items[0].body} />
+              <PartnerCard title={items[1].title} imgSrc={items[1].imgSrc} body={items[1].body} />
             </div>
-            <Button
-              variant={'primary'}
-              size={'lg'}
-              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-              onClick={() => {
-                setIsModalOpen(true)
-              }}
-              className={classNames.button}
-            >
-              <h3 className={classNames.buttonTitle}>Sign up</h3>
-            </Button>
+            <div className={classNames.column}>
+              <PartnerCard title={items[2].title} imgSrc={items[2].imgSrc} body={items[2].body} />
+              <PartnerCard title={items[3].title} imgSrc={items[3].imgSrc} body={items[3].body} />
+            </div>
           </div>
-          <div className={classNames.imgContainer}>
-            <img src={cylinder} />
+          <div className={classNames.contactCard}>
+            <div className={classNames.titleContainer}>
+              <div className={classNames.contactHeader}>
+                <h2>Let’s work together</h2>
+                <p className={'body2'}>We are always looking to grow with new partners </p>
+              </div>
+              <Button
+                variant={'primary'}
+                size={'lg'}
+                rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+                onClick={() => {
+                  setIsModalOpen(true)
+                }}
+                className={classNames.button}
+              >
+                <h3 className={classNames.buttonTitle}>Sign up</h3>
+              </Button>
+            </div>
+            <div className={classNames.imgContainer}>
+              <img src={cylinder} />
+            </div>
           </div>
         </div>
-      </div>
-      <ContactModal
-        show={isModalOpen}
-        setShow={setIsModalOpen}
-        title={'Let’s work together '}
-        body={'We are always looking to grow with new partners '}
-      />
-    </BlackCard>
+        <ContactModal
+          show={isModalOpen}
+          setShow={setIsModalOpen}
+          title={'Let’s work together '}
+          body={'We are always looking to grow with new partners '}
+        />
+      </BlackCard>
+    </div>
   )
 }
