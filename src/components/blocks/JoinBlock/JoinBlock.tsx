@@ -18,9 +18,7 @@ export function JoinBlock() {
         <div className={classNames.titleContainer}>
           <div>
             <h2>Join waitlist</h2>
-            <p className={'body1'}>
-              Subscribe to our newsletter for exclusive updates, contests, and breakthrough features.
-            </p>
+            <p className={'body1'}>Be among the first ones to participate in Concero testnet.</p>
           </div>
           <div className={classNames.inputContainer}>
             {/*<Input*/}
