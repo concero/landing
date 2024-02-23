@@ -15,7 +15,7 @@ export const items = [
     body: 'Audits & Monitoring',
   },
   {
-    title: 'LI.FI',
+    title: 'Space & Time',
     imgSrc: spaceAndTime,
     body: 'Data provision',
   },
