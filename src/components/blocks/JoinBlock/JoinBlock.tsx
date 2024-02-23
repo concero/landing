@@ -39,7 +39,7 @@ export function JoinBlock() {
                 setIsModalVisible(true)
               }}
             >
-              <h3 className={`${classNames.buttonTitle} ${classNames.buttonTitleSize}`}>Sign up</h3>
+              <h3 className={`${classNames.buttonTitle} ${classNames.buttonTitleSize}`}>Contact us</h3>
             </Button>
             <Link to={routes.prototypes}>
               <Button
