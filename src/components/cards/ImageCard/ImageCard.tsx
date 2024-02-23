@@ -13,7 +13,7 @@ interface CardMainProps {
 
 export function ImageCard({ title, body, imgSrc, className, imgWidth, imgHeight }: CardMainProps) {
   return (
-    <Card padding={'xxl'} className={className}>
+    <Card padding={'lg'} className={`${classNames.container} ${className}`}>
       <CardHeader title={title} body={body} />
       <div className={classNames.innerContainer}>
         <div className={classNames.imgContainer} style={{ width: imgWidth, height: imgHeight }}>
