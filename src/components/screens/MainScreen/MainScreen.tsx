@@ -2,8 +2,12 @@ import classNames from './MainScreen.module.pcss'
 import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.png'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
+import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
+import { useState } from 'react'
 
 export const MainScreen = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false)
+
   return (
     <div className={`screenContainer ${classNames.container}`}>
       <div className={classNames.bgContainer}>
@@ -19,10 +23,10 @@ export const MainScreen = () => {
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={() => {
-                window.open('`https://app.concero.io`', '_blank')
+                setIsModalVisible(true)
               }}
             >
-              <h3 className={classNames.buttonTitle}>Launch app</h3>
+              <h3 className={classNames.buttonTitle}>Join Waitlist</h3>
             </Button>
           </div>
         </div>
@@ -32,6 +36,12 @@ export const MainScreen = () => {
           </div>
         </div>
       </div>
+      <ContactModal
+        show={isModalVisible}
+        setShow={setIsModalVisible}
+        title={'Sign up to waitlist'}
+        isMessageNeeded={false}
+      />
     </div>
   )
 }

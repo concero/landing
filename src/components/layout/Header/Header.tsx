@@ -6,12 +6,15 @@ import { Link, useMatch } from 'react-router-dom'
 import { routes } from '../../../constants/routes'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
+import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
+import { useState } from 'react'
 
 export const Header = () => {
-  const isMobile = useMediaQuery('mobile')
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
+  const isMobile = useMediaQuery('mobile')
   const isHomeMatched = useMatch(routes.home)
-  const isProtypesMatched = useMatch(routes.prototypes)
+  const isPrototypesMatched = useMatch(routes.prototypes)
 
   return (
     <header className={classNames.container}>
@@ -23,23 +26,29 @@ export const Header = () => {
               <p className={`body1 ${isHomeMatched ? classNames.selected : ''}`}>Home</p>
             </Link>
             <Link to={routes.prototypes}>
-              <p className={`body1 ${isProtypesMatched ? classNames.selected : ''}`}>Prototypes</p>
+              <p className={`body1 ${isPrototypesMatched ? classNames.selected : ''}`}>Prototypes</p>
             </Link>
           </div>
-          <a href="https://app.concero.io" target={'_blank'}>
-            <Button
-              variant={'primary'}
-              size={'sm'}
-              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-              className={classNames.button}
-            >
-              <h5 className={classNames.buttonTitle}>Launch app</h5>
-            </Button>
-          </a>
+          <Button
+            variant={'primary'}
+            size={'sm'}
+            rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+            className={classNames.button}
+            onClick={() => {
+              setIsModalVisible(true)
+            }}
+          >
+            <h5 className={classNames.buttonTitle}>Join Waitlist</h5>
+          </Button>
         </>
       ) : null}
-
       {isMobile ? <BurgerMenu /> : null}
+      <ContactModal
+        show={isModalVisible}
+        setShow={setIsModalVisible}
+        title={'Sign up to waitlist'}
+        isMessageNeeded={false}
+      />
     </header>
   )
 }

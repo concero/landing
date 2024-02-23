@@ -20,6 +20,7 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
     name: '',
     email: '',
     message: '',
+    socialMedia: '',
   })
 
   function handleSubmit(e: any) {
@@ -41,6 +42,7 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
           name: '',
           email: '',
           message: '',
+          socialMedia: '',
         })
       })
   }
@@ -65,6 +67,12 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
               type={'email'}
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
+            />
+            <Input
+              title={'Twitter/Discord (optional)'}
+              type={'email'}
+              onChange={(e) => setInputs({ ...inputs, socialMedia: e.target.value })}
+              value={inputs.socialMedia}
             />
             {isMessageNeeded ? (
               <Input
