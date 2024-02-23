@@ -1,34 +1,117 @@
 .container {
-  padding: 0 var(--sp-xl);
-  gap: var(--sp-lg);
-  height: calc(100vh - 86px);
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  width: 100%;
+  height: calc(100dvh - 86px);
+  padding: 0 var(--sp-xl) var(--sp-xl) var(--sp-xl);
+  min-height: 674px;
+}
+
+.bgContainer {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: var(--st-br-card-lg);
+  background: linear-gradient(207deg, #ece6f9 0%, #f6f4fc 95.72%);
+  padding-left: 98px;
 }
 
-.titleContainer {
-  gap: var(--sp-lg);
-  max-width: 500px;
-  min-width: 400px;
+.leftSide {
+  flex: 1;
+  height: 100%;
+  min-width: 504px;
+
+  .headerContainer {
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--sp-xl);
+
+    .titleContainer {
+      gap: var(--sp-xl);
+    }
+
+    h3 {
+      color: var(--color-text-secondary);
+      font-weight: 400;
+    }
+
+    .header {
+      max-width: 600px;
+      color: var(--color-base-black);
+      font-size: 87px;
+      font-weight: 400;
+      line-height: 100%;
+    }
+
+    .subTitle {
+      max-width: 300px;
+      line-height: unset;
+    }
+  }
 }
 
-.header {
-  max-width: 580px;
-  font-size: 87px;
-  font-weight: 400;
+.rightSide {
+  flex: none;
+  margin-right: -240px;
+  height: 100%;
+  justify-content: flex-start;
+
+  .imgContainer {
+    flex: none;
+    max-width: 845px;
+    height: 100%;
+    align-items: flex-end;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.buttonTitle {
+  color: var(--color-base-white);
   line-height: 100%;
 }
 
-.figureContainer {
-  height: 70%;
+.launchAppButton {
+  padding: var(--sp-md) var(--sp-lg) !important;
+  border-radius: var(--st-br-lg) !important;
+}
 
-  img {
-    height: 100%;
+@media (width <= 768px) {
+  .container {
+    padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
+    min-height: 500px;
   }
 
-  @media (width <= 768px) {
-    height: unset;
-    width: 100%;
+  .bgContainer {
+    border-radius: var(--st-br-card-md);
+    padding-left: 23px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .leftSide {
+      min-width: unset;
+
+      .headerContainer {
+        height: 100%;
+        z-index: 1;
+        justify-content: space-between;
+
+        .header {
+          font-size: 40px;
+          max-width: 400px;
+        }
+      }
+    }
+
+    .rightSide {
+      position: absolute;
+      bottom: -40%;
+    }
   }
 }
