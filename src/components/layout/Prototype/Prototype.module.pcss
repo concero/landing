@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   gap: var(--sp-lg);
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 
@@ -11,17 +11,35 @@
 }
 
 .imgContainer {
+  max-width: 550px;
   min-width: 500px;
-  max-width: 650px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .sideContainer {
+  flex: 1;
   gap: var(--sp-lg);
-  min-width: 300px;
+  min-width: 400px;
   justify-content: space-evenly;
+
+  @media (width <= 768px) {
+    min-width: 300px;
+  }
+}
+
+.rightSideContainer {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-lg);
 }
 
 .buttonsContainer {
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: var(--sp-md);
 }

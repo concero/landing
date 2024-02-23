@@ -36,7 +36,7 @@ export function Prototype({ title, body, srcImg, buttons }: PrototypeProps) {
           })}
         </div>
       </div>
-      <div>
+      <div className={classNames.rightSideContainer}>
         <Card>
           <div className={classNames.imgContainer}>
             <img src={srcImg} />

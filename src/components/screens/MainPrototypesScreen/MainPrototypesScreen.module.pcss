@@ -2,7 +2,7 @@
   padding: 0 var(--sp-xl);
   gap: var(--sp-lg);
   height: calc(100vh - 86px);
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -10,6 +10,7 @@
 .titleContainer {
   gap: var(--sp-lg);
   max-width: 500px;
+  min-width: 400px;
 }
 
 .header {
@@ -24,5 +25,10 @@
 
   img {
     height: 100%;
+  }
+
+  @media (width <= 768px) {
+    height: unset;
+    width: 100%;
   }
 }

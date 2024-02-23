@@ -2,35 +2,15 @@ import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import classNames from './JoinBlock.module.pcss'
 import object1 from '../../../assets/images/mainScreen/mainPageFigure.png'
-import axios from 'axios'
 import { useState } from 'react'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
+import { Link } from 'react-router-dom'
+import { routes } from '../../../constants/routes'
+import { ContactModal } from '../PartnersBlock/ContactModal/ContactModal'
 
 export function JoinBlock() {
-  const [inputs, setInputs] = useState({
-    email: '',
-  })
-
-  function handleSubmit(e: any) {
-    e.preventDefault()
-    axios({
-      method: 'POST',
-      url: 'https://formspree.io/f/maygajao',
-      data: inputs,
-    })
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-      .finally(() => {
-        setInputs({
-          email: '',
-        })
-      })
-  }
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
   return (
     <Block className={classNames.wrapper}>
@@ -55,25 +35,34 @@ export function JoinBlock() {
               size={'lg'}
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-              onClick={handleSubmit}
+              onClick={() => {
+                setIsModalVisible(true)
+              }}
             >
               <h3 className={`${classNames.buttonTitle} ${classNames.buttonTitleSize}`}>Sign up</h3>
             </Button>
-            <Button
-              variant={'transparent'}
-              size={'lg'}
-              className={classNames.launchAppButton}
-              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-black)'} />}
-              onClick={handleSubmit}
-            >
-              <h3 className={classNames.buttonTitleSize}>Help us test</h3>
-            </Button>
+            <Link to={routes.prototypes}>
+              <Button
+                variant={'transparent'}
+                size={'lg'}
+                className={classNames.launchAppButton}
+                rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-black)'} />}
+              >
+                <h3 className={classNames.buttonTitleSize}>Help us test</h3>
+              </Button>
+            </Link>
           </div>
         </div>
         <div className={classNames.imgContainer}>
           <img src={object1} />
         </div>
       </Card>
+      <ContactModal
+        show={isModalVisible}
+        setShow={setIsModalVisible}
+        title={'Sign up to waitlist'}
+        isMessageNeeded={false}
+      />
     </Block>
   )
 }

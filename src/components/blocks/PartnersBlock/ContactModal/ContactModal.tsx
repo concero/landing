@@ -11,10 +11,11 @@ interface ContactModalProps {
   show: boolean
   setShow: (show: boolean) => void
   title: string
-  body: string
+  body?: string
+  isMessageNeeded?: boolean
 }
 
-export function ContactModal({ show, setShow, title, body }: ContactModalProps) {
+export function ContactModal({ show, setShow, title, body, isMessageNeeded = true }: ContactModalProps) {
   const [inputs, setInputs] = useState({
     name: '',
     email: '',
@@ -50,7 +51,7 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
         <div className={classNames.formContainer}>
           <div className={classNames.titleContainer}>
             <h2>{title}</h2>
-            <p className={'body2'}>{body}</p>
+            {body ? <p className={'body2'}>{body}</p> : null}
           </div>
           <form className={classNames.inputContainer}>
             <Input
@@ -65,13 +66,15 @@ export function ContactModal({ show, setShow, title, body }: ContactModalProps) 
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
             />
-            <Input
-              title={'Message'}
-              inputType={'textarea'}
-              type={'text'}
-              onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
-              value={inputs.message}
-            />
+            {isMessageNeeded ? (
+              <Input
+                title={'Message'}
+                inputType={'textarea'}
+                type={'text'}
+                onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
+                value={inputs.message}
+              />
+            ) : null}
             <Button size={'md'} onClick={handleSubmit}>
               <h4 className={classNames.buttonTitle}>Send</h4>
             </Button>
