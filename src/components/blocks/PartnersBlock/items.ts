@@ -1,7 +1,7 @@
-import lifiLogo from '../../../assets/images/Partner/lifi.svg'
 import insurace from '../../../assets/images/Partner/insurace.svg'
-import rango from '../../../assets/images/Partner/rango.svg'
 import chainlink from '../../../assets/images/Partner/chainlink.svg'
+import dedaub from '../../../assets/images/Partner/dedaub.svg'
+import spaceAndTime from '../../../assets/images/Partner/spaceAndTime.svg'
 
 export const items = [
   {
@@ -11,12 +11,12 @@ export const items = [
   },
   {
     title: 'Dedaub',
-    imgSrc: rango,
+    imgSrc: dedaub,
     body: 'Audits & Monitoring',
   },
   {
     title: 'LI.FI',
-    imgSrc: lifiLogo,
+    imgSrc: spaceAndTime,
     body: 'Data provision',
   },
   {

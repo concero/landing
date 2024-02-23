@@ -2,13 +2,16 @@ import classNames from './Header.module.pcss'
 import { Logo } from './Logo'
 import { Button } from '../Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
-import { Link } from 'react-router-dom'
+import { Link, useMatch } from 'react-router-dom'
 import { routes } from '../../../constants/routes'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
 
 export const Header = () => {
   const isMobile = useMediaQuery('mobile')
+
+  const isHomeMatched = useMatch(routes.home)
+  const isProtypesMatched = useMatch(routes.prototypes)
 
   return (
     <header className={classNames.container}>
@@ -17,10 +20,10 @@ export const Header = () => {
         <>
           <div className={classNames.breadcrumbsContainer}>
             <Link to={routes.home}>
-              <p className={'body1'}>Home</p>
+              <p className={`body1 ${isHomeMatched ? classNames.selected : ''}`}>Home</p>
             </Link>
             <Link to={routes.prototypes}>
-              <p className={'body1'}>Prototypes</p>
+              <p className={`body1 ${isProtypesMatched ? classNames.selected : ''}`}>Prototypes</p>
             </Link>
           </div>
           <a href="https://app.concero.io" target={'_blank'}>
