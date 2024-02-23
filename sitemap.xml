@@ -6,4 +6,8 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://www.concero.io//favicon-32x32.png?v=4</loc>
+    </url>
 </urlset>
+
