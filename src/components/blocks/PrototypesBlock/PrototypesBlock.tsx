@@ -16,7 +16,7 @@ const items = [
       },
       {
         title: 'Survey',
-        link: 'https://app.concero.io',
+        link: 'https://forms.gle/cooNJZ5jTmtb4PLr7',
       },
     ],
   },
@@ -31,7 +31,7 @@ const items = [
       },
       {
         title: 'Survey',
-        link: 'https://app.concero.io',
+        link: 'https://forms.gle/XkpPeRp5FcnyKpq6A',
       },
     ],
   },
