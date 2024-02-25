@@ -1,4 +1,3 @@
-import classNames from './BenefitsBlock.module.pcss'
 import { Block } from '../../layout/Block/Block'
 import { TopicPicker } from '../../layout/TopicPicker/TopicPicker'
 import rightUpArrows from '../../../assets/icons/rightUpArrows.svg'
@@ -28,7 +27,7 @@ const items = [
 
 export function BenefitsBlock() {
   return (
-    <Block className={classNames.container}>
+    <Block>
       <TopicPicker
         title={'Benefits of participating in user testing'}
         body={

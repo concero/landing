@@ -29,6 +29,9 @@ export function Prototype({ title, body, srcImg, buttons }: PrototypeProps) {
                 key={index.toString()}
                 size={'lg'}
                 rightIcon={<IconArrowUpRight size={20} />}
+                onClick={() => {
+                  window.open(button.link, '_blank')
+                }}
               >
                 {button.title}
               </Button>
