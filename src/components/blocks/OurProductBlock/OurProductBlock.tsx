@@ -1,7 +1,7 @@
 import { Block } from '../../layout/Block/Block'
 import { TopicPicker } from '../../layout/TopicPicker/TopicPicker'
-import swap from '../../../assets/images/common/swap.png'
-import earn from '../../../assets/images/common/earn.png'
+import swap from '../../../assets/images/dexAggregatorBlock/dex.png'
+import earn from '../../../assets/images//YieldBlock/earn.png'
 import track from '../../../assets/images/common/track.png'
 
 const items = [
@@ -11,7 +11,6 @@ const items = [
     body: 'Swap any assets on any chains in one click.',
     icon: swap,
   },
-
   {
     id: '2',
     title: 'Earn',

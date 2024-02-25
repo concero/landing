@@ -40,8 +40,7 @@ export function Footer() {
         <div className={classNames.columnContainer}>
           <h4 className={classNames.columnTitle}>Company</h4>
           <div className={classNames.column}>
-            <p className={'body2'}>What is Concero</p>
-            <p className={'body2'}>P2P Protocol</p>
+            <p className={'body2'}>Docs</p>
             <a href={'/brand-assets.zip'}>
               <p className={'body2'}>Brand assets</p>
             </a>
@@ -55,7 +54,6 @@ export function Footer() {
             <p className={'body2'}>Privacy Policy</p>
           </div>
         </div>
-
         {/*<div className={classNames.columnContainer}>*/}
         {/*  <div>*/}
         {/*    <MainButton size={'md'} onClick={() => setIsModalOpened(true)}>*/}

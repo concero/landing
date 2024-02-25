@@ -6,9 +6,11 @@ import { MobileBreadcrumbs } from './MobileBreadcrumbs/MobileBreadcrumbs'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import burgerMenuIcon from '../../../assets/icons/burgerMenuIcon.svg'
 import { Button } from '../Button/Button'
+import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
 
 export function BurgerMenu() {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
+  const [isModalOpened, setIsModalOpened] = useState(false)
   const isMobile = useMediaQuery('mobile')
 
   const handleKeyDown = (event: KeyboardEvent) => {
@@ -73,17 +75,23 @@ export function BurgerMenu() {
                 size={'sq-sm'}
                 className={classNames.listButton}
                 onClick={(e: MouseEvent) => {
-                  window.open('https://app.concero.io', '_blank')
+                  setIsModalOpened(true)
                   e.stopPropagation()
                 }}
               >
-                <IconArrowUpRight size={18} color={'var(--color-text-secondary)'} />
-                <h5>Launch app</h5>
+                <IconArrowUpRight size={18} color={'var(--color-text-primary)'} />
+                <h5>Join Waitlist</h5>
               </Button>
             </li>
           </ul>
         </animated.div>
       </animated.div>
+      <ContactModal
+        show={isModalOpened}
+        setShow={setIsModalOpened}
+        title={'Sign up to waitlist'}
+        isMessageNeeded={false}
+      />
     </div>
   )
 }

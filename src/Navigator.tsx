@@ -1,5 +1,5 @@
 import { HomePage } from './components/pages/HomePage/HomePage'
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 import { routes } from './constants/routes'
 import { Header } from './components/layout/Header/Header'
@@ -15,7 +15,7 @@ export const Navigator = () => {
         <Routes>
           <Route path={routes.home} element={<HomePage />} />
           <Route path={routes.prototypes} element={<PrototypesPage />} />
-          <Route path={'/*'} element={<HomePage />} />
+          <Route path={'/*'} element={<Navigate to={routes.home} />} />
         </Routes>
         <Footer />
       </div>
