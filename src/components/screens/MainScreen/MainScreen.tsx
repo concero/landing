@@ -1,5 +1,5 @@
 import classNames from './MainScreen.module.pcss'
-import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.png'
+import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.webp'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'

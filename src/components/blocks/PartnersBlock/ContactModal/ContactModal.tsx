@@ -1,7 +1,7 @@
 import { Modal } from '../../../layout/Modal/Modal'
 import classNames from './ContactModal.module.pcss'
 import { Input } from '../../../layout/Input/Input'
-import object from '../../../../assets/images/mainScreen/mainPageFigure.png'
+import object from '../../../../assets/images/mainScreen/mainPageFigure.webp'
 import { Button } from '../../../layout/Button/Button'
 import { useState } from 'react'
 import axios from 'axios'

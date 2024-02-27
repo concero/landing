@@ -1,7 +1,7 @@
 import { Block } from '../../layout/Block/Block'
 import { Card } from '../../cards/Card/Card'
 import classNames from './JoinBlock.module.pcss'
-import object1 from '../../../assets/images/mainScreen/mainPageFigure.png'
+import object1 from '../../../assets/images/mainScreen/mainPageFigure.webp'
 import { useState } from 'react'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'

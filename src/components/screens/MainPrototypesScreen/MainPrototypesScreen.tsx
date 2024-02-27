@@ -1,5 +1,5 @@
 import classNames from './MainPrototypesScreen.module.pcss'
-import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigureLight.png'
+import mainPageFigure from '../../../assets/images/mainScreen/mainScreenFigureLight.webp'
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
 
