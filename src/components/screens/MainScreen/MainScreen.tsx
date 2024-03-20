@@ -23,10 +23,11 @@ export const MainScreen = () => {
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={() => {
-                setIsModalVisible(true)
+                // setIsModalVisible(true)
+                window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
               }}
             >
-              <h3 className={classNames.buttonTitle}>Join Waitlist</h3>
+              <h3 className={classNames.buttonTitle}>Join testnet</h3>
             </Button>
           </div>
         </div>

@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/signup/:path*",
+      "destination": "https://send.concero.io/:path*"
+    },
+    {
       "source": "/([^.\n]*)",
       "destination": "/"
     }

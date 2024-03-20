@@ -35,10 +35,11 @@ export const Header = () => {
             rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
             className={classNames.button}
             onClick={() => {
-              setIsModalVisible(true)
+              window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+              // setIsModalVisible(true)
             }}
           >
-            <h5 className={classNames.buttonTitle}>Join Waitlist</h5>
+            <h5 className={classNames.buttonTitle}>Join testnet</h5>
           </Button>
         </>
       ) : null}
