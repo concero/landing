@@ -4,5 +4,11 @@
       "source": "/([^.\n]*)",
       "destination": "/"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/signup/:id",
+      "destination": "https://send.concero.io/s/cltzo34650007yl7a1qah623z?referral=:id"
+    }
   ]
 }
