@@ -25,16 +25,31 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
 
   function handleSubmit(e: any) {
     e.preventDefault()
+
+    if (!inputs.name || !inputs.email) {
+      return
+    }
+
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/maygajao',
-      data: inputs,
+      url: 'https://send.concero.io/api/v1/client/cltkp48yy0009swvupzjn5ezi/responses',
+      data: {
+        surveyId: 'clu2fnr98001gmiks31g00uml',
+        userId: `${inputs.email}`,
+        finished: true,
+        data: {
+          name: inputs.name,
+          email: inputs.email,
+          discordOrTwitterUsername: inputs.socialMedia,
+          message: inputs.message,
+        },
+      },
     })
       .then((response) => {
         console.log(response)
       })
-      .catch((error) => {
-        console.log(error)
+      .catch((err) => {
+        console.log(err)
       })
       .finally(() => {
         setShow(false)
