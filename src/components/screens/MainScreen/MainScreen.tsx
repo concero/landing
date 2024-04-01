@@ -10,6 +10,8 @@ export const MainScreen = () => {
 
   return (
     <div className={`screenContainer ${classNames.container}`}>
+      <div className="cf-turnstile" data-sitekey="0x4AAAAAAAWGficfp02MJ5Oe" data-callback="javascriptCallback"></div>
+      <div id="captcha" style={{width: "100vw", height: "100vh", position: "absolute"}}></div>
       <div className={classNames.bgContainer}>
         <div className={classNames.leftSide}>
           <div className={classNames.headerContainer}>
@@ -24,7 +26,13 @@ export const MainScreen = () => {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               onClick={() => {
                 // setIsModalVisible(true)
-                window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                turnstile.render('#captcha', {
+                  sitekey: '1x00000000000000000000BB',
+                  callback: function(token) {
+                    console.log(`Challenge Success ${token}`);
+                    window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                  },
+                });
               }}
             >
               <h3 className={classNames.buttonTitle}>Join testnet</h3>
