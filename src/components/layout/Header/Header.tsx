@@ -11,6 +11,7 @@ import { useState } from 'react'
 
 export const Header = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const isMobile = useMediaQuery('mobile')
   const isHomeMatched = useMatch(routes.home)
@@ -34,9 +35,17 @@ export const Header = () => {
             size={'sm'}
             rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
             className={classNames.button}
+            isLoading={isLoading}
             onClick={() => {
-              window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
-              // setIsModalVisible(true)
+              setIsLoading(true)
+              turnstile.render('#captcha', {
+                sitekey: process.env.CLOUDFLARE_SITEKEY as string,
+                callback: function (token) {
+                  console.log(`Challenge Success ${token}`)
+                  window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                  setIsLoading(false)
+                },
+              })
             }}
           >
             <h5 className={classNames.buttonTitle}>Join testnet</h5>
