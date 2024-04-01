@@ -7,9 +7,12 @@ import { useState } from 'react'
 
 export const MainScreen = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   return (
     <div className={`screenContainer ${classNames.container}`}>
+      <div className="cf-turnstile" data-sitekey="0x4AAAAAAAWGficfp02MJ5Oe" data-callback="javascriptCallback"></div>
+      <div id="captcha" />
       <div className={classNames.bgContainer}>
         <div className={classNames.leftSide}>
           <div className={classNames.headerContainer}>
@@ -22,9 +25,17 @@ export const MainScreen = () => {
               size={'lg'}
               className={classNames.launchAppButton}
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+              isLoading={isLoading}
               onClick={() => {
-                // setIsModalVisible(true)
-                window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                setIsLoading(true)
+                turnstile.render('#captcha', {
+                  sitekey: process.env.CLOUDFLARE_SITEKEY as string,
+                  callback: function (token) {
+                    console.log(`Challenge Success ${token}`)
+                    window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                    setIsLoading(false)
+                  },
+                })
               }}
             >
               <h3 className={classNames.buttonTitle}>Join testnet</h3>
