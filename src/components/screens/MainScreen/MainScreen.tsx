@@ -32,7 +32,7 @@ export const MainScreen = () => {
                   sitekey: process.env.CLOUDFLARE_SITEKEY as string,
                   callback: function (token) {
                     console.log(`Challenge Success ${token}`)
-                    window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
+                    window.location.href = 'https://send.concero.io/s/cltzo34650007yl7a1qah623z';
                     setIsLoading(false)
                   },
                 })
