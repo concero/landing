@@ -37,18 +37,10 @@ export const Header = () => {
             className={classNames.button}
             isLoading={isLoading}
             onClick={() => {
-              setIsLoading(true)
-              turnstile.render('#captcha', {
-                sitekey: process.env.CLOUDFLARE_SITEKEY as string,
-                callback: function (token) {
-                  console.log(`Challenge Success ${token}`)
-                  window.open('https://send.concero.io/s/cltzo34650007yl7a1qah623z', '_blank')
-                  setIsLoading(false)
-                },
-              })
+              window.location.href = 'https://app.concero.io/swap';
             }}
           >
-            <h5 className={classNames.buttonTitle}>Join testnet</h5>
+            <h5 className={classNames.buttonTitle}>Launch app</h5>
           </Button>
         </>
       ) : null}

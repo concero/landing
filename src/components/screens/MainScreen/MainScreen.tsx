@@ -27,18 +27,10 @@ export const MainScreen = () => {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               isLoading={isLoading}
               onClick={() => {
-                setIsLoading(true)
-                turnstile.render('#captcha', {
-                  sitekey: process.env.CLOUDFLARE_SITEKEY as string,
-                  callback: function (token) {
-                    console.log(`Challenge Success ${token}`)
-                    window.location.href = 'https://send.concero.io/s/cltzo34650007yl7a1qah623z';
-                    setIsLoading(false)
-                  },
-                })
+                window.location.href = 'https://app.concero.io/swap';
               }}
             >
-              <h3 className={classNames.buttonTitle}>Join testnet</h3>
+              <h3 className={classNames.buttonTitle}>Launch app</h3>
             </Button>
           </div>
         </div>
