@@ -27,7 +27,7 @@ export const MainScreen = () => {
               rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               isLoading={isLoading}
               onClick={() => {
-                window.location.href = 'https://app.concero.io/swap';
+                window.location.href = 'https://lanca.io';
               }}
             >
               <h3 className={classNames.buttonTitle}>Launch app</h3>

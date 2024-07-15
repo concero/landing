@@ -12,7 +12,7 @@ const items = [
     buttons: [
       {
         title: 'Launch app',
-        link: 'https://app.concero.io',
+        link: 'https://lanca.io',
       },
       {
         title: 'Survey',
@@ -28,6 +28,7 @@ const items = [
       {
         title: 'Launch app',
         link: 'https://app.concero.io/earn',
+        disabled: true
       },
       {
         title: 'Survey',

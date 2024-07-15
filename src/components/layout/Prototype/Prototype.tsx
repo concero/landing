@@ -10,6 +10,7 @@ export interface PrototypeProps {
   buttons: {
     title: string
     link: string
+    disabled?: boolean
   }[]
 }
 
@@ -29,6 +30,7 @@ export function Prototype({ title, body, srcImg, buttons }: PrototypeProps) {
                 key={index.toString()}
                 size={'lg'}
                 rightIcon={<IconArrowUpRight size={20} />}
+                isDisabled={button.disabled}
                 onClick={() => {
                   window.open(button.link, '_blank')
                 }}
