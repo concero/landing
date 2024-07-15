@@ -37,7 +37,7 @@ export const Header = () => {
             className={classNames.button}
             isLoading={isLoading}
             onClick={() => {
-              window.location.href = 'https://app.concero.io/swap';
+              window.location.href = 'https://lanca.io';
             }}
           >
             <h5 className={classNames.buttonTitle}>Launch app</h5>
