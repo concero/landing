@@ -68,7 +68,13 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
         <div className={classNames.formContainer}>
           <div className={classNames.titleContainer}>
             <h2>{title}</h2>
-            {body ? <p className={'body2'}>{body}</p> : null}
+            <Button
+              className={classNames.closeButton}
+              variant={'secondaryGrey'}
+              size={'xs'}
+              onClick={() => setShow(false)}
+              leftIcon={<IconX style={{}} strokeWidth={1.7} height={30} color={'var(--color-gray-700)'} />}
+            />
           </div>
           <form className={classNames.inputContainer}>
             <Input
@@ -89,30 +95,21 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
               onChange={(e) => setInputs({ ...inputs, socialMedia: e.target.value })}
               value={inputs.socialMedia}
             />
-            {isMessageNeeded ? (
-              <Input
-                title={'Message'}
-                inputType={'textarea'}
-                type={'text'}
-                onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
-                value={inputs.message}
-              />
-            ) : null}
-            <Button size={'md'} onClick={handleSubmit}>
-              <h4 className={classNames.buttonTitle}>Send</h4>
-            </Button>
+
+            <Input
+              title={'Message'}
+              inputType={'textarea'}
+              type={'text'}
+              onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
+              value={inputs.message}
+            />
+            <div style={{ alignSelf: 'flex-start' }}>
+              <Button size={'lg'} onClick={handleSubmit}>
+                <h4 className={classNames.buttonTitle}>Send message</h4>
+              </Button>
+            </div>
           </form>
         </div>
-        <div className={classNames.imageContainer}>
-          <img src={object} />
-        </div>
-        <Button
-          className={classNames.closeButton}
-          variant={'black'}
-          size={'xs'}
-          onClick={() => setShow(false)}
-          leftIcon={<IconX color={'var(--color-base-white)'} />}
-        ></Button>
       </div>
     </Modal>
   )

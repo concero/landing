@@ -1,14 +1,19 @@
 .container {
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .formContainer {
-  padding: var(--sp-xxl);
+  padding: var(--sp-lg);
+  width: 100%;
 }
 
 .titleContainer {
   gap: var(--sp-sm);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   p {
     max-width: 500px;
@@ -45,10 +50,8 @@
 }
 
 .closeButton {
-  position: absolute;
-  top: var(--sp-lg);
-  right: var(--sp-lg);
   cursor: pointer;
+  background-clor: --color-primary-700;
 }
 
 .closeButton:hover {

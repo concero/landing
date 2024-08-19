@@ -3,7 +3,7 @@
 :root {
   --st-br-xxl: 100px;
   --st-br-xl: 64px;
-  --st-br-lg: 24px;
+  --st-br-lg: 12px;
   --st-br-md: 12px;
   --st-br-sm: 8px;
   --st-br-xs: 4px;
@@ -44,9 +44,10 @@
   --color-base-white: #fff;
   --color-grey-300: #131313;
   --color-grey-350: #1c1c1c;
+  --color-grey-100: #f2f4f7;
   --color-grey-400: #464646;
   --color-grey-450: #98959e;
-  --color-grey-500: #b0afb5;
+  --color-grey-500: #667085;
   --color-grey-550: #cbcacf;
   --color-grey-600: #e5e5e7;
   --color-grey-650: #f7f7f7;
@@ -58,6 +59,7 @@
   --color-text-primary: #131313;
   --color-text-secondary: #888698;
   --color-bg1: #f4f4f4;
+  --color-gray-700: #344054;
   --color-primary-250: #0b0519;
   --color-primary-300: #170b31;
   --color-primary-350: #2e1563;
@@ -67,7 +69,7 @@
   --color-primary-550: #8f5df9;
   --color-primary-600: #ab86fa;
   --color-primary-650: #c7aefc;
-  --color-primary-700: #e3d7fd;
+  --color-primary-700: #ebe9fe;
   --color-primary-750: #f7f3ff;
 }
 
@@ -167,32 +169,32 @@ li {
 }
 
 h1 {
-  font-size: 48px;
-  font-weight: 600;
+  font-size: 56px;
+  font-weight: 500;
   line-height: 120%;
 }
 
 h2 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 120%;
 }
 
 h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
 }
 
 h5 {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 p {
@@ -245,8 +247,6 @@ button {
 
 .screenContainer {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   background-color: var(--color-base-white);

@@ -4,6 +4,10 @@ import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
 import { useState } from 'react'
+import DiscordIcon from '../../icons/DiscordIcon'
+import XIcon from '../../icons/XIcon'
+import MediumIcon from '../../icons/MediumIcon'
+import TelegramIcon from '../../icons/TelegramIcon'
 
 export const MainScreen = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -11,35 +15,33 @@ export const MainScreen = () => {
 
   return (
     <div className={`screenContainer ${classNames.container}`}>
-      <div className="cf-turnstile" data-sitekey="0x4AAAAAAAWGficfp02MJ5Oe" data-callback="javascriptCallback"></div>
-      <div id="captcha" />
-      <div className={classNames.bgContainer}>
-        <div className={classNames.leftSide}>
-          <div className={classNames.headerContainer}>
-            <div className={classNames.titleContainer}>
-              <h1 className={classNames.header}>Making cross-chain effortless</h1>
-              <h3 className={classNames.subTitle}>A quicker, safer & easier to use cross-chain infrastructure.</h3>
+      {/* <div className="cf-turnstile" data-sitekey="0x4AAAAAAAWGficfp02MJ5Oe" data-callback="javascriptCallback"></div>
+      <div id="captcha" /> */}
+      {/* <div className={classNames.bgContainer}> */}
+      <div className={classNames.blank} />
+      <div className={classNames.titleContainer}>
+        <h1 className={classNames.header}>
+          Decentralised<p className={classNames.asterisk}>*</p> interoperability protocol
+        </h1>
+        <h1 className={classNames.subTitle}>Fast, secure, one-click</h1>
+        <div className={classNames.captionContainer}>
+          <h3 className={classNames.caption}>*And we mean Fully Decentralised</h3>
+          <div className={classNames.socialIconsContainer}>
+            <div className={classNames.socialIconContainer} style={{ backgroundColor: '#475467' }}>
+              <XIcon width={32} height={32} fill="white" />
             </div>
-            <Button
-              variant={'primary'}
-              size={'lg'}
-              className={classNames.launchAppButton}
-              rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-              isLoading={isLoading}
-              onClick={() => {
-                window.location.href = 'https://lanca.io';
-              }}
-            >
-              <h3 className={classNames.buttonTitle}>Launch app</h3>
-            </Button>
-          </div>
-        </div>
-        <div className={classNames.rightSide}>
-          <div className={classNames.imgContainer}>
-            <img src={mainPageFigure} />
+            <div className={classNames.socialIconContainer} style={{ backgroundColor: '#5865F2' }}>
+              <DiscordIcon width={32} height={32} fill="white" />
+            </div>
+            <div className={classNames.socialIconContainer} style={{ backgroundColor: '#475467' }}>
+              <MediumIcon width={32} height={32} fill="white" />
+            </div>
           </div>
         </div>
       </div>
+      <img src="src/assets/images/landing/Desktop.png" alt="Landing Image" />
+
+      {/* </div> */}
       <ContactModal
         show={isModalVisible}
         setShow={setIsModalVisible}

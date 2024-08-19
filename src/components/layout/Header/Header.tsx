@@ -30,27 +30,36 @@ export const Header = () => {
               <p className={`body1 ${isPrototypesMatched ? classNames.selected : ''}`}>Prototypes</p>
             </Link>
           </div>
-          <Button
-            variant={'primary'}
-            size={'sm'}
-            rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
-            className={classNames.button}
-            isLoading={isLoading}
-            onClick={() => {
-              window.location.href = 'https://lanca.io';
-            }}
-          >
-            <h5 className={classNames.buttonTitle}>Launch app</h5>
-          </Button>
+          <div className={classNames.headerBtnContainer}>
+            <Button
+              variant={'secondary'}
+              size={'sm'}
+              // rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+              className={classNames.button}
+              isLoading={isLoading}
+              onClick={() => {
+                setIsModalVisible(true)
+              }}
+            >
+              <h5 className={classNames.contactButtonTitle}>Contact us</h5>
+            </Button>
+            <Button
+              variant={'primary'}
+              size={'sm'}
+              // rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
+              className={classNames.button}
+              isLoading={isLoading}
+              onClick={() => {
+                window.location.href = 'https://lanca.io'
+              }}
+            >
+              <h5 className={classNames.launchButtonTitle}>Launch app</h5>
+            </Button>
+          </div>
         </>
       ) : null}
       {isMobile ? <BurgerMenu /> : null}
-      <ContactModal
-        show={isModalVisible}
-        setShow={setIsModalVisible}
-        title={'Sign up to waitlist'}
-        isMessageNeeded={false}
-      />
+      <ContactModal show={isModalVisible} setShow={setIsModalVisible} title={'Contact us'} isMessageNeeded={false} />
     </header>
   )
 }

@@ -5,71 +5,17 @@
   min-height: 674px;
 }
 
-.bgContainer {
-  flex: 1;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  border-radius: var(--st-br-card-lg);
-  background: linear-gradient(211deg, #0f1c2a 3.64%, #120a24 30.75%, #131216 71.22%);
-  padding-left: 98px;
+.titleContainer {
+  margin-bottom: 32px;
 }
 
-.leftSide {
-  flex: 1;
-  height: 100%;
-  min-width: 504px;
-
-  .headerContainer {
-    flex: 1;
-    justify-content: center;
-    align-items: flex-start;
-    gap: var(--sp-xl);
-
-    .titleContainer {
-      gap: var(--sp-xl);
-    }
-
-    h3 {
-      color: var(--color-base-white);
-      font-weight: 400;
-    }
-
-    .header {
-      max-width: 580px;
-      color: var(--color-base-white);
-      font-size: 87px;
-      font-weight: 400;
-      line-height: 100%;
-    }
-
-    .subTitle {
-      max-width: 300px;
-      line-height: unset;
-    }
-  }
+.asterisk {
+  color: var(--color-primary);
+  font-size: 55px;
 }
 
-.rightSide {
-  flex: none;
-  margin-right: -240px;
-  height: 100%;
-  justify-content: flex-start;
-
-  .imgContainer {
-    flex: none;
-    max-width: 845px;
-    height: 100%;
-    align-items: flex-end;
-
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+.blank {
+  height: 180px;
 }
 
 .buttonTitle {
@@ -80,6 +26,39 @@
 .launchAppButton {
   padding: var(--sp-md) var(--sp-lg) !important;
   border-radius: var(--st-br-lg) !important;
+}
+
+.captionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialIconContainer {
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--st-br-md);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.socialIconsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.caption {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.subTitle {
+  color: var(--color-grey-500);
 }
 
 @media (width <= 768px) {
