@@ -1,0 +1,59 @@
+.dropbtn {
+  color: var(--color-grey-700);
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border-radius: var(--sp-md);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: var(--color-grey-100);
+  min-width: 170px;
+  margin-top: 5px;
+  border-radius: var(--sp-md);
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 2%);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  pointer-events: none;
+}
+
+/* Adjusted for seamless hover */
+.dropdown:hover .dropdownContent {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Allows interaction when visible */
+}
+
+/* Links inside the dropdown */
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownContent a:hover {
+  background-color: var(--color-grey-600);
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--color-grey-100);
+}

@@ -8,6 +8,7 @@ import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
 import { useState } from 'react'
+import { DropdownBtn } from '../DropdownBtn/DropdownBtn'
 
 export const Header = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -23,18 +24,17 @@ export const Header = () => {
       {!isMobile ? (
         <>
           <div className={classNames.breadcrumbsContainer}>
-            <Link to={routes.home}>
-              <p className={`body1 ${isHomeMatched ? classNames.selected : ''}`}>Home</p>
-            </Link>
-            <Link to={routes.prototypes}>
-              <p className={`body1 ${isPrototypesMatched ? classNames.selected : ''}`}>Prototypes</p>
-            </Link>
+            <DropdownBtn>
+              <a href="#">Provide Liquidity</a>
+              <a href="#">Rewards portal</a>
+            </DropdownBtn>
+
+            <p className={``}>For developers</p>
           </div>
           <div className={classNames.headerBtnContainer}>
             <Button
               variant={'secondary'}
               size={'sm'}
-              // rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               className={classNames.button}
               isLoading={isLoading}
               onClick={() => {
@@ -46,7 +46,6 @@ export const Header = () => {
             <Button
               variant={'primary'}
               size={'sm'}
-              // rightIcon={<IconArrowUpRight size={20} color={'var(--color-base-white)'} />}
               className={classNames.button}
               isLoading={isLoading}
               onClick={() => {
