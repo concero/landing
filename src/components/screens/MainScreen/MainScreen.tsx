@@ -7,11 +7,14 @@ import { useEffect, useState } from 'react'
 import DiscordIcon from '../../icons/DiscordIcon'
 import XIcon from '../../icons/XIcon'
 import MediumIcon from '../../icons/MediumIcon'
+import MobileImg from '../../../assets/images/landing/Mobile.png'
+import Desktop from '../../../assets/images/landing/Desktop.png'
+import Tablet from '../../../assets/images/landing/Tablet.png'
 
 export const MainScreen = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const [imageSrc, setImageSrc] = useState('src/assets/images/landing/Desktop.png')
+  const [imageSrc, setImageSrc] = useState(Desktop)
 
   const handleClick = (link) => {
     window.open(link, '_blank')
@@ -20,11 +23,11 @@ export const MainScreen = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 743) {
-        setImageSrc('src/assets/images/landing/Mobile.png')
+        setImageSrc(MobileImg)
       } else if (window.innerWidth < 1000) {
-        setImageSrc('src/assets/images/landing/Tablet.png')
+        setImageSrc(Tablet)
       } else {
-        setImageSrc('src/assets/images/landing/Desktop.png')
+        setImageSrc(Desktop)
       }
     }
 
