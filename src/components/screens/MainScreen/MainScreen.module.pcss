@@ -1,8 +1,27 @@
 .container {
   width: 100%;
-  height: calc(100dvh - 86px);
+  height: calc(100dvh);
   padding: 0 var(--sp-xl) var(--sp-xl) var(--sp-xl);
   min-height: 674px;
+}
+
+.screenContainer {
+  position: relative;
+  min-height: 120vh; /* Ensure the container takes at least the full height of the viewport */
+}
+
+.comingSoon {
+  p {
+    color: var(--color-grey-500);
+  }
+
+  width: 100%;
+  position: relative;
+  bottom: -30px;
+  color: #721c24; /* Dark red text color */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
 }
 
 .titleContainer {
