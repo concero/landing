@@ -15,13 +15,14 @@ export const Header = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const isMobile = useMediaQuery('mobile')
+  const isIpad = useMediaQuery('ipad')
   const isHomeMatched = useMatch(routes.home)
   const isPrototypesMatched = useMatch(routes.prototypes)
 
   return (
     <header className={classNames.container}>
       <Logo />
-      {!isMobile ? (
+      {!isMobile && !isIpad ? (
         <>
           <div className={classNames.breadcrumbsContainer}>
             <DropdownBtn title="Ecosystem">
@@ -60,7 +61,7 @@ export const Header = () => {
           </div>
         </>
       ) : null}
-      {isMobile ? <BurgerMenu /> : null}
+      {isMobile || isIpad ? <BurgerMenu /> : null}
       <ContactModal show={isModalVisible} setShow={setIsModalVisible} title={'Contact us'} isMessageNeeded={false} />
     </header>
   )

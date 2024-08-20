@@ -3,22 +3,38 @@ import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.web
 import { Button } from '../../layout/Button/Button'
 import { IconArrowUpRight } from '@tabler/icons-react'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DiscordIcon from '../../icons/DiscordIcon'
 import XIcon from '../../icons/XIcon'
 import MediumIcon from '../../icons/MediumIcon'
-import TelegramIcon from '../../icons/TelegramIcon'
 
 export const MainScreen = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [imageSrc, setImageSrc] = useState('src/assets/images/landing/Desktop.png')
 
   const handleClick = (link) => {
     window.open(link, '_blank')
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 743) {
+        setImageSrc('src/assets/images/landing/Mobile.png')
+      } else if (window.innerWidth < 1000) {
+        setImageSrc('src/assets/images/landing/Tablet.png')
+      } else {
+        setImageSrc('src/assets/images/landing/Desktop.png')
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   return (
     <div className={`screenContainer ${classNames.container}`}>
-      {/* Existing content */}
       <div className={classNames.blank} />
       <div className={classNames.titleContainer}>
         <h1 className={classNames.header}>
@@ -52,9 +68,8 @@ export const MainScreen = () => {
           </div>
         </div>
       </div>
-      <img src="src/assets/images/landing/Desktop.png" alt="Landing Image" />
+      <img src={imageSrc} alt="Landing Image" />
 
-      {/* Coming Soon Message */}
       <div className={classNames.comingSoon}>
         <p>Website is coming soon, stay in touch</p>
       </div>

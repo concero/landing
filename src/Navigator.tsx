@@ -17,7 +17,6 @@ export const Navigator = () => {
           <Route path={routes.prototypes} element={<PrototypesPage />} />
           <Route path={'/*'} element={<Navigate to={routes.home} />} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   )
