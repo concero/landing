@@ -1,4 +1,4 @@
-@import url('../assets/fonts/Axiforma/typography.css');
+@import url('../assets/fonts/DM_Sans/typography.css');
 
 :root {
   --st-br-xxl: 100px;
@@ -27,7 +27,7 @@
   --radius-md: 16px;
 
   color-scheme: light dark;
-  font-family: Axiforma;
+  font-family: 'DM Sans';
   font-style: normal;
   font-size: 16px; /* base font size, 1rem */
   -webkit-font-smoothing: antialiased;
@@ -77,6 +77,11 @@
 #root {
   width: 100%;
   height: 0;
+}
+
+html,
+body {
+  font-family: 'DM Sans', sans-serif !important;
 }
 
 body::-webkit-scrollbar {
