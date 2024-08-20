@@ -43,6 +43,10 @@ export function BurgerMenu() {
     from: { opacity: 0, pointerEvents: 'none' },
   })
 
+  const handleClick = (link) => {
+    window.open(link, '_blank')
+  }
+
   useEffect(() => {
     if (isMenuOpened) {
       document.body.style.overflowY = 'hidden'
@@ -65,30 +69,20 @@ export function BurgerMenu() {
       >
         <IconMenu2 size={20} color={'#F2F4F7'} />
       </Button>
-      {/* <animated.div
-        style={overlayFadeAnimation}
-        className={classNames.overlay}
-        onClick={() => {
-          setIsMenuOpened(false)
-        }}
-      >
-        <animated.div style={fadeAnimation} className={classNames.menuContainer}>
-       
-        </animated.div>
-      </animated.div> */}
 
-      {/* Overlay Menu */}
       {isMenuOpened && (
         <div className={`${classNames.overlay} ${isFadingOut ? classNames.fadeOut : classNames.fadeIn}`}>
           <div className={classNames.burgerMenuHeader}>
             <Logo />
             <Button
+              variant={'secondary'}
               size={'sq-sm'}
+              className={classNames.closeButton}
               onClick={() => {
                 setIsMenuOpened((prev) => !prev)
               }}
             >
-              <IconX size={20} color={'#F2F4F7'} />
+              <IconX size={20} color={'#344054'} />
             </Button>
           </div>
 
@@ -97,8 +91,8 @@ export function BurgerMenu() {
             <div className={classNames.menuSection}>
               <p className={classNames.sectionTitle}>Ecosystem</p>
               <ul className={classNames.sectionList}>
-                <li>Provide Liquidity</li>
-                <li>Rewards portal</li>
+                <li onClick={() => handleClick('https://app.concero.io/pool')}>Provide Liquidity</li>
+                <li onClick={() => handleClick('https://app.concero.io/rewards')}>Rewards portal</li>
               </ul>
             </div>
 
@@ -109,7 +103,7 @@ export function BurgerMenu() {
               <p className={classNames.sectionTitle}>For Developers</p>
               <ul className={classNames.sectionList}>
                 <li>Documentation</li>
-                <li>Whitepaper</li>
+                <li onClick={() => handleClick(' https://www.concero.io/whitepaper.pdf')}>Whitepaper</li>
               </ul>
             </div>
             <div className={classNames.buttonContainer}>

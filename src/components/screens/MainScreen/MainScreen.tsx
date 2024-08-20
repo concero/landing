@@ -77,12 +77,7 @@ export const MainScreen = () => {
         <p>Website is coming soon, stay in touch</p>
       </div>
 
-      <ContactModal
-        show={isModalVisible}
-        setShow={setIsModalVisible}
-        title={'Sign up to waitlist'}
-        isMessageNeeded={false}
-      />
+      {/* <ContactModal show={isModalVisible} setShow={setIsModalVisible} isMessageNeeded={false} /> */}
     </div>
   )
 }

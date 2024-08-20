@@ -18,6 +18,9 @@ export const Header = () => {
   const isIpad = useMediaQuery('ipad')
   const isHomeMatched = useMatch(routes.home)
   const isPrototypesMatched = useMatch(routes.prototypes)
+  const handleClick = (link) => {
+    window.open(link, '_blank')
+  }
 
   return (
     <header className={classNames.container}>
@@ -26,13 +29,21 @@ export const Header = () => {
         <>
           <div className={classNames.breadcrumbsContainer}>
             <DropdownBtn title="Ecosystem">
-              <a href="#">Provide Liquidity</a>
-              <a href="#">Rewards portal</a>
+              <a href="#" onClick={() => handleClick('https://app.concero.io/pool')}>
+                Provide Liquidity
+              </a>
+              <a href="#" onClick={() => handleClick('https://app.concero.io/rewards')}>
+                Rewards portal
+              </a>
             </DropdownBtn>
 
             <DropdownBtn title="For developers">
-              <a href="#">Documentation</a>
-              <a href="#">Whitepaper</a>
+              <a href="#" onClick={() => handleClick('https://app.concero.io/pool')}>
+                Documentation
+              </a>
+              <a href="#" onClick={() => handleClick(' https://www.concero.io/whitepaper.pdf')}>
+                Whitepaper
+              </a>
             </DropdownBtn>
           </div>
           <div className={classNames.headerBtnContainer}>
