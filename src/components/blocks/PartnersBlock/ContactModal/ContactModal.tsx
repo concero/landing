@@ -103,7 +103,7 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
               title={'Message'}
               inputType={'textarea'}
               type={'text'}
-              placeholder="Massage"
+              placeholder="Message"
               onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
               value={inputs.message}
             />
