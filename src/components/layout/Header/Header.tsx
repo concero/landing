@@ -61,7 +61,22 @@ export const Header = () => {
           </div>
         </>
       ) : null}
-      {isMobile || isIpad ? <BurgerMenu /> : null}
+      {isMobile || isIpad ? (
+        <div className={'rowCenter'}>
+          <Button
+            variant={'secondary'}
+            size={'sm'}
+            className={classNames.button}
+            isLoading={isLoading}
+            onClick={() => {
+              setIsModalVisible(true)
+            }}
+          >
+            <h5 className={classNames.contactButtonTitle}>Contact us</h5>
+          </Button>
+          <BurgerMenu />
+        </div>
+      ) : null}
       <ContactModal show={isModalVisible} setShow={setIsModalVisible} title={'Contact us'} isMessageNeeded={false} />
     </header>
   )

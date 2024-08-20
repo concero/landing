@@ -1,24 +1,33 @@
 import classNames from './BurgerMenu.module.pcss'
 import { type KeyboardEvent, useEffect, useState } from 'react'
-import { IconArrowUpRight } from '@tabler/icons-react'
+import { IconArrowUpRight, IconMenu2, IconX } from '@tabler/icons-react'
 import { animated, useSpring } from '@react-spring/web'
 import { MobileBreadcrumbs } from './MobileBreadcrumbs/MobileBreadcrumbs'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
-import burgerMenuIcon from '../../../assets/icons/burgerMenuIcon.svg'
 import { Button } from '../Button/Button'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
+import { Header } from '../Header/Header'
+import { Logo } from '../Header/Logo'
 
 export function BurgerMenu() {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const [isModalOpened, setIsModalOpened] = useState(false)
-  const isMobile = useMediaQuery('mobile')
+  const [isFadingOut, setIsFadingOut] = useState(false)
 
+  const isMobile = useMediaQuery('mobile')
+  console.log(isMobile)
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       setIsMenuOpened(false)
     }
   }
-
+  const handleCloseMenu = () => {
+    setIsFadingOut(true)
+    setTimeout(() => {
+      setIsMenuOpened(false)
+      setIsFadingOut(false)
+    }, 300) // Match the duration with your CSS animation duration
+  }
   const fadeAnimation = useSpring({
     opacity: isMenuOpened ? 1 : 0,
     translateY: isMenuOpened ? 0 : -100,
@@ -49,17 +58,14 @@ export function BurgerMenu() {
   return (
     <div className={classNames.container}>
       <Button
-        variant={'black'}
         size={'sq-sm'}
         onClick={() => {
           setIsMenuOpened((prev) => !prev)
         }}
       >
-        <div className={classNames.imgContainer}>
-          <img src={burgerMenuIcon} />
-        </div>
+        <IconMenu2 size={20} color={'#F2F4F7'} />
       </Button>
-      <animated.div
+      {/* <animated.div
         style={overlayFadeAnimation}
         className={classNames.overlay}
         onClick={() => {
@@ -67,25 +73,71 @@ export function BurgerMenu() {
         }}
       >
         <animated.div style={fadeAnimation} className={classNames.menuContainer}>
-          {isMobile ? <MobileBreadcrumbs /> : null}
-          <ul className={classNames.listContainer}>
-            <li>
-              <Button
-                variant={'black'}
-                size={'sq-sm'}
-                className={classNames.listButton}
-                onClick={(e: MouseEvent) => {
-                  setIsModalOpened(true)
-                  e.stopPropagation()
-                }}
-              >
-                <IconArrowUpRight size={18} color={'var(--color-text-primary)'} />
-                <h5>Join Waitlist</h5>
-              </Button>
-            </li>
-          </ul>
+       
         </animated.div>
-      </animated.div>
+      </animated.div> */}
+
+      {/* Overlay Menu */}
+      {isMenuOpened && (
+        <div className={`${classNames.overlay} ${isFadingOut ? classNames.fadeOut : classNames.fadeIn}`}>
+          <div className={classNames.burgerMenuHeader}>
+            <Logo />
+            <Button
+              size={'sq-sm'}
+              onClick={() => {
+                setIsMenuOpened((prev) => !prev)
+              }}
+            >
+              <IconX size={20} color={'#F2F4F7'} />
+            </Button>
+          </div>
+
+          <div className={classNames.menuContent}>
+            {/* First Section */}
+            <div className={classNames.menuSection}>
+              <p className={classNames.sectionTitle}>Ecosystem</p>
+              <ul className={classNames.sectionList}>
+                <li>Provide Liquidity</li>
+                <li>Rewards portal</li>
+              </ul>
+            </div>
+
+            <hr className={classNames.menuDivider} />
+
+            {/* Second Section */}
+            <div className={classNames.menuSection}>
+              <p className={classNames.sectionTitle}>For Developers</p>
+              <ul className={classNames.sectionList}>
+                <li>Documentation</li>
+                <li>Whitepaper</li>
+              </ul>
+            </div>
+            <div className={classNames.buttonContainer}>
+              <Button
+                variant={'secondary'}
+                size={'md'}
+                className={classNames.button}
+                // onClick={() => {
+                //   setIsModalVisible(true)
+                // }}
+              >
+                <h5 style={{ color: '#5925DC' }}>Contact us</h5>
+              </Button>
+              <Button
+                variant={'primary'}
+                size={'md'}
+                className={classNames.button}
+                // onClick={() => {
+                //   setIsModalVisible(true)
+                // }}
+              >
+                <h5 style={{ color: '#F9FBFB' }}>Launch app</h5>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <ContactModal
         show={isModalOpened}
         setShow={setIsModalOpened}
