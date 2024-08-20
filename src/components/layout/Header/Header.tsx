@@ -24,12 +24,15 @@ export const Header = () => {
       {!isMobile ? (
         <>
           <div className={classNames.breadcrumbsContainer}>
-            <DropdownBtn>
+            <DropdownBtn title="Ecosystem">
               <a href="#">Provide Liquidity</a>
               <a href="#">Rewards portal</a>
             </DropdownBtn>
 
-            <p className={``}>For developers</p>
+            <DropdownBtn title="For developers">
+              <a href="#">Documentation</a>
+              <a href="#">Whitepaper</a>
+            </DropdownBtn>
           </div>
           <div className={classNames.headerBtnContainer}>
             <Button

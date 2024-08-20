@@ -3,9 +3,7 @@
   width: 100%;
 
   p {
-    position: absolute;
-    top: -13px;
-    left: 20px;
+    margin-bottom: 10px;
     color: var(--color-base-black);
     font-weight: 400;
     background-color: var(--color-base-white);
@@ -14,11 +12,26 @@
 
 .input {
   flex: 1;
-  border: 1px solid var(--color-border-main);
+  border: none; /* Default border color */
   border-radius: var(--st-br-md);
   padding: var(--sp-md);
-  background-color: var(--color-base-white);
+  background-color: var(--color-grey-100);
   font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for both box-shadow and border color */
+}
+
+/* Focus styles */
+.input:focus {
+  border: none; /* Keep the default border */
+  box-shadow: 0 0 0 2px var(--color-primary-600); /* Purple border effect */
+  outline: none; /* Remove default outline */
+}
+
+/* Error styles */
+.errorInput {
+  border: none; /* Keep the default border to avoid layout shift */
+  box-shadow: 0 0 0 2px var(--color-danger-500); /* Red border effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
 }
 
 .title {
@@ -27,8 +40,8 @@
 
 .textarea {
   flex: 1;
-  border: 1px solid var(--color-border-main);
-  background-color: var(--color-base-white);
+  border: none; /* Default border color */
+  background-color: var(--color-grey-100);
   border-radius: var(--st-br-md);
   padding: var(--sp-md);
   min-height: 130px;
@@ -36,4 +49,34 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for both box-shadow and border color */
+}
+
+.textarea:focus {
+  border: none; /* Keep the default border */
+  box-shadow: 0 0 0 2px var(--color-primary-600); /* Purple border effect */
+  outline: none; /* Remove default outline */
+}
+
+/* Error styles for textarea */
+.errorTextarea {
+  border: none; /* Keep the default border to avoid layout shift */
+  box-shadow: 0 0 0 2px var(--color-danger-500); /* Red border effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.errorContainer {
+  margin-bottom: 24px; /* Add space for error message */
+}
+
+.errorMessage {
+  background-color: var(--color-danger-500);
+  font-size: 16px;
+  margin-top: 14px;
+  margin-left: 0;
+}
+
+.errorMessageHidden {
+  font-size: 14px;
+  margin-top: 14px;
 }

@@ -80,18 +80,21 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
             <Input
               title={'Name'}
               type={'text'}
+              placeholder="Name Surname"
               onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
               value={inputs.name}
             />
             <Input
               title={'Email'}
               type={'email'}
+              placeholder="your@mail.com"
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               value={inputs.email}
             />
             <Input
-              title={'Twitter/Discord (optional)'}
+              title={`Discord <span style="color: var(--color-grey-500);">(Optional)</span>`}
               type={'email'}
+              placeholder="Username or ID"
               onChange={(e) => setInputs({ ...inputs, socialMedia: e.target.value })}
               value={inputs.socialMedia}
             />
@@ -100,6 +103,7 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
               title={'Message'}
               inputType={'textarea'}
               type={'text'}
+              placeholder="Massage"
               onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
               value={inputs.message}
             />

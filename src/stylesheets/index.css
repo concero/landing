@@ -3,7 +3,7 @@
 :root {
   --st-br-xxl: 100px;
   --st-br-xl: 64px;
-  --st-br-lg: 12px;
+  --st-br-lg: 18px;
   --st-br-md: 12px;
   --st-br-sm: 8px;
   --st-br-xs: 4px;
@@ -12,8 +12,8 @@
   --st-br-card-md: 32px;
   --st-br-card-lg: 64px;
   --sp-xxl: 48px;
-  --sp-xl: 32px;
-  --sp-lg: 24px;
+  --sp-xl: 20px;
+  --sp-lg: 16px;
   --sp-md: 12px;
   --sp-sm: 8px;
   --sp-xs: 4px;
@@ -67,10 +67,11 @@
   --color-primary-450: #5c2ac6;
   --color-primary-500: #7335f7;
   --color-primary-550: #8f5df9;
-  --color-primary-600: #ab86fa;
+  --color-primary-600: #6938ef;
   --color-primary-650: #c7aefc;
   --color-primary-700: #ebe9fe;
   --color-primary-750: #f7f3ff;
+  --color-danger-500: #f04438;
 }
 
 #root {
@@ -266,6 +267,12 @@ button {
     padding-top: var(--sp-md);
     max-width: 60%;
   }
+}
+
+.rowCenter {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .card {

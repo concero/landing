@@ -1,14 +1,16 @@
+import React, { FC } from 'react'
 import classNames from './Input.module.pcss'
-import { FC } from 'react'
 
 interface InputProps {
-  type: 'text' | 'email' | 'password'
-  title?: string
-  placeholder: string
+  type?: string
+  placeholder?: string
   value?: string
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  title?: string
   inputType?: 'input' | 'textarea'
   className?: string
+  error?: boolean // Indicates if there is an error
+  errorMessage?: string // Error message to display
 }
 
 export const Input: FC<InputProps> = ({
@@ -19,20 +21,36 @@ export const Input: FC<InputProps> = ({
   title,
   inputType = 'input',
   className,
+  error = false, // Default to no error
+  errorMessage = 'Hint', // Default to an empty error message
 }) => {
   return (
-    <div className={classNames.container}>
-      {title ? <p className={`body2 ${classNames.title}`}>{title}</p> : null}
+    <div className={`${classNames.container} ${error ? classNames.errorContainer : ''}`}>
+      {title ? <p className={`body2 ${classNames.title}`} dangerouslySetInnerHTML={{ __html: title }} /> : null}
       {inputType === 'textarea' ? (
-        <textarea className={classNames.textarea} placeholder={placeholder} value={value} onChange={onChange} />
+        <textarea
+          className={`${classNames.input} ${className} ${error ? classNames.errorInput : ''}`}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
       ) : (
         <input
-          className={`${classNames.input} ${className}`}
+          className={`${classNames.input} ${className} ${error ? classNames.errorInput : ''}`}
           type={type}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
         />
+      )}
+      {error && errorMessage ? (
+        <p className={classNames.errorMessage} style={{ color: '#F04438' }}>
+          {errorMessage}
+        </p>
+      ) : (
+        <p className={classNames.errorMessageHidden} style={{ color: '#FCFCFD' }}>
+          {errorMessage}
+        </p>
       )}
     </div>
   )
