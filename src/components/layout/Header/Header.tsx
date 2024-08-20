@@ -49,7 +49,7 @@ export const Header = () => {
           <div className={classNames.headerBtnContainer}>
             <Button
               variant={'secondary'}
-              size={'sm'}
+              size={'md'}
               className={classNames.button}
               isLoading={isLoading}
               onClick={() => {
@@ -60,7 +60,7 @@ export const Header = () => {
             </Button>
             <Button
               variant={'primary'}
-              size={'sm'}
+              size={'md'}
               className={classNames.button}
               isLoading={isLoading}
               onClick={() => {
