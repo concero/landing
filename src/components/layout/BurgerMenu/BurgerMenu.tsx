@@ -76,15 +76,14 @@ export function BurgerMenu() {
           <div className={classNames.burgerMenuHeader}>
             <Logo />
             <Button
-              variant={'secondary'}
-              size={'sq-sm'}
               className={classNames.closeButton}
+              // variant={'secondaryGrey'}
+              size={'md'}
               onClick={() => {
                 setIsMenuOpened((prev) => !prev)
               }}
-            >
-              <IconX size={20} color={'#344054'} />
-            </Button>
+              leftIcon={<IconX style={{}} strokeWidth={1.5} height={21} width={21} color={'var(--color-gray-700)'} />}
+            />
           </div>
 
           <div className={classNames.menuContent}>
@@ -112,11 +111,12 @@ export function BurgerMenu() {
                 variant={'secondary'}
                 size={'md'}
                 className={classNames.button}
-                // onClick={() => {
-                //   setIsModalVisible(true)
-                // }}
+                onClick={() => {
+                  setIsModalOpened(true)
+                  setIsMenuOpened(false)
+                }}
               >
-                <h5 style={{ color: '#5925DC' }}>Contact us</h5>
+                <h5 style={{ color: '#5925DC', fontWeight: 500 }}>Contact us</h5>
               </Button>
               <Button
                 variant={'primary'}
@@ -126,7 +126,7 @@ export function BurgerMenu() {
                 //   setIsModalVisible(true)
                 // }}
               >
-                <h5 style={{ color: '#F9FBFB' }}>Launch app</h5>
+                <h5 style={{ color: '#F9FBFB', fontWeight: 500 }}>Launch app</h5>
               </Button>
             </div>
           </div>

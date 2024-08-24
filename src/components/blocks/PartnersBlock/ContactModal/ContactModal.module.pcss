@@ -1,6 +1,12 @@
 .container {
   flex-direction: row;
   width: 100%;
+  z-index: 2000;
+  font-weight: 500;
+}
+
+.container p {
+  font-weight: 500;
 }
 
 .formContainer {
@@ -35,10 +41,9 @@
 
 .closeButton {
   cursor: pointer;
-  background-clor: --color-primary-700;
+  padding: 0;
+  height: 40px;
+  aspect-ratio: 1;
+  background-color: var(--color-grey-100);
   border: none;
-}
-
-.closeButton:hover {
-  background-color: transparent;
 }

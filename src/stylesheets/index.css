@@ -187,31 +187,31 @@ h1 {
 
 h2 {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 120%;
 }
 
 h3 {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 100%;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 100%;
 }
 
 h5 {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 p {
   display: inline;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 100%;
 }
 
@@ -223,13 +223,13 @@ a {
 .body1 {
   color: var(--color-text-secondary);
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 160%;
 }
 
 .body2 {
   color: var(--color-text-secondary);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   line-height: 160%;
 }
@@ -237,7 +237,7 @@ a {
 .body3 {
   color: var(--color-text-secondary);
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 140%;
 }
 

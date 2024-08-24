@@ -70,10 +70,10 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
             <h2>{title}</h2>
             <Button
               className={classNames.closeButton}
-              variant={'secondaryGrey'}
-              size={'xs'}
+              // variant={'secondaryGrey'}
+              size={'md'}
               onClick={() => setShow(false)}
-              leftIcon={<IconX style={{}} strokeWidth={1.7} height={30} color={'var(--color-gray-700)'} />}
+              leftIcon={<IconX style={{}} strokeWidth={1.5} height={21} width={21} color={'var(--color-gray-700)'} />}
             />
           </div>
           <form className={classNames.inputContainer}>
