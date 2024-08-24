@@ -62,12 +62,13 @@ export function BurgerMenu() {
   return (
     <div className={classNames.container}>
       <Button
-        size={'sq-sm'}
+        size={'md'}
+        className={classNames.burgerButton}
         onClick={() => {
           setIsMenuOpened((prev) => !prev)
         }}
       >
-        <IconMenu2 size={20} color={'#F2F4F7'} />
+        <IconMenu2 size={24} color={'#F2F4F7'} strokeWidth={1.5} />
       </Button>
 
       {isMenuOpened && (

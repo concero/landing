@@ -13,6 +13,7 @@ export const Button: FC<ButtonProps> = ({
   children,
   onClick,
   className,
+  title = null,
 }) => {
   const buttonClasses = getButtonClasses(size, variant, isLoading, isDisabled, className)
 
@@ -24,6 +25,7 @@ export const Button: FC<ButtonProps> = ({
       aria-label={variant + size}
     >
       {leftIcon}
+      {title && <p className={classNames.btnTitle}>{title}</p>}
       {children}
       {rightIcon}
     </button>

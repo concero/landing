@@ -22,9 +22,9 @@ export const MainScreen = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 743) {
+      if (window.innerWidth <= 768) {
         setImageSrc(MobileImg)
-      } else if (window.innerWidth < 1000) {
+      } else if (window.innerWidth <= 1024) {
         setImageSrc(Tablet)
       } else {
         setImageSrc(Desktop)
@@ -37,7 +37,7 @@ export const MainScreen = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
   return (
-    <div className={`screenContainer ${classNames.container}`}>
+    <div className={classNames.screenContainer}>
       <div className={classNames.blank} />
       <div className={classNames.titleContainer}>
         <h1 className={classNames.header}>
@@ -52,29 +52,27 @@ export const MainScreen = () => {
               style={{ backgroundColor: '#475467' }}
               onClick={() => handleClick('https://x.com/concero_io')}
             >
-              <XIcon width={32} height={32} fill="white" />
+              <XIcon width={24} height={24} fill="white" />
             </div>
             <div
               className={classNames.socialIconContainer}
               style={{ backgroundColor: '#5865F2' }}
               onClick={() => handleClick('https://discord.gg/nBMAdxYTZK')}
             >
-              <DiscordIcon width={32} height={32} fill="white" />
+              <DiscordIcon width={24} height={24} fill="white" />
             </div>
             <div
               className={classNames.socialIconContainer}
               style={{ backgroundColor: '#475467' }}
               onClick={() => handleClick('https://medium.com/@concero')}
             >
-              <MediumIcon width={32} height={32} fill="white" />
+              <MediumIcon width={24} height={24} fill="white" />
             </div>
           </div>
         </div>
       </div>
-      <img src={imageSrc} alt="Landing Image" />
-
-      <div className={classNames.comingSoon}>
-        <p>Website is coming soon, stay in touch</p>
+      <div className={classNames.img}>
+        <img src={imageSrc} alt="Landing Image" className={classNames.img} />
       </div>
 
       {/* <ContactModal show={isModalVisible} setShow={setIsModalVisible} isMessageNeeded={false} /> */}

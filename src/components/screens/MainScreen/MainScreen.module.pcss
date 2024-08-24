@@ -1,13 +1,15 @@
 .container {
   width: 100%;
   height: calc(100dvh);
-  padding: 0 var(--sp-xl) var(--sp-xl) var(--sp-xl);
+  padding: 20px var(--main-pd-h);
   min-height: 674px;
 }
 
 .screenContainer {
   position: relative;
-  min-height: 120vh; /* Ensure the container takes at least the full height of the viewport */
+  min-height: 120vh;
+  padding: 0 var(--main-pd-h);
+  background-color: var(--color-base-white);
 }
 
 .comingSoon {
@@ -33,7 +35,7 @@
 }
 
 .blank {
-  height: 180px;
+  height: 128px;
 }
 
 .buttonTitle {
@@ -79,7 +81,11 @@
   color: var(--color-grey-500);
 }
 
-@media (width <= 743px) {
+.img {
+  position: relative;
+}
+
+@media (width <= 750px) {
   .container {
     padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
     min-height: 500px;
@@ -103,7 +109,7 @@
   }
 
   .blank {
-    height: 70px;
+    height: 64px;
   }
 
   .bgContainer {

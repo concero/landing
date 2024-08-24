@@ -9,5 +9,6 @@ export interface ButtonProps {
   isLoading?: boolean
   isDisabled?: boolean
   className?: string
+  title?: string
   children?: ReactNode
 }

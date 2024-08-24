@@ -1,5 +1,5 @@
 .dropbtn {
-  color: var(--color-grey-700);
+  color: var(--color-grey-550);
   padding: var(--sp-lg) var(--sp-xl);
   font-size: 14px;
   cursor: pointer;
@@ -8,9 +8,6 @@
   border-radius: var(--st-br-lg);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  /* Use box-shadow for the border effect */
   box-shadow: none;
 }
 
@@ -27,11 +24,9 @@
 
 .dropdownContent {
   position: absolute;
-  background-color: var(--color-grey-100);
   min-width: 170px;
   margin-top: 10px;
   border-radius: var(--st-br-lg);
-  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 2%);
   z-index: 1;
   opacity: 0;
   transform: translateY(-15px);
@@ -62,7 +57,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdownContent a:hover {
-  background-color: var(--color-grey-600);
+  color: var(--color-primary);
 }
 
 /* Button hover effects */
@@ -72,8 +67,7 @@
 
 .dropbtn.active {
   /* Use box-shadow to simulate the border */
-  box-shadow: 0 0 0 2px #6938ef;
-  background-color: var(--color-grey-100);
+  color: var(--color-grey-100);
 }
 
 .rowCenter {

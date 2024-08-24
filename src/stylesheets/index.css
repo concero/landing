@@ -25,6 +25,9 @@
   --sp-gap-sm: 8px;
   --color-border-main: #d3d0e380;
   --radius-md: 16px;
+  --main-pd-h: 32px;
+  --tablet: 900px;
+  --mobile: 750px;
 
   color-scheme: light dark;
   font-family: 'DM Sans';
@@ -41,7 +44,7 @@
   --color-card-dark: #202020;
   --color-base-background: #fff;
   --color-base-black: #131313;
-  --color-base-white: #fff;
+  --color-base-white: #fcfcfd;
   --color-grey-300: #131313;
   --color-grey-350: #1c1c1c;
   --color-grey-100: #f2f4f7;
