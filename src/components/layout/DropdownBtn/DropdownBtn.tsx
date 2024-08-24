@@ -70,9 +70,9 @@ export const DropdownBtn: FC<ButtonProps> = ({
         <div className={classNames.rowCenter}>
           <p>{title}</p>
           {isOpen ? (
-            <ChevronUp className={classNames.chevron} width={25} height={15} />
+            <ChevronUp className={classNames.chevron} width={13} height={15} />
           ) : (
-            <ChevronDown className={classNames.chevron} width={25} height={15} />
+            <ChevronDown className={classNames.chevron} width={13} height={15} />
           )}
         </div>
       </button>

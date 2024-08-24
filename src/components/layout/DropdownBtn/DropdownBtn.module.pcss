@@ -32,6 +32,7 @@
   transform: translateY(-15px);
   transition: opacity 500ms ease, transform 500ms ease;
   pointer-events: none;
+  font-size: 14px;
 }
 
 /* Make the dropdown visible when the .show class is added */
@@ -49,10 +50,12 @@
   display: block;
   transition: background-color 0.3s ease;
   border-radius: 12px;
+  font-weight: 500;
 }
 
 .chevron {
-  margin-left: 7px;
+  margin-left: 16.75px;
+  color: var(--color-grey-500);
 }
 
 /* Change color of dropdown links on hover */
@@ -62,7 +65,9 @@
 
 /* Button hover effects */
 .dropbtn:hover {
-  background-color: var(--color-grey-100);
+  p {
+    color: var(--color-grey-700);
+  }
 }
 
 .dropbtn.active {
