@@ -33,6 +33,7 @@ export const Input: FC<InputProps> = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          rows={4}
         />
       ) : (
         <input

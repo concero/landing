@@ -103,11 +103,11 @@ export function ContactModal({ show, setShow, title, body, isMessageNeeded = tru
               title={'Message'}
               inputType={'textarea'}
               type={'text'}
-              placeholder="Message"
+              placeholder="Hello!"
               onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
               value={inputs.message}
             />
-            <div style={{ alignSelf: 'flex-start' }}>
+            <div style={{ alignSelf: 'flex-start', marginTop: 8 }}>
               <Button size={'lg'} onClick={handleSubmit}>
                 <h4 className={classNames.buttonTitle}>Send message</h4>
               </Button>

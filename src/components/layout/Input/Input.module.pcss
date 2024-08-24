@@ -6,7 +6,6 @@
     margin-bottom: 10px;
     color: var(--color-base-black);
     font-weight: 400;
-    background-color: var(--color-base-white);
   }
 }
 
@@ -14,10 +13,14 @@
   flex: 1;
   border: none; /* Default border color */
   border-radius: var(--st-br-md);
-  padding: var(--sp-md);
+  padding: var(--input-pd-v) var(--input-pd-h);
   background-color: var(--color-grey-100);
   font-size: 16px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for both box-shadow and border color */
+}
+
+.input::placeholder {
+  color: var(--color-grey-500);
 }
 
 /* Focus styles */
@@ -35,7 +38,7 @@
 }
 
 .title {
-  z-index: 1;
+  font-size: 14px;
 }
 
 .textarea {
