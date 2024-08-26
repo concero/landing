@@ -41,32 +41,23 @@ export const MainScreen = () => {
         <div className={classNames.captionContainer}>
           <h3 className={classNames.caption}>*And we mean Fully Decentralised</h3>
           <div className={classNames.socialIconsContainer}>
-            <div
-              className={classNames.socialIconContainer}
-              style={{ backgroundColor: '#475467' }}
-              onClick={() => handleClick('https://x.com/concero_io')}
-            >
+            <div className={classNames.darkIconContainer} onClick={() => handleClick('https://x.com/concero_io')}>
               <XIcon width={24} height={24} fill="white" />
             </div>
             <div
-              className={classNames.socialIconContainer}
-              style={{ backgroundColor: '#5865F2' }}
+              className={classNames.discrodIconContainer}
               onClick={() => handleClick('https://discord.gg/nBMAdxYTZK')}
             >
               <DiscordIcon width={24} height={24} fill="white" />
             </div>
-            <div
-              className={classNames.socialIconContainer}
-              style={{ backgroundColor: '#475467' }}
-              onClick={() => handleClick('https://medium.com/@concero')}
-            >
+            <div className={classNames.darkIconContainer} onClick={() => handleClick('https://medium.com/@concero')}>
               <MediumIcon width={24} height={24} fill="white" />
             </div>
           </div>
         </div>
       </div>
-      <div className={classNames.img}>
-        <img src={imageSrc} alt="Landing Image" className={classNames.img} />
+      <div className={classNames.imgContainer}>
+        <img src={imageSrc} alt="Landing Image" />
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
 import { MainScreen } from '../../screens/MainScreen/MainScreen'
+import classNames from './HomePage.module.pcss'
 
 export const HomePage = () => {
   return (
-    <>
+    <div className={classNames.container}>
       <MainScreen />
       {/* <SolvingProblemsBlock />
       <KeyFeaturesBlock />
@@ -15,6 +16,6 @@ export const HomePage = () => {
       <CcipBlock />
       <PartnersBlock />
       <JoinBlock /> */}
-    </>
+    </div>
   )
 }

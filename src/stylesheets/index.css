@@ -26,6 +26,7 @@
   --color-border-main: #d3d0e380;
   --radius-md: 16px;
   --main-pd-h: 32px;
+  --main-pd-v: 32px;
   --input-pd-h: 20px;
   --input-pd-v: 14px;
   --tablet: 900px;
@@ -77,6 +78,8 @@
   --color-primary-700: #ebe9fe;
   --color-primary-750: #f7f3ff;
   --color-danger-500: #f04438;
+  --color-social-discord: #5865f2;
+  --color-social-dark: #475467;
 }
 
 #root {
