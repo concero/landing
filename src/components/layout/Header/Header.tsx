@@ -1,9 +1,6 @@
 import classNames from './Header.module.pcss'
 import { Logo } from './Logo'
 import { Button } from '../Button/Button'
-import { IconArrowUpRight } from '@tabler/icons-react'
-import { Link, useMatch } from 'react-router-dom'
-import { routes } from '../../../constants/routes'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
@@ -16,8 +13,6 @@ export const Header = () => {
 
   const isMobile = useMediaQuery('mobile')
   const isIpad = useMediaQuery('ipad')
-  const isHomeMatched = useMatch(routes.home)
-  const isPrototypesMatched = useMatch(routes.prototypes)
   const handleClick = (link) => {
     window.open(link, '_blank')
   }
