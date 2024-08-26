@@ -80,7 +80,7 @@ export function BurgerMenu() {
               // variant={'secondaryGrey'}
               size={'md'}
               onClick={() => {
-                setIsMenuOpened((prev) => !prev)
+                handleCloseMenu()
               }}
               leftIcon={<IconX style={{}} strokeWidth={1.5} height={21} width={21} color={'var(--color-gray-700)'} />}
             />
