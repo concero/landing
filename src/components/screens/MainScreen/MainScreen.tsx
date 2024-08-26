@@ -1,8 +1,4 @@
 import classNames from './MainScreen.module.pcss'
-import mainPageFigure from '../../../assets/images/mainScreen/mainPageFigure.webp'
-import { Button } from '../../layout/Button/Button'
-import { IconArrowUpRight } from '@tabler/icons-react'
-import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
 import { useEffect, useState } from 'react'
 import DiscordIcon from '../../icons/DiscordIcon'
 import XIcon from '../../icons/XIcon'
@@ -12,8 +8,6 @@ import Desktop from '../../../assets/images/landing/Desktop.png'
 import Tablet from '../../../assets/images/landing/Tablet.png'
 
 export const MainScreen = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
   const [imageSrc, setImageSrc] = useState(Desktop)
 
   const handleClick = (link) => {
@@ -74,8 +68,6 @@ export const MainScreen = () => {
       <div className={classNames.img}>
         <img src={imageSrc} alt="Landing Image" className={classNames.img} />
       </div>
-
-      {/* <ContactModal show={isModalVisible} setShow={setIsModalVisible} isMessageNeeded={false} /> */}
     </div>
   )
 }
