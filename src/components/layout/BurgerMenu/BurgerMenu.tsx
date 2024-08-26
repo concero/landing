@@ -1,12 +1,9 @@
 import classNames from './BurgerMenu.module.pcss'
 import { type KeyboardEvent, useEffect, useState } from 'react'
 import { IconArrowUpRight, IconMenu2, IconX } from '@tabler/icons-react'
-import { animated, useSpring } from '@react-spring/web'
-import { MobileBreadcrumbs } from './MobileBreadcrumbs/MobileBreadcrumbs'
 import { useMediaQuery } from '../../../hooks/useMediaQueryHook'
 import { Button } from '../Button/Button'
 import { ContactModal } from '../../blocks/PartnersBlock/ContactModal/ContactModal'
-import { Header } from '../Header/Header'
 import { Logo } from '../Header/Logo'
 
 export function BurgerMenu() {
@@ -28,20 +25,6 @@ export function BurgerMenu() {
       setIsFadingOut(false)
     }, 300) // Match the duration with your CSS animation duration
   }
-  const fadeAnimation = useSpring({
-    opacity: isMenuOpened ? 1 : 0,
-    translateY: isMenuOpened ? 0 : -100,
-    config: { easing: 'spring', mass: 1, tension: 600, friction: 30 },
-    pointerEvents: isMenuOpened ? 'auto' : 'none',
-    from: { opacity: 0, pointerEvents: 'none' },
-  })
-
-  const overlayFadeAnimation = useSpring({
-    opacity: isMenuOpened ? 1 : 0,
-    config: { easing: 'spring', mass: 1, tension: 600, friction: 30 },
-    pointerEvents: isMenuOpened ? 'auto' : 'none',
-    from: { opacity: 0, pointerEvents: 'none' },
-  })
 
   const handleClick = (link) => {
     window.open(link, '_blank')

@@ -108,8 +108,12 @@ h1 {
 
 @media (width <= 750px) {
   .container {
-    padding: var(--sp-md) var(--sp-md) var(--sp-xl) var(--sp-md);
     min-height: 500px;
+    padding: var(--mobile-pd);
+  }
+
+  .screenContainer {
+    padding: 0;
   }
 
   .captionContainer {
@@ -124,6 +128,8 @@ h1 {
   }
 
   .titleContainer {
+    width: 335px;
+
     h1 {
       font-size: 32px;
     }
