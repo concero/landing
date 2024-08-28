@@ -38,7 +38,7 @@ export const Header = () => {
           variant={'secondary'}
           size={'md'}
           title={'Contact us'}
-          className={classNames.button}
+          className={classNames.contactButton}
           isLoading={isLoading}
           onClick={() => {
             setIsModalVisible(true)
