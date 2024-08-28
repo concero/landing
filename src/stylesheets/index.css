@@ -51,12 +51,12 @@
   --color-base-white: #fcfcfd;
   --color-grey-300: #131313;
   --color-grey-350: #1c1c1c;
-  --color-grey-100: #f2f4f7;
+  --color-grey-100: ##f2f4f7;
   --color-grey-400: #464646;
   --color-grey-450: #98959e;
   --color-grey-500: #667085;
   --color-grey-550: #cbcacf;
-  --color-grey-600: #e5e5e7;
+  --color-grey-600: #475467;
   --color-grey-650: #f7f7f7;
   --color-main-300: #9774f1;
   --color-main-350: #885ff0;
@@ -81,6 +81,7 @@
   --color-danger-500: #f04438;
   --color-social-discord: #5865f2;
   --color-social-dark: #475467;
+  --color-accent-700: #5925dc;
 }
 
 #root {

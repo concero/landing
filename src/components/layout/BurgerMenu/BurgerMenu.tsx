@@ -92,24 +92,24 @@ export function BurgerMenu() {
             <div className={classNames.buttonContainer}>
               <Button
                 variant={'secondary'}
-                size={'md'}
+                size={'lg'}
                 className={classNames.button}
                 onClick={() => {
                   setIsModalOpened(true)
                   setIsMenuOpened(false)
                 }}
               >
-                <h5 style={{ color: '#5925DC', fontWeight: 500 }}>Contact us</h5>
+                <h5 className={classNames.contactBtn}>Contact us</h5>
               </Button>
               <Button
                 variant={'primary'}
-                size={'md'}
+                size={'lg'}
                 className={classNames.button}
                 onClick={() => {
                   window.location.href = 'https://lanca.io'
                 }}
               >
-                <h5 style={{ color: '#F9FBFB', fontWeight: 500 }}>Launch app</h5>
+                <h5 className={classNames.launchBtn}>Launch app</h5>
               </Button>
             </div>
           </div>
