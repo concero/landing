@@ -34,25 +34,23 @@ export const MainScreen = () => {
     <div className={classNames.screenContainer}>
       <div className={classNames.blank} />
       <div className={classNames.titleContainer}>
-        <h1 className={classNames.header}>
-          Decentralised<p className={classNames.asterisk}>*</p> interoperability protocol
-        </h1>
-        <h1 className={classNames.subTitle}>Fast, secure, one-click</h1>
-        <div className={classNames.captionContainer}>
+        <div>
+          <h1 className={classNames.header}>
+            Decentralised<p className={classNames.asterisk}>*</p> interoperability protocol
+          </h1>
+          <h1 className={classNames.subTitle}>Fast, secure, one-click</h1>
           <h3 className={classNames.caption}>*And we mean Fully Decentralised</h3>
-          <div className={classNames.socialIconsContainer}>
-            <div className={classNames.darkIconContainer} onClick={() => handleClick('https://x.com/concero_io')}>
-              <XIcon width={24} height={24} fill="white" />
-            </div>
-            <div
-              className={classNames.discrodIconContainer}
-              onClick={() => handleClick('https://discord.gg/nBMAdxYTZK')}
-            >
-              <DiscordIcon width={24} height={24} fill="white" />
-            </div>
-            <div className={classNames.darkIconContainer} onClick={() => handleClick('https://medium.com/@concero')}>
-              <MediumIcon width={24} height={24} fill="white" />
-            </div>
+        </div>
+
+        <div className={classNames.socialIconsContainer}>
+          <div className={classNames.darkIconContainer} onClick={() => handleClick('https://x.com/concero_io')}>
+            <XIcon width={24} height={24} fill="white" />
+          </div>
+          <div className={classNames.discrodIconContainer} onClick={() => handleClick('https://discord.gg/nBMAdxYTZK')}>
+            <DiscordIcon width={24} height={24} fill="white" />
+          </div>
+          <div className={classNames.darkIconContainer} onClick={() => handleClick('https://medium.com/@concero')}>
+            <MediumIcon width={24} height={24} fill="white" />
           </div>
         </div>
       </div>

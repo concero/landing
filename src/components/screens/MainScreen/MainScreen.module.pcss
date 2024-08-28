@@ -18,7 +18,7 @@ h1 {
 
 .subTitle {
   color: var(--color-grey-500);
-  line-height: 40px;
+  line-height: 52px;
   letter-spacing: -1.28px;
 }
 
@@ -37,11 +37,13 @@ h1 {
 
 .titleContainer {
   margin-bottom: 32px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .asterisk {
   color: var(--color-primary);
-  font-size: 55px;
+  font-size: 48px;
 }
 
 .blank {
@@ -56,13 +58,6 @@ h1 {
 .launchAppButton {
   padding: var(--sp-md) var(--sp-lg) !important;
   border-radius: var(--st-br-lg) !important;
-}
-
-.captionContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .discrodIconContainer {
@@ -86,8 +81,8 @@ h1 {
 .socialIconsContainer {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   gap: 8px;
-  align-items: center;
 }
 
 .caption {
@@ -104,9 +99,44 @@ h1 {
 .imgContainer img {
   width: 100%;
   height: 100%;
+  border-radius: var(--radius-md);
 }
 
-@media (width <= 750px) {
+.screenContainer {
+  position: relative;
+  padding: 0 var(--main-pd-h);
+  background-color: var(--color-base-white);
+  height: 100%;
+}
+
+.header {
+  line-height: 52px;
+}
+
+@media (width <= 1024px) {
+  .screenContainer {
+    position: relative;
+    padding: 0 var(--main-pd-h);
+    background-color: var(--color-base-white);
+  }
+
+  .asterisk {
+    font-size: 32px;
+  }
+
+  .header {
+    font-size: 32px;
+    line-height: 32px;
+    max-width: 528px;
+  }
+
+  .subTitle {
+    line-height: 32px;
+    font-size: 32px;
+  }
+}
+
+@media (width <= 768px) {
   .container {
     min-height: 500px;
     padding: var(--mobile-pd);
@@ -114,6 +144,11 @@ h1 {
 
   .screenContainer {
     padding: 0;
+    height: 100%;
+  }
+
+  .header {
+    line-height: 32px;
   }
 
   h1 {
@@ -126,19 +161,10 @@ h1 {
     letter-spacing: -1.28px;
   }
 
-  .captionContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-
-    h3 {
-      font-size: 18px;
-    }
-  }
-
   .titleContainer {
     width: 335px;
+    flex-direction: column;
+    gap: 16px;
 
     h1 {
       font-size: 32px;
@@ -148,32 +174,5 @@ h1 {
   .blank {
     height: 64px;
     min-height: 64px;
-  }
-
-  .bgContainer {
-    border-radius: var(--st-br-card-md);
-    padding-left: 23px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    .leftSide {
-      min-width: unset;
-
-      .headerContainer {
-        height: 100%;
-        z-index: 1;
-        justify-content: space-between;
-
-        .header {
-          font-size: 40px;
-          max-width: 400px;
-        }
-      }
-    }
-
-    .rightSide {
-      position: absolute;
-      bottom: -40%;
-    }
   }
 }
