@@ -86,7 +86,7 @@ export function BurgerMenu() {
               <p className={classNames.sectionTitle}>For Developers</p>
               <ul className={classNames.sectionList}>
                 <li>Documentation</li>
-                <li onClick={() => handleClick(' https://www.concero.io/whitepaper.pdf')}>Whitepaper</li>
+                <li onClick={() => handleClick('https://www.concero.io/v2_whitepaper')}>Whitepaper</li>
               </ul>
             </div>
             <div className={classNames.buttonContainer}>
