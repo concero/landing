@@ -23,13 +23,13 @@ export const Header = () => {
       {!isMobile && !isIpad ? (
         <div className={classNames.breadcrumbsContainer}>
           <DropdownBtn title="Ecosystem">
-            <a onClick={() => handleClick('https://app.concero.io/pool')}>Provide Liquidity</a>
+            <a onClick={() => handleClick('https://app.lanca.io/pools')}>Provide Liquidity</a>
             <a onClick={() => handleClick('https://app.concero.io/rewards')}>Rewards portal</a>
           </DropdownBtn>
 
           <DropdownBtn title="For developers">
             <a onClick={() => handleClick('https://docs.concero.io')}>Documentation</a>
-            <a onClick={() => handleClick(' https://www.concero.io/whitepaper.pdf')}>Whitepaper</a>
+            <a onClick={() => handleClick('https://www.concero.io/v2_whitepaper')}>Whitepaper</a>
           </DropdownBtn>
         </div>
       ) : null}
