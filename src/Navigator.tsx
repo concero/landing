@@ -21,3 +21,4 @@ export const Navigator = () => {
     </BrowserRouter>
   )
 }
+
