@@ -29,7 +29,7 @@ export const Header = () => {
 
           <DropdownBtn title="For developers">
             <a onClick={() => handleClick('https://docs.concero.io')}>Documentation</a>
-            <a onClick={() => handleClick('https://www.concero.io/v2_whitepaper')}>Whitepaper</a>
+            <a onClick={() => handleClick('https://www.concero.io/v2_whitepaper.pdf')}>Whitepaper</a>
           </DropdownBtn>
         </div>
       ) : null}
